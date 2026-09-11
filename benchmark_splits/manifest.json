@@ -1,0 +1,13 @@
+{
+  "title": "Benchmark train-validation-test split",
+  "record_count": 12000,
+  "train_count": 8400,
+  "validation_count": 1800,
+  "test_count": 1800,
+  "split_strategy": "fixed_seed_random_shuffle_70_15_15",
+  "seed": 42,
+  "generated_from": [
+    "C:\\Users\\jnibe\\Desktop\\Datasets\\ml_programming_top10\\task_corpus_10k\\task_corpus_10k.jsonl",
+    "C:\\Users\\jnibe\\Desktop\\Datasets\\ml_programming_top10\\bugfix_corpus\\bugfix_corpus.jsonl"
+  ]
+}

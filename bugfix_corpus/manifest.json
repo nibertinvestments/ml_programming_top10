@@ -1,0 +1,39 @@
+{
+  "title": "Bug-fix training corpus",
+  "record_count": 2000,
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C#",
+    "C++",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "PHP",
+    "Ruby"
+  ],
+  "bug_patterns": [
+    "missing-null-check",
+    "wrong-file-path",
+    "off-by-one-loop",
+    "incorrect-sort-order",
+    "bad-json-key",
+    "string-trimming-bug",
+    "float-precision-error",
+    "index-out-of-range",
+    "missing-return-statement",
+    "broken-conditional",
+    "bad-date-parsing",
+    "array-append-misuse",
+    "wrong-config-key",
+    "bad-encoding-handling",
+    "unclosed-quote",
+    "broken-csv-parsing",
+    "incorrect-division",
+    "incorrect-sql-query",
+    "bad-binary-check",
+    "memory-copy-overflow"
+  ],
+  "description": "Bug-fix style examples designed to teach repair, root-cause reasoning, and patch generation across languages."
+}

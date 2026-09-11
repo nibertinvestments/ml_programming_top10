@@ -1,16 +1,12 @@
 # ML Programming Top 10
 
-<p align="center">
-  <img src="assets/hero-banner.svg" alt="ML Programming Top 10 banner" width="100%" />
-</p>
+![ML Programming Top 10 banner](assets/hero-banner.svg)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/10-Languages-blue" alt="10 languages" />
-  <img src="https://img.shields.io/badge/1200-Benchmark%20Rows-orange" alt="1200 benchmark rows" />
-  <img src="https://img.shields.io/badge/Train%2FVal%2FTest-Splits-green" alt="Train validation test" />
-  <img src="https://img.shields.io/badge/Assembly%2BBinary-Included-purple" alt="assembly and binary included" />
-  <img src="https://img.shields.io/badge/Release-v1.0.0-9cf" alt="release v1.0.0" />
-</p>
+![10 Languages](https://img.shields.io/badge/10-Languages-blue)
+![1200 Benchmark Rows](https://img.shields.io/badge/1200-Benchmark%20Rows-orange)
+![Train/Val/Test Splits](https://img.shields.io/badge/Train%2FVal%2FTest-Splits-green)
+![Assembly + Binary Included](https://img.shields.io/badge/Assembly%2BBinary-Included-purple)
+![Release v1.0.0](https://img.shields.io/badge/Release-v1.0.0-9cf)
 
 A premium multilingual programming corpus for LLM and ML training, built to support software generation, code understanding, low-level reasoning, and project-scale learning across the world’s most used languages.
 
@@ -81,9 +77,11 @@ This corpus is designed for teams and researchers training models for:
 ## Dataset suites
 
 ### Core corpus
+
 A foundational mixed-language dataset covering core programming tasks and realistic software patterns.
 
 ### Low-level training corpus
+
 Includes low-level material focused on:
 
 - memory behavior
@@ -93,6 +91,7 @@ Includes low-level material focused on:
 - system-level reasoning
 
 ### Large project corpus
+
 Extends beyond single-file coding into project-like structure, including:
 
 - CLI tools
@@ -103,6 +102,7 @@ Extends beyond single-file coding into project-like structure, including:
 - application scaffolding
 
 ### Benchmark corpus
+
 The benchmark release contains a 1200-record multilingual dataset with a validated split:
 
 - train: 840

@@ -1,0 +1,37 @@
+{
+  "title": "10k multilingual coding task corpus",
+  "record_count": 10000,
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C#",
+    "C++",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "PHP",
+    "Ruby"
+  ],
+  "domains": [
+    "cli",
+    "parser",
+    "pipeline",
+    "api",
+    "filesystem",
+    "database",
+    "scheduler",
+    "memory",
+    "tooling",
+    "binary"
+  ],
+  "task_types": [
+    "generate",
+    "repair",
+    "refactor",
+    "debug",
+    "explain"
+  ],
+  "source_type": "mixed",
+  "description": "Large task-grounded corpus for multilingual code generation, validation, repair, and low-level reasoning."
+}

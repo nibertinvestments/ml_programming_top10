@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.jsonl": "plaintext",
+    "*.ndjson": "plaintext",
+    "*.csv": "plaintext",
+    "*.tsv": "plaintext"
+  },
+  "json.validate.enable": true,
+  "json.schemas": []
+}

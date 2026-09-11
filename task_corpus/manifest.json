@@ -1,0 +1,32 @@
+{
+  "title": "Task-driven multilingual training corpus",
+  "record_count": 180,
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C#",
+    "C++",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "PHP",
+    "Ruby"
+  ],
+  "task_types": [
+    "generate",
+    "repair",
+    "refactor",
+    "debug",
+    "explain"
+  ],
+  "domains": [
+    "api",
+    "binary",
+    "cli",
+    "memory",
+    "parser",
+    "pipeline"
+  ],
+  "description": "Expanded training corpus for multilingual code generation, repair, project reasoning, and low-level understanding."
+}
