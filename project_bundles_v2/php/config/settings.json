@@ -1,0 +1,9 @@
+{
+  "language": "PHP",
+  "mode": "training",
+  "features": [
+    "cli",
+    "parser",
+    "pipeline"
+  ]
+}

@@ -1,0 +1,189 @@
+dataset_id,language,category,source_type,valid,text,notes
+python_code_1,Python,code,organic,True,"def add(a, b):
+    return a + b
+
+
+print(add(2, 3))
+",Python code sample generated for ML training; Assembly and Binary are included per language.
+python_code_2,Python,code,synthetic,True,"def normalize(value):
+    return max(0, min(value, 100))
+
+
+print(normalize(42))
+",Python code sample generated for ML training; Assembly and Binary are included per language.
+python_assembly_3,Python,assembly,synthetic,True,"section .text
+    global _start
+_start:
+    mov eax, 1
+    mov ebx, 42
+    int 0x80
+",Python assembly sample generated for ML training; Assembly and Binary are included per language.
+python_binary_4,Python,binary,synthetic,True,31 c0 31 db b0 01 40 89 c3 80 3d 2a 00 00 00 00 0f 05,Python binary sample generated for ML training; Assembly and Binary are included per language.
+javascript_code_5,JavaScript,code,organic,True,"const total = items.reduce((sum, item) => sum + item.price, 0);
+console.log('Total:', total);
+",JavaScript code sample generated for ML training; Assembly and Binary are included per language.
+javascript_code_6,JavaScript,code,synthetic,True,"function formatAmount(value) {
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+}
+console.log(formatAmount(42.5));
+",JavaScript code sample generated for ML training; Assembly and Binary are included per language.
+javascript_assembly_7,JavaScript,assembly,synthetic,True,"section .text
+    global _start
+_start:
+    mov rax, 60
+    mov rdi, 0
+    syscall
+",JavaScript assembly sample generated for ML training; Assembly and Binary are included per language.
+javascript_binary_8,JavaScript,binary,synthetic,True,48 83 ec 08 48 89 5c 24 08 48 89 74 24 10 48 8b 5c 24 08 48 83 c4 08 c3,JavaScript binary sample generated for ML training; Assembly and Binary are included per language.
+java_code_9,Java,code,organic,True,"public class Main {
+    public static void main(String[] args) {
+        int total = 0;
+        for (int i = 1; i <= 5; i++) total += i;
+        System.out.println(total);
+    }
+}
+",Java code sample generated for ML training; Assembly and Binary are included per language.
+java_code_10,Java,code,synthetic,True,"public class TaxCalculator {
+    public static double applyVAT(double amount, double taxRate) {
+        return amount * (1 + taxRate);
+    }
+}
+",Java code sample generated for ML training; Assembly and Binary are included per language.
+java_assembly_11,Java,assembly,synthetic,True,"section .text
+    global main
+main:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+",Java assembly sample generated for ML training; Assembly and Binary are included per language.
+java_binary_12,Java,binary,synthetic,True,55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,Java binary sample generated for ML training; Assembly and Binary are included per language.
+csharp_code_13,C#,code,organic,True,"using System;
+
+class Program {
+    static void Main() {
+        Console.WriteLine(""Hello, C#!"");
+    }
+}
+",C# code sample generated for ML training; Assembly and Binary are included per language.
+csharp_code_14,C#,code,synthetic,True,"public static class StringHelper {
+    public static string Truncate(string input, int maxLength) => input.Length <= maxLength ? input : input[..maxLength];
+}
+",C# code sample generated for ML training; Assembly and Binary are included per language.
+csharp_assembly_15,C#,assembly,synthetic,True,"section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+",C# assembly sample generated for ML training; Assembly and Binary are included per language.
+csharp_binary_16,C#,binary,synthetic,True,48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,C# binary sample generated for ML training; Assembly and Binary are included per language.
+cplusplus_code_17,C++,code,organic,True,"#include <iostream>
+int main() {
+    int sum = 0;
+    for (int i = 1; i <= 10; ++i) sum += i;
+    std::cout << sum << std::endl;
+    return 0;
+}
+",C++ code sample generated for ML training; Assembly and Binary are included per language.
+cplusplus_code_18,C++,code,synthetic,True,"std::string toTitle(std::string text) {
+    if (text.empty()) return text;
+    text[0] = std::toupper(static_cast<unsigned char>(text[0]));
+    return text;
+}
+",C++ code sample generated for ML training; Assembly and Binary are included per language.
+cplusplus_assembly_19,C++,assembly,synthetic,True,"section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",C++ assembly sample generated for ML training; Assembly and Binary are included per language.
+cplusplus_binary_20,C++,binary,synthetic,True,55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,C++ binary sample generated for ML training; Assembly and Binary are included per language.
+go_code_21,Go,code,organic,True,"package main
+
+import ""fmt""
+
+func main() {
+    fmt.Println(""hello from Go"")
+}
+",Go code sample generated for ML training; Assembly and Binary are included per language.
+go_code_22,Go,code,synthetic,True,"package main
+
+func add(a, b int) int {
+    return a + b
+}
+",Go code sample generated for ML training; Assembly and Binary are included per language.
+go_assembly_23,Go,assembly,synthetic,True,"section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",Go assembly sample generated for ML training; Assembly and Binary are included per language.
+go_binary_24,Go,binary,synthetic,True,48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,Go binary sample generated for ML training; Assembly and Binary are included per language.
+rust_code_25,Rust,code,organic,True,"fn main() {
+    let numbers = [1, 2, 3, 4, 5];
+    let sum: i32 = numbers.iter().sum();
+    println!(""{sum}"");
+}
+",Rust code sample generated for ML training; Assembly and Binary are included per language.
+rust_code_26,Rust,code,synthetic,True,"fn square(x: i32) -> i32 { x * x }
+fn main() { println!(""{}"", square(7)); }
+",Rust code sample generated for ML training; Assembly and Binary are included per language.
+rust_assembly_27,Rust,assembly,synthetic,True,"section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",Rust assembly sample generated for ML training; Assembly and Binary are included per language.
+rust_binary_28,Rust,binary,synthetic,True,48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,Rust binary sample generated for ML training; Assembly and Binary are included per language.
+typescript_code_29,TypeScript,code,organic,True,"const values: number[] = [1, 2, 3, 4];
+const total = values.reduce((sum, value) => sum + value, 0);
+console.log(total);
+",TypeScript code sample generated for ML training; Assembly and Binary are included per language.
+typescript_code_30,TypeScript,code,synthetic,True,"function clamp(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), max);
+}
+console.log(clamp(8, 0, 10));
+",TypeScript code sample generated for ML training; Assembly and Binary are included per language.
+typescript_assembly_31,TypeScript,assembly,synthetic,True,"section .text
+    global _start
+_start:
+    xor eax, eax
+    ret
+",TypeScript assembly sample generated for ML training; Assembly and Binary are included per language.
+typescript_binary_32,TypeScript,binary,synthetic,True,31 c0 c3 90 90 90 90,TypeScript binary sample generated for ML training; Assembly and Binary are included per language.
+php_code_33,PHP,code,organic,True,"<?php
+
+$items = [10, 20, 30];
+$sum = array_sum($items);
+echo $sum;
+",PHP code sample generated for ML training; Assembly and Binary are included per language.
+php_code_34,PHP,code,synthetic,True,"<?php
+function greet(string $name): string {
+    return ""Hello, {$name}!"";
+}
+echo greet('Ada');
+",PHP code sample generated for ML training; Assembly and Binary are included per language.
+php_assembly_35,PHP,assembly,synthetic,True,"section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+",PHP assembly sample generated for ML training; Assembly and Binary are included per language.
+php_binary_36,PHP,binary,synthetic,True,48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,PHP binary sample generated for ML training; Assembly and Binary are included per language.
+ruby_code_37,Ruby,code,organic,True,"numbers = [1, 2, 3, 4, 5]
+puts numbers.sum
+",Ruby code sample generated for ML training; Assembly and Binary are included per language.
+ruby_code_38,Ruby,code,synthetic,True,"def full_name(first, last)
+  ""#{first} #{last}""
+end
+puts full_name('Ada', 'Lovelace')
+",Ruby code sample generated for ML training; Assembly and Binary are included per language.
+ruby_assembly_39,Ruby,assembly,synthetic,True,"section .text
+    global _start
+_start:
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
+",Ruby assembly sample generated for ML training; Assembly and Binary are included per language.
+ruby_binary_40,Ruby,binary,synthetic,True,b8 01 00 00 00 bb 00 00 00 00 cd 80,Ruby binary sample generated for ML training; Assembly and Binary are included per language.

@@ -1,0 +1,37 @@
+{
+  "title": "Low-Level Programming Training Corpus",
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C#",
+    "C++",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "PHP",
+    "Ruby"
+  ],
+  "categories": [
+    "high_level",
+    "memory",
+    "syscall",
+    "assembly",
+    "binary"
+  ],
+  "record_count": 50,
+  "source_mix": {
+    "organic": 10,
+    "synthetic": 40
+  },
+  "description": "A low-level ML corpus for teaching LLMs and ML models how high-level code maps to memory operations, syscall behavior, assembly instructions, and binary representations across the top 10 languages.",
+  "learning_goals": [
+    "language recognition",
+    "execution semantics",
+    "memory behavior",
+    "system call interaction",
+    "assembly translation",
+    "binary pattern awareness",
+    "cross-language code comprehension"
+  ]
+}

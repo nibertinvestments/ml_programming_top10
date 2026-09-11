@@ -1,0 +1,3 @@
+<?php
+$arg = $argv[1] ?? 'no argument';
+echo $arg . PHP_EOL;

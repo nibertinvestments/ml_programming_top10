@@ -1,0 +1,1533 @@
+dataset_id,language,category,source_type,valid,difficulty,labels,text,notes
+python_project_cli_v1,Python,project_cli,synthetic,True,core,"[""project_training"", ""python"", ""project_cli"", ""llm_learning""]","def main():
+    values = [12, 18, 21, 9, 31]
+    total = sum(values)
+    avg = total / len(values)
+    print(f'Total: {total}')
+    print(f'Average: {avg:.2f}')
+
+if __name__ == '__main__':
+    main()
+",Python project_cli v1 sample built for end-to-end LLM training and project generation.
+python_project_cli_v2,Python,project_cli,synthetic,True,core,"[""project_training"", ""python"", ""project_cli"", ""llm_learning""]","def main():
+    values = [12, 18, 21, 9, 31]
+    total = sum(values)
+    avg = total / len(values)
+    print(f'Total: {total}')
+    print(f'Average: {avg:.2f}')
+
+if __name__ == '__main__':
+    main()
+",Python project_cli v2 sample built for end-to-end LLM training and project generation.
+python_project_parser_v1,Python,project_parser,organic,True,core,"[""project_training"", ""python"", ""project_parser"", ""llm_learning""]","import csv
+
+with open('input.csv', newline='', encoding='utf-8') as fh:
+    rows = list(csv.DictReader(fh))
+
+revenue = sum(float(r['amount']) for r in rows)
+print(f'Revenue: {revenue:.2f}')
+",Python project_parser v1 sample built for end-to-end LLM training and project generation.
+python_project_parser_v2,Python,project_parser,organic,True,core,"[""project_training"", ""python"", ""project_parser"", ""llm_learning""]","import csv
+
+with open('input.csv', newline='', encoding='utf-8') as fh:
+    rows = list(csv.DictReader(fh))
+
+revenue = sum(float(r['amount']) for r in rows)
+print(f'Revenue: {revenue:.2f}')
+",Python project_parser v2 sample built for end-to-end LLM training and project generation.
+python_project_data_pipeline_v1,Python,project_data_pipeline,organic,True,core,"[""project_training"", ""python"", ""project_data_pipeline"", ""llm_learning""]","def transform(rows):
+    return [int(value) for value in rows if value.strip() not in {'', 'NA'}]
+
+raw = ['1', '2', '', 'NA', '7']
+print(transform(raw))
+",Python project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+python_project_data_pipeline_v2,Python,project_data_pipeline,organic,True,core,"[""project_training"", ""python"", ""project_data_pipeline"", ""llm_learning""]","def transform(rows):
+    return [int(value) for value in rows if value.strip() not in {'', 'NA'}]
+
+raw = ['1', '2', '', 'NA', '7']
+print(transform(raw))
+",Python project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+python_project_api_v1,Python,project_api,synthetic,True,core,"[""project_training"", ""python"", ""project_api"", ""llm_learning""]","from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get('/health')
+def health():
+    return {'status': 'ok'}
+",Python project_api v1 sample built for end-to-end LLM training and project generation.
+python_project_api_v2,Python,project_api,synthetic,True,core,"[""project_training"", ""python"", ""project_api"", ""llm_learning""]","from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get('/health')
+def health():
+    return {'status': 'ok'}
+",Python project_api v2 sample built for end-to-end LLM training and project generation.
+python_project_http_service_v1,Python,project_http_service,synthetic,True,core,"[""project_training"", ""python"", ""project_http_service"", ""llm_learning""]","from flask import Flask
+app = Flask(__name__)
+
+@app.get('/ping')
+def ping():
+    return {'message': 'pong'}
+",Python project_http_service v1 sample built for end-to-end LLM training and project generation.
+python_project_http_service_v2,Python,project_http_service,synthetic,True,core,"[""project_training"", ""python"", ""project_http_service"", ""llm_learning""]","from flask import Flask
+app = Flask(__name__)
+
+@app.get('/ping')
+def ping():
+    return {'message': 'pong'}
+",Python project_http_service v2 sample built for end-to-end LLM training and project generation.
+python_project_file_system_v1,Python,project_file_system,organic,True,core,"[""project_training"", ""python"", ""project_file_system"", ""llm_learning""]","import os
+
+for name in os.listdir('.'):
+    if name.endswith('.py'):
+        print(name)
+",Python project_file_system v1 sample built for end-to-end LLM training and project generation.
+python_project_file_system_v2,Python,project_file_system,organic,True,core,"[""project_training"", ""python"", ""project_file_system"", ""llm_learning""]","import os
+
+for name in os.listdir('.'):
+    if name.endswith('.py'):
+        print(name)
+",Python project_file_system v2 sample built for end-to-end LLM training and project generation.
+python_project_database_v1,Python,project_database,organic,True,core,"[""project_training"", ""python"", ""project_database"", ""llm_learning""]","import sqlite3
+
+conn = sqlite3.connect('app.db')
+c = conn.cursor()
+c.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)')
+conn.commit()
+",Python project_database v1 sample built for end-to-end LLM training and project generation.
+python_project_database_v2,Python,project_database,organic,True,core,"[""project_training"", ""python"", ""project_database"", ""llm_learning""]","import sqlite3
+
+conn = sqlite3.connect('app.db')
+c = conn.cursor()
+c.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)')
+conn.commit()
+",Python project_database v2 sample built for end-to-end LLM training and project generation.
+python_project_scheduler_v1,Python,project_scheduler,synthetic,True,core,"[""project_training"", ""python"", ""project_scheduler"", ""llm_learning""]","import schedule
+
+# Example job definition for training purposes
+schedule.every(5).minutes.do(lambda: print('tick'))
+",Python project_scheduler v1 sample built for end-to-end LLM training and project generation.
+python_project_scheduler_v2,Python,project_scheduler,synthetic,True,core,"[""project_training"", ""python"", ""project_scheduler"", ""llm_learning""]","import schedule
+
+# Example job definition for training purposes
+schedule.every(5).minutes.do(lambda: print('tick'))
+",Python project_scheduler v2 sample built for end-to-end LLM training and project generation.
+python_memory_v1,Python,memory,synthetic,True,low_level,"[""project_training"", ""python"", ""memory"", ""llm_learning""]","def copy_buffer(src, dst):
+    for i in range(len(src)):
+        dst[i] = src[i]
+    return dst
+",Python memory v1 sample built for end-to-end LLM training and project generation.
+python_memory_v2,Python,memory,synthetic,True,low_level,"[""project_training"", ""python"", ""memory"", ""llm_learning""]","def copy_buffer(src, dst):
+    for i in range(len(src)):
+        dst[i] = src[i]
+    return dst
+",Python memory v2 sample built for end-to-end LLM training and project generation.
+python_syscall_v1,Python,syscall,synthetic,True,low_level,"[""project_training"", ""python"", ""syscall"", ""llm_learning""]","import os
+
+with open('/tmp/pid.txt', 'w', encoding='utf-8') as fh:
+    fh.write(str(os.getpid()))
+",Python syscall v1 sample built for end-to-end LLM training and project generation.
+python_syscall_v2,Python,syscall,synthetic,True,low_level,"[""project_training"", ""python"", ""syscall"", ""llm_learning""]","import os
+
+with open('/tmp/pid.txt', 'w', encoding='utf-8') as fh:
+    fh.write(str(os.getpid()))
+",Python syscall v2 sample built for end-to-end LLM training and project generation.
+python_assembly_v1,Python,assembly,synthetic,True,low_level,"[""project_training"", ""python"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+",Python assembly v1 sample built for end-to-end LLM training and project generation.
+python_assembly_v2,Python,assembly,synthetic,True,low_level,"[""project_training"", ""python"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+",Python assembly v2 sample built for end-to-end LLM training and project generation.
+python_binary_v1,Python,binary,synthetic,True,low_level,"[""project_training"", ""python"", ""binary"", ""llm_learning""]",31 c0 31 db b0 01 40 89 c3 80 3d 2a 00 00 00 00 0f 05,Python binary v1 sample built for end-to-end LLM training and project generation.
+python_binary_v2,Python,binary,synthetic,True,low_level,"[""project_training"", ""python"", ""binary"", ""llm_learning""]",31 c0 31 db b0 01 40 89 c3 80 3d 2a 00 00 00 00 0f 05,Python binary v2 sample built for end-to-end LLM training and project generation.
+python_ml_preprocessor_v1,Python,ml_preprocessor,organic,True,core,"[""project_training"", ""python"", ""ml_preprocessor"", ""llm_learning""]","def normalize(values):
+    return [float(v) / max(1.0, max(values)) for v in values]
+
+print(normalize([10, 20, 30]))
+",Python ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+python_ml_preprocessor_v2,Python,ml_preprocessor,organic,True,core,"[""project_training"", ""python"", ""ml_preprocessor"", ""llm_learning""]","def normalize(values):
+    return [float(v) / max(1.0, max(values)) for v in values]
+
+print(normalize([10, 20, 30]))
+",Python ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+python_project_full_stack_v1,Python,project_full_stack,synthetic,True,core,"[""project_training"", ""python"", ""project_full_stack"", ""llm_learning""]","from flask import Flask, jsonify
+app = Flask(__name__)
+
+@app.get('/')
+def index():
+    return jsonify({'status': 'ready'})
+",Python project_full_stack v1 sample built for end-to-end LLM training and project generation.
+python_project_full_stack_v2,Python,project_full_stack,synthetic,True,core,"[""project_training"", ""python"", ""project_full_stack"", ""llm_learning""]","from flask import Flask, jsonify
+app = Flask(__name__)
+
+@app.get('/')
+def index():
+    return jsonify({'status': 'ready'})
+",Python project_full_stack v2 sample built for end-to-end LLM training and project generation.
+python_project_tooling_v1,Python,project_tooling,synthetic,True,core,"[""project_training"", ""python"", ""project_tooling"", ""llm_learning""]","import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('name')
+print(parser.parse_args().name)
+",Python project_tooling v1 sample built for end-to-end LLM training and project generation.
+python_project_tooling_v2,Python,project_tooling,synthetic,True,core,"[""project_training"", ""python"", ""project_tooling"", ""llm_learning""]","import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('name')
+print(parser.parse_args().name)
+",Python project_tooling v2 sample built for end-to-end LLM training and project generation.
+javascript_project_cli_v1,JavaScript,project_cli,synthetic,True,core,"[""project_training"", ""javascript"", ""project_cli"", ""llm_learning""]","const values = [12, 18, 21, 9, 31];
+const total = values.reduce((sum, value) => sum + value, 0);
+console.log('Total:', total);
+console.log('Average:', (total / values.length).toFixed(2));
+",JavaScript project_cli v1 sample built for end-to-end LLM training and project generation.
+javascript_project_cli_v2,JavaScript,project_cli,synthetic,True,core,"[""project_training"", ""javascript"", ""project_cli"", ""llm_learning""]","const values = [12, 18, 21, 9, 31];
+const total = values.reduce((sum, value) => sum + value, 0);
+console.log('Total:', total);
+console.log('Average:', (total / values.length).toFixed(2));
+",JavaScript project_cli v2 sample built for end-to-end LLM training and project generation.
+javascript_project_parser_v1,JavaScript,project_parser,organic,True,core,"[""project_training"", ""javascript"", ""project_parser"", ""llm_learning""]","const fs = require('fs');
+const rows = fs.readFileSync('input.csv', 'utf8').trim().split('
+').slice(1);
+console.log(rows.length);
+",JavaScript project_parser v1 sample built for end-to-end LLM training and project generation.
+javascript_project_parser_v2,JavaScript,project_parser,organic,True,core,"[""project_training"", ""javascript"", ""project_parser"", ""llm_learning""]","const fs = require('fs');
+const rows = fs.readFileSync('input.csv', 'utf8').trim().split('
+').slice(1);
+console.log(rows.length);
+",JavaScript project_parser v2 sample built for end-to-end LLM training and project generation.
+javascript_project_data_pipeline_v1,JavaScript,project_data_pipeline,organic,True,core,"[""project_training"", ""javascript"", ""project_data_pipeline"", ""llm_learning""]","const raw = ['1', '2', '', 'NA', '7'];
+const cleaned = raw.filter(v => v && v !== 'NA').map(Number);
+console.log(cleaned);
+",JavaScript project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+javascript_project_data_pipeline_v2,JavaScript,project_data_pipeline,organic,True,core,"[""project_training"", ""javascript"", ""project_data_pipeline"", ""llm_learning""]","const raw = ['1', '2', '', 'NA', '7'];
+const cleaned = raw.filter(v => v && v !== 'NA').map(Number);
+console.log(cleaned);
+",JavaScript project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+javascript_project_api_v1,JavaScript,project_api,synthetic,True,core,"[""project_training"", ""javascript"", ""project_api"", ""llm_learning""]","const express = require('express');
+const app = express();
+app.get('/health', (_, res) => res.json({ status: 'ok' }));
+app.listen(3000);
+",JavaScript project_api v1 sample built for end-to-end LLM training and project generation.
+javascript_project_api_v2,JavaScript,project_api,synthetic,True,core,"[""project_training"", ""javascript"", ""project_api"", ""llm_learning""]","const express = require('express');
+const app = express();
+app.get('/health', (_, res) => res.json({ status: 'ok' }));
+app.listen(3000);
+",JavaScript project_api v2 sample built for end-to-end LLM training and project generation.
+javascript_project_http_service_v1,JavaScript,project_http_service,synthetic,True,core,"[""project_training"", ""javascript"", ""project_http_service"", ""llm_learning""]","const http = require('http');
+http.createServer((req, res) => { res.end(JSON.stringify({ ok: true })); }).listen(8080);
+",JavaScript project_http_service v1 sample built for end-to-end LLM training and project generation.
+javascript_project_http_service_v2,JavaScript,project_http_service,synthetic,True,core,"[""project_training"", ""javascript"", ""project_http_service"", ""llm_learning""]","const http = require('http');
+http.createServer((req, res) => { res.end(JSON.stringify({ ok: true })); }).listen(8080);
+",JavaScript project_http_service v2 sample built for end-to-end LLM training and project generation.
+javascript_project_file_system_v1,JavaScript,project_file_system,organic,True,core,"[""project_training"", ""javascript"", ""project_file_system"", ""llm_learning""]","const fs = require('fs');
+for (const name of fs.readdirSync('.')) if (name.endsWith('.js')) console.log(name);
+",JavaScript project_file_system v1 sample built for end-to-end LLM training and project generation.
+javascript_project_file_system_v2,JavaScript,project_file_system,organic,True,core,"[""project_training"", ""javascript"", ""project_file_system"", ""llm_learning""]","const fs = require('fs');
+for (const name of fs.readdirSync('.')) if (name.endsWith('.js')) console.log(name);
+",JavaScript project_file_system v2 sample built for end-to-end LLM training and project generation.
+javascript_project_database_v1,JavaScript,project_database,organic,True,core,"[""project_training"", ""javascript"", ""project_database"", ""llm_learning""]","const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('app.db');
+db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');
+",JavaScript project_database v1 sample built for end-to-end LLM training and project generation.
+javascript_project_database_v2,JavaScript,project_database,organic,True,core,"[""project_training"", ""javascript"", ""project_database"", ""llm_learning""]","const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('app.db');
+db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');
+",JavaScript project_database v2 sample built for end-to-end LLM training and project generation.
+javascript_project_scheduler_v1,JavaScript,project_scheduler,synthetic,True,core,"[""project_training"", ""javascript"", ""project_scheduler"", ""llm_learning""]","setInterval(() => console.log('tick'), 5000);
+",JavaScript project_scheduler v1 sample built for end-to-end LLM training and project generation.
+javascript_project_scheduler_v2,JavaScript,project_scheduler,synthetic,True,core,"[""project_training"", ""javascript"", ""project_scheduler"", ""llm_learning""]","setInterval(() => console.log('tick'), 5000);
+",JavaScript project_scheduler v2 sample built for end-to-end LLM training and project generation.
+javascript_memory_v1,JavaScript,memory,synthetic,True,low_level,"[""project_training"", ""javascript"", ""memory"", ""llm_learning""]","function copyBytes(src, dst) {
+  for (let i = 0; i < src.length; i++) dst[i] = src[i];
+  return dst;
+}
+",JavaScript memory v1 sample built for end-to-end LLM training and project generation.
+javascript_memory_v2,JavaScript,memory,synthetic,True,low_level,"[""project_training"", ""javascript"", ""memory"", ""llm_learning""]","function copyBytes(src, dst) {
+  for (let i = 0; i < src.length; i++) dst[i] = src[i];
+  return dst;
+}
+",JavaScript memory v2 sample built for end-to-end LLM training and project generation.
+javascript_syscall_v1,JavaScript,syscall,synthetic,True,low_level,"[""project_training"", ""javascript"", ""syscall"", ""llm_learning""]","const fs = require('fs');
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+",JavaScript syscall v1 sample built for end-to-end LLM training and project generation.
+javascript_syscall_v2,JavaScript,syscall,synthetic,True,low_level,"[""project_training"", ""javascript"", ""syscall"", ""llm_learning""]","const fs = require('fs');
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+",JavaScript syscall v2 sample built for end-to-end LLM training and project generation.
+javascript_assembly_v1,JavaScript,assembly,synthetic,True,low_level,"[""project_training"", ""javascript"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov rax, 60
+    xor rdi, rdi
+    syscall
+",JavaScript assembly v1 sample built for end-to-end LLM training and project generation.
+javascript_assembly_v2,JavaScript,assembly,synthetic,True,low_level,"[""project_training"", ""javascript"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov rax, 60
+    xor rdi, rdi
+    syscall
+",JavaScript assembly v2 sample built for end-to-end LLM training and project generation.
+javascript_binary_v1,JavaScript,binary,synthetic,True,low_level,"[""project_training"", ""javascript"", ""binary"", ""llm_learning""]",48 83 ec 08 48 89 5c 24 08 48 89 74 24 10 48 8b 5c 24 08 48 83 c4 08 c3,JavaScript binary v1 sample built for end-to-end LLM training and project generation.
+javascript_binary_v2,JavaScript,binary,synthetic,True,low_level,"[""project_training"", ""javascript"", ""binary"", ""llm_learning""]",48 83 ec 08 48 89 5c 24 08 48 89 74 24 10 48 8b 5c 24 08 48 83 c4 08 c3,JavaScript binary v2 sample built for end-to-end LLM training and project generation.
+javascript_ml_preprocessor_v1,JavaScript,ml_preprocessor,organic,True,core,"[""project_training"", ""javascript"", ""ml_preprocessor"", ""llm_learning""]","const normalize = values => values.map(value => Number(value) / Math.max(1, Math.max(...values)));
+console.log(normalize([10, 20, 30]));
+",JavaScript ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+javascript_ml_preprocessor_v2,JavaScript,ml_preprocessor,organic,True,core,"[""project_training"", ""javascript"", ""ml_preprocessor"", ""llm_learning""]","const normalize = values => values.map(value => Number(value) / Math.max(1, Math.max(...values)));
+console.log(normalize([10, 20, 30]));
+",JavaScript ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+javascript_project_full_stack_v1,JavaScript,project_full_stack,synthetic,True,core,"[""project_training"", ""javascript"", ""project_full_stack"", ""llm_learning""]","const express = require('express');
+const app = express();
+app.get('/', (_, res) => res.json({ status: 'ready' }));
+app.listen(3000);
+",JavaScript project_full_stack v1 sample built for end-to-end LLM training and project generation.
+javascript_project_full_stack_v2,JavaScript,project_full_stack,synthetic,True,core,"[""project_training"", ""javascript"", ""project_full_stack"", ""llm_learning""]","const express = require('express');
+const app = express();
+app.get('/', (_, res) => res.json({ status: 'ready' }));
+app.listen(3000);
+",JavaScript project_full_stack v2 sample built for end-to-end LLM training and project generation.
+javascript_project_tooling_v1,JavaScript,project_tooling,synthetic,True,core,"[""project_training"", ""javascript"", ""project_tooling"", ""llm_learning""]","const args = process.argv.slice(2);
+console.log(args[0] || 'no argument');
+",JavaScript project_tooling v1 sample built for end-to-end LLM training and project generation.
+javascript_project_tooling_v2,JavaScript,project_tooling,synthetic,True,core,"[""project_training"", ""javascript"", ""project_tooling"", ""llm_learning""]","const args = process.argv.slice(2);
+console.log(args[0] || 'no argument');
+",JavaScript project_tooling v2 sample built for end-to-end LLM training and project generation.
+java_project_cli_v1,Java,project_cli,synthetic,True,core,"[""project_training"", ""java"", ""project_cli"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        int[] values = {12, 18, 21, 9, 31};
+        int total = 0;
+        for (int value : values) total += value;
+        System.out.println(""Total: "" + total);
+        System.out.println(""Average: "" + (total / (double) values.length));
+    }
+}
+",Java project_cli v1 sample built for end-to-end LLM training and project generation.
+java_project_cli_v2,Java,project_cli,synthetic,True,core,"[""project_training"", ""java"", ""project_cli"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        int[] values = {12, 18, 21, 9, 31};
+        int total = 0;
+        for (int value : values) total += value;
+        System.out.println(""Total: "" + total);
+        System.out.println(""Average: "" + (total / (double) values.length));
+    }
+}
+",Java project_cli v2 sample built for end-to-end LLM training and project generation.
+java_project_parser_v1,Java,project_parser,organic,True,core,"[""project_training"", ""java"", ""project_parser"", ""llm_learning""]","import java.nio.file.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        var text = Files.readString(Path.of(""input.csv""));
+        System.out.println(text.lines().count());
+    }
+}
+",Java project_parser v1 sample built for end-to-end LLM training and project generation.
+java_project_parser_v2,Java,project_parser,organic,True,core,"[""project_training"", ""java"", ""project_parser"", ""llm_learning""]","import java.nio.file.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        var text = Files.readString(Path.of(""input.csv""));
+        System.out.println(text.lines().count());
+    }
+}
+",Java project_parser v2 sample built for end-to-end LLM training and project generation.
+java_project_data_pipeline_v1,Java,project_data_pipeline,organic,True,core,"[""project_training"", ""java"", ""project_data_pipeline"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        String[] raw = {""1"", ""2"", """", ""NA"", ""7""};
+        int count = 0;
+        for (String value : raw) if (value != null && !value.isBlank() && !value.equals(""NA"")) count++;
+        System.out.println(count);
+    }
+}
+",Java project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+java_project_data_pipeline_v2,Java,project_data_pipeline,organic,True,core,"[""project_training"", ""java"", ""project_data_pipeline"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        String[] raw = {""1"", ""2"", """", ""NA"", ""7""};
+        int count = 0;
+        for (String value : raw) if (value != null && !value.isBlank() && !value.equals(""NA"")) count++;
+        System.out.println(count);
+    }
+}
+",Java project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+java_project_api_v1,Java,project_api,synthetic,True,core,"[""project_training"", ""java"", ""project_api"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(""API ready"");
+    }
+}
+",Java project_api v1 sample built for end-to-end LLM training and project generation.
+java_project_api_v2,Java,project_api,synthetic,True,core,"[""project_training"", ""java"", ""project_api"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(""API ready"");
+    }
+}
+",Java project_api v2 sample built for end-to-end LLM training and project generation.
+java_project_http_service_v1,Java,project_http_service,synthetic,True,core,"[""project_training"", ""java"", ""project_http_service"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(""HTTP service stub"");
+    }
+}
+",Java project_http_service v1 sample built for end-to-end LLM training and project generation.
+java_project_http_service_v2,Java,project_http_service,synthetic,True,core,"[""project_training"", ""java"", ""project_http_service"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(""HTTP service stub"");
+    }
+}
+",Java project_http_service v2 sample built for end-to-end LLM training and project generation.
+java_project_file_system_v1,Java,project_file_system,organic,True,core,"[""project_training"", ""java"", ""project_file_system"", ""llm_learning""]","import java.io.File;
+public class Main {
+    public static void main(String[] args) {
+        File dir = new File(""."");
+        for (String name : dir.list()) if (name.endsWith("".java"")) System.out.println(name);
+    }
+}
+",Java project_file_system v1 sample built for end-to-end LLM training and project generation.
+java_project_file_system_v2,Java,project_file_system,organic,True,core,"[""project_training"", ""java"", ""project_file_system"", ""llm_learning""]","import java.io.File;
+public class Main {
+    public static void main(String[] args) {
+        File dir = new File(""."");
+        for (String name : dir.list()) if (name.endsWith("".java"")) System.out.println(name);
+    }
+}
+",Java project_file_system v2 sample built for end-to-end LLM training and project generation.
+java_project_database_v1,Java,project_database,organic,True,core,"[""project_training"", ""java"", ""project_database"", ""llm_learning""]","import java.sql.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Connection conn = DriverManager.getConnection(""jdbc:sqlite:app.db"");
+        Statement st = conn.createStatement();
+        st.execute(""CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)"");
+    }
+}
+",Java project_database v1 sample built for end-to-end LLM training and project generation.
+java_project_database_v2,Java,project_database,organic,True,core,"[""project_training"", ""java"", ""project_database"", ""llm_learning""]","import java.sql.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Connection conn = DriverManager.getConnection(""jdbc:sqlite:app.db"");
+        Statement st = conn.createStatement();
+        st.execute(""CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)"");
+    }
+}
+",Java project_database v2 sample built for end-to-end LLM training and project generation.
+java_project_scheduler_v1,Java,project_scheduler,synthetic,True,core,"[""project_training"", ""java"", ""project_scheduler"", ""llm_learning""]","import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() { public void run() { System.out.println(""tick""); } }, 5000);
+    }
+}
+",Java project_scheduler v1 sample built for end-to-end LLM training and project generation.
+java_project_scheduler_v2,Java,project_scheduler,synthetic,True,core,"[""project_training"", ""java"", ""project_scheduler"", ""llm_learning""]","import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() { public void run() { System.out.println(""tick""); } }, 5000);
+    }
+}
+",Java project_scheduler v2 sample built for end-to-end LLM training and project generation.
+java_memory_v1,Java,memory,synthetic,True,low_level,"[""project_training"", ""java"", ""memory"", ""llm_learning""]","public class BufferCopy {
+    static void copy(byte[] src, byte[] dst) {
+        System.arraycopy(src, 0, dst, 0, src.length);
+    }
+}
+",Java memory v1 sample built for end-to-end LLM training and project generation.
+java_memory_v2,Java,memory,synthetic,True,low_level,"[""project_training"", ""java"", ""memory"", ""llm_learning""]","public class BufferCopy {
+    static void copy(byte[] src, byte[] dst) {
+        System.arraycopy(src, 0, dst, 0, src.length);
+    }
+}
+",Java memory v2 sample built for end-to-end LLM training and project generation.
+java_syscall_v1,Java,syscall,synthetic,True,low_level,"[""project_training"", ""java"", ""syscall"", ""llm_learning""]","import java.io.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        new FileWriter(""/tmp/pid.txt"").write(String.valueOf(java.lang.ProcessHandle.current().pid()));
+    }
+}
+",Java syscall v1 sample built for end-to-end LLM training and project generation.
+java_syscall_v2,Java,syscall,synthetic,True,low_level,"[""project_training"", ""java"", ""syscall"", ""llm_learning""]","import java.io.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        new FileWriter(""/tmp/pid.txt"").write(String.valueOf(java.lang.ProcessHandle.current().pid()));
+    }
+}
+",Java syscall v2 sample built for end-to-end LLM training and project generation.
+java_assembly_v1,Java,assembly,synthetic,True,low_level,"[""project_training"", ""java"", ""assembly"", ""llm_learning""]","section .text
+    global main
+main:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+",Java assembly v1 sample built for end-to-end LLM training and project generation.
+java_assembly_v2,Java,assembly,synthetic,True,low_level,"[""project_training"", ""java"", ""assembly"", ""llm_learning""]","section .text
+    global main
+main:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+",Java assembly v2 sample built for end-to-end LLM training and project generation.
+java_binary_v1,Java,binary,synthetic,True,low_level,"[""project_training"", ""java"", ""binary"", ""llm_learning""]",55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,Java binary v1 sample built for end-to-end LLM training and project generation.
+java_binary_v2,Java,binary,synthetic,True,low_level,"[""project_training"", ""java"", ""binary"", ""llm_learning""]",55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,Java binary v2 sample built for end-to-end LLM training and project generation.
+java_ml_preprocessor_v1,Java,ml_preprocessor,organic,True,core,"[""project_training"", ""java"", ""ml_preprocessor"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        int[] values = {10, 20, 30};
+        for (int i = 0; i < values.length; i++) values[i] = values[i] / 10;
+        System.out.println(java.util.Arrays.toString(values));
+    }
+}
+",Java ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+java_ml_preprocessor_v2,Java,ml_preprocessor,organic,True,core,"[""project_training"", ""java"", ""ml_preprocessor"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        int[] values = {10, 20, 30};
+        for (int i = 0; i < values.length; i++) values[i] = values[i] / 10;
+        System.out.println(java.util.Arrays.toString(values));
+    }
+}
+",Java ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+java_project_full_stack_v1,Java,project_full_stack,synthetic,True,core,"[""project_training"", ""java"", ""project_full_stack"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(""Full-stack app stub"");
+    }
+}
+",Java project_full_stack v1 sample built for end-to-end LLM training and project generation.
+java_project_full_stack_v2,Java,project_full_stack,synthetic,True,core,"[""project_training"", ""java"", ""project_full_stack"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(""Full-stack app stub"");
+    }
+}
+",Java project_full_stack v2 sample built for end-to-end LLM training and project generation.
+java_project_tooling_v1,Java,project_tooling,synthetic,True,core,"[""project_training"", ""java"", ""project_tooling"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(args.length > 0 ? args[0] : ""no argument"");
+    }
+}
+",Java project_tooling v1 sample built for end-to-end LLM training and project generation.
+java_project_tooling_v2,Java,project_tooling,synthetic,True,core,"[""project_training"", ""java"", ""project_tooling"", ""llm_learning""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(args.length > 0 ? args[0] : ""no argument"");
+    }
+}
+",Java project_tooling v2 sample built for end-to-end LLM training and project generation.
+csharp_project_cli_v1,C#,project_cli,synthetic,True,core,"[""project_training"", ""c#"", ""project_cli"", ""llm_learning""]","using System;
+class Program {
+    static void Main() {
+        int[] values = { 12, 18, 21, 9, 31 };
+        int total = 0;
+        foreach (var value in values) total += value;
+        Console.WriteLine($""Total: {total}"");
+        Console.WriteLine($""Average: {total / (double)values.Length:F2}"");
+    }
+}
+",C# project_cli v1 sample built for end-to-end LLM training and project generation.
+csharp_project_cli_v2,C#,project_cli,synthetic,True,core,"[""project_training"", ""c#"", ""project_cli"", ""llm_learning""]","using System;
+class Program {
+    static void Main() {
+        int[] values = { 12, 18, 21, 9, 31 };
+        int total = 0;
+        foreach (var value in values) total += value;
+        Console.WriteLine($""Total: {total}"");
+        Console.WriteLine($""Average: {total / (double)values.Length:F2}"");
+    }
+}
+",C# project_cli v2 sample built for end-to-end LLM training and project generation.
+csharp_project_parser_v1,C#,project_parser,organic,True,core,"[""project_training"", ""c#"", ""project_parser"", ""llm_learning""]","using System;
+using System.IO;
+class Program {
+    static void Main() {
+        var lines = File.ReadAllLines(""input.csv"");
+        Console.WriteLine(lines.Length);
+    }
+}
+",C# project_parser v1 sample built for end-to-end LLM training and project generation.
+csharp_project_parser_v2,C#,project_parser,organic,True,core,"[""project_training"", ""c#"", ""project_parser"", ""llm_learning""]","using System;
+using System.IO;
+class Program {
+    static void Main() {
+        var lines = File.ReadAllLines(""input.csv"");
+        Console.WriteLine(lines.Length);
+    }
+}
+",C# project_parser v2 sample built for end-to-end LLM training and project generation.
+csharp_project_data_pipeline_v1,C#,project_data_pipeline,organic,True,core,"[""project_training"", ""c#"", ""project_data_pipeline"", ""llm_learning""]","using System;
+class Program {
+    static void Main() {
+        string[] raw = { ""1"", ""2"", """", ""NA"", ""7"" };
+        int count = 0;
+        foreach (var value in raw) if (!string.IsNullOrWhiteSpace(value) && value != ""NA"") count++;
+        Console.WriteLine(count);
+    }
+}
+",C# project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+csharp_project_data_pipeline_v2,C#,project_data_pipeline,organic,True,core,"[""project_training"", ""c#"", ""project_data_pipeline"", ""llm_learning""]","using System;
+class Program {
+    static void Main() {
+        string[] raw = { ""1"", ""2"", """", ""NA"", ""7"" };
+        int count = 0;
+        foreach (var value in raw) if (!string.IsNullOrWhiteSpace(value) && value != ""NA"") count++;
+        Console.WriteLine(count);
+    }
+}
+",C# project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+csharp_project_api_v1,C#,project_api,synthetic,True,core,"[""project_training"", ""c#"", ""project_api"", ""llm_learning""]","using System;
+class Program {
+    static void Main() { Console.WriteLine(""API ready""); }
+}
+",C# project_api v1 sample built for end-to-end LLM training and project generation.
+csharp_project_api_v2,C#,project_api,synthetic,True,core,"[""project_training"", ""c#"", ""project_api"", ""llm_learning""]","using System;
+class Program {
+    static void Main() { Console.WriteLine(""API ready""); }
+}
+",C# project_api v2 sample built for end-to-end LLM training and project generation.
+csharp_project_http_service_v1,C#,project_http_service,synthetic,True,core,"[""project_training"", ""c#"", ""project_http_service"", ""llm_learning""]","using System;
+class Program { static void Main() { Console.WriteLine(""HTTP service stub""); } }
+",C# project_http_service v1 sample built for end-to-end LLM training and project generation.
+csharp_project_http_service_v2,C#,project_http_service,synthetic,True,core,"[""project_training"", ""c#"", ""project_http_service"", ""llm_learning""]","using System;
+class Program { static void Main() { Console.WriteLine(""HTTP service stub""); } }
+",C# project_http_service v2 sample built for end-to-end LLM training and project generation.
+csharp_project_file_system_v1,C#,project_file_system,organic,True,core,"[""project_training"", ""c#"", ""project_file_system"", ""llm_learning""]","using System;
+using System.IO;
+class Program {
+    static void Main() { foreach (var file in Directory.GetFiles(""."")) Console.WriteLine(file); }
+}
+",C# project_file_system v1 sample built for end-to-end LLM training and project generation.
+csharp_project_file_system_v2,C#,project_file_system,organic,True,core,"[""project_training"", ""c#"", ""project_file_system"", ""llm_learning""]","using System;
+using System.IO;
+class Program {
+    static void Main() { foreach (var file in Directory.GetFiles(""."")) Console.WriteLine(file); }
+}
+",C# project_file_system v2 sample built for end-to-end LLM training and project generation.
+csharp_project_database_v1,C#,project_database,organic,True,core,"[""project_training"", ""c#"", ""project_database"", ""llm_learning""]","using System.Data.SQLite;
+class Program {
+    static void Main() {
+        using var conn = new SQLiteConnection(""Data Source=app.db"");
+        conn.Open();
+        using var cmd = new SQLiteCommand(""CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)"", conn);
+        cmd.ExecuteNonQuery();
+    }
+}
+",C# project_database v1 sample built for end-to-end LLM training and project generation.
+csharp_project_database_v2,C#,project_database,organic,True,core,"[""project_training"", ""c#"", ""project_database"", ""llm_learning""]","using System.Data.SQLite;
+class Program {
+    static void Main() {
+        using var conn = new SQLiteConnection(""Data Source=app.db"");
+        conn.Open();
+        using var cmd = new SQLiteCommand(""CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)"", conn);
+        cmd.ExecuteNonQuery();
+    }
+}
+",C# project_database v2 sample built for end-to-end LLM training and project generation.
+csharp_project_scheduler_v1,C#,project_scheduler,synthetic,True,core,"[""project_training"", ""c#"", ""project_scheduler"", ""llm_learning""]","using System;
+using System.Threading;
+class Program {
+    static void Main() {
+        var timer = new Timer(_ => Console.WriteLine(""tick""), null, 5000, 5000);
+        Thread.Sleep(10000);
+    }
+}
+",C# project_scheduler v1 sample built for end-to-end LLM training and project generation.
+csharp_project_scheduler_v2,C#,project_scheduler,synthetic,True,core,"[""project_training"", ""c#"", ""project_scheduler"", ""llm_learning""]","using System;
+using System.Threading;
+class Program {
+    static void Main() {
+        var timer = new Timer(_ => Console.WriteLine(""tick""), null, 5000, 5000);
+        Thread.Sleep(10000);
+    }
+}
+",C# project_scheduler v2 sample built for end-to-end LLM training and project generation.
+csharp_memory_v1,C#,memory,synthetic,True,low_level,"[""project_training"", ""c#"", ""memory"", ""llm_learning""]","unsafe static void Copy(byte[] src, byte[] dst) {
+    fixed (byte* s = src, d = dst) {
+        Buffer.MemoryCopy(s, d, dst.Length, src.Length);
+    }
+}
+",C# memory v1 sample built for end-to-end LLM training and project generation.
+csharp_memory_v2,C#,memory,synthetic,True,low_level,"[""project_training"", ""c#"", ""memory"", ""llm_learning""]","unsafe static void Copy(byte[] src, byte[] dst) {
+    fixed (byte* s = src, d = dst) {
+        Buffer.MemoryCopy(s, d, dst.Length, src.Length);
+    }
+}
+",C# memory v2 sample built for end-to-end LLM training and project generation.
+csharp_syscall_v1,C#,syscall,synthetic,True,low_level,"[""project_training"", ""c#"", ""syscall"", ""llm_learning""]","using System.IO;
+File.WriteAllText(""/tmp/pid.txt"", System.Environment.ProcessId.ToString());
+",C# syscall v1 sample built for end-to-end LLM training and project generation.
+csharp_syscall_v2,C#,syscall,synthetic,True,low_level,"[""project_training"", ""c#"", ""syscall"", ""llm_learning""]","using System.IO;
+File.WriteAllText(""/tmp/pid.txt"", System.Environment.ProcessId.ToString());
+",C# syscall v2 sample built for end-to-end LLM training and project generation.
+csharp_assembly_v1,C#,assembly,synthetic,True,low_level,"[""project_training"", ""c#"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+",C# assembly v1 sample built for end-to-end LLM training and project generation.
+csharp_assembly_v2,C#,assembly,synthetic,True,low_level,"[""project_training"", ""c#"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+",C# assembly v2 sample built for end-to-end LLM training and project generation.
+csharp_binary_v1,C#,binary,synthetic,True,low_level,"[""project_training"", ""c#"", ""binary"", ""llm_learning""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,C# binary v1 sample built for end-to-end LLM training and project generation.
+csharp_binary_v2,C#,binary,synthetic,True,low_level,"[""project_training"", ""c#"", ""binary"", ""llm_learning""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,C# binary v2 sample built for end-to-end LLM training and project generation.
+csharp_ml_preprocessor_v1,C#,ml_preprocessor,organic,True,core,"[""project_training"", ""c#"", ""ml_preprocessor"", ""llm_learning""]","using System;
+class Program {
+    static void Main() {
+        int[] values = {10, 20, 30};
+        for (int i = 0; i < values.Length; i++) values[i] = values[i] / 10;
+        Console.WriteLine(string.Join("", "", values));
+    }
+}
+",C# ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+csharp_ml_preprocessor_v2,C#,ml_preprocessor,organic,True,core,"[""project_training"", ""c#"", ""ml_preprocessor"", ""llm_learning""]","using System;
+class Program {
+    static void Main() {
+        int[] values = {10, 20, 30};
+        for (int i = 0; i < values.Length; i++) values[i] = values[i] / 10;
+        Console.WriteLine(string.Join("", "", values));
+    }
+}
+",C# ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+csharp_project_full_stack_v1,C#,project_full_stack,synthetic,True,core,"[""project_training"", ""c#"", ""project_full_stack"", ""llm_learning""]","using System;
+class Program { static void Main() { Console.WriteLine(""Full stack app stub""); } }
+",C# project_full_stack v1 sample built for end-to-end LLM training and project generation.
+csharp_project_full_stack_v2,C#,project_full_stack,synthetic,True,core,"[""project_training"", ""c#"", ""project_full_stack"", ""llm_learning""]","using System;
+class Program { static void Main() { Console.WriteLine(""Full stack app stub""); } }
+",C# project_full_stack v2 sample built for end-to-end LLM training and project generation.
+csharp_project_tooling_v1,C#,project_tooling,synthetic,True,core,"[""project_training"", ""c#"", ""project_tooling"", ""llm_learning""]","using System;
+class Program { static void Main(string[] args) { Console.WriteLine(args.Length > 0 ? args[0] : ""no argument""); } }
+",C# project_tooling v1 sample built for end-to-end LLM training and project generation.
+csharp_project_tooling_v2,C#,project_tooling,synthetic,True,core,"[""project_training"", ""c#"", ""project_tooling"", ""llm_learning""]","using System;
+class Program { static void Main(string[] args) { Console.WriteLine(args.Length > 0 ? args[0] : ""no argument""); } }
+",C# project_tooling v2 sample built for end-to-end LLM training and project generation.
+cpp_project_cli_v1,C++,project_cli,synthetic,True,core,"[""project_training"", ""c++"", ""project_cli"", ""llm_learning""]","#include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> values = {12, 18, 21, 9, 31};
+    int total = 0;
+    for (int value : values) total += value;
+    std::cout << ""Total: "" << total << '\n';
+    std::cout << ""Average: "" << (total / static_cast<double>(values.size())) << '\n';
+}
+",C++ project_cli v1 sample built for end-to-end LLM training and project generation.
+cpp_project_cli_v2,C++,project_cli,synthetic,True,core,"[""project_training"", ""c++"", ""project_cli"", ""llm_learning""]","#include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> values = {12, 18, 21, 9, 31};
+    int total = 0;
+    for (int value : values) total += value;
+    std::cout << ""Total: "" << total << '\n';
+    std::cout << ""Average: "" << (total / static_cast<double>(values.size())) << '\n';
+}
+",C++ project_cli v2 sample built for end-to-end LLM training and project generation.
+cpp_project_parser_v1,C++,project_parser,organic,True,core,"[""project_training"", ""c++"", ""project_parser"", ""llm_learning""]","#include <fstream>
+#include <iostream>
+int main() {
+    std::ifstream file(""input.csv"");
+    std::string line;
+    int count = 0;
+    while (std::getline(file, line)) ++count;
+    std::cout << count << '\n';
+}
+",C++ project_parser v1 sample built for end-to-end LLM training and project generation.
+cpp_project_parser_v2,C++,project_parser,organic,True,core,"[""project_training"", ""c++"", ""project_parser"", ""llm_learning""]","#include <fstream>
+#include <iostream>
+int main() {
+    std::ifstream file(""input.csv"");
+    std::string line;
+    int count = 0;
+    while (std::getline(file, line)) ++count;
+    std::cout << count << '\n';
+}
+",C++ project_parser v2 sample built for end-to-end LLM training and project generation.
+cpp_project_data_pipeline_v1,C++,project_data_pipeline,organic,True,core,"[""project_training"", ""c++"", ""project_data_pipeline"", ""llm_learning""]","#include <iostream>
+#include <vector>
+#include <string>
+int main() {
+    std::vector<std::string> raw = {""1"", ""2"", """", ""NA"", ""7""};
+    int count = 0;
+    for (const auto& value : raw) if (!value.empty() && value != ""NA"") ++count;
+    std::cout << count << '\n';
+}
+",C++ project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+cpp_project_data_pipeline_v2,C++,project_data_pipeline,organic,True,core,"[""project_training"", ""c++"", ""project_data_pipeline"", ""llm_learning""]","#include <iostream>
+#include <vector>
+#include <string>
+int main() {
+    std::vector<std::string> raw = {""1"", ""2"", """", ""NA"", ""7""};
+    int count = 0;
+    for (const auto& value : raw) if (!value.empty() && value != ""NA"") ++count;
+    std::cout << count << '\n';
+}
+",C++ project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+cpp_project_api_v1,C++,project_api,synthetic,True,core,"[""project_training"", ""c++"", ""project_api"", ""llm_learning""]","#include <iostream>
+int main() { std::cout << ""API ready\n""; }
+",C++ project_api v1 sample built for end-to-end LLM training and project generation.
+cpp_project_api_v2,C++,project_api,synthetic,True,core,"[""project_training"", ""c++"", ""project_api"", ""llm_learning""]","#include <iostream>
+int main() { std::cout << ""API ready\n""; }
+",C++ project_api v2 sample built for end-to-end LLM training and project generation.
+cpp_project_http_service_v1,C++,project_http_service,synthetic,True,core,"[""project_training"", ""c++"", ""project_http_service"", ""llm_learning""]","#include <iostream>
+int main() { std::cout << ""HTTP service stub\n""; }
+",C++ project_http_service v1 sample built for end-to-end LLM training and project generation.
+cpp_project_http_service_v2,C++,project_http_service,synthetic,True,core,"[""project_training"", ""c++"", ""project_http_service"", ""llm_learning""]","#include <iostream>
+int main() { std::cout << ""HTTP service stub\n""; }
+",C++ project_http_service v2 sample built for end-to-end LLM training and project generation.
+cpp_project_file_system_v1,C++,project_file_system,organic,True,core,"[""project_training"", ""c++"", ""project_file_system"", ""llm_learning""]","#include <filesystem>
+#include <iostream>
+int main() {
+    for (const auto& entry : std::filesystem::directory_iterator(""."")) std::cout << entry.path() << '\n';
+}
+",C++ project_file_system v1 sample built for end-to-end LLM training and project generation.
+cpp_project_file_system_v2,C++,project_file_system,organic,True,core,"[""project_training"", ""c++"", ""project_file_system"", ""llm_learning""]","#include <filesystem>
+#include <iostream>
+int main() {
+    for (const auto& entry : std::filesystem::directory_iterator(""."")) std::cout << entry.path() << '\n';
+}
+",C++ project_file_system v2 sample built for end-to-end LLM training and project generation.
+cpp_project_database_v1,C++,project_database,organic,True,core,"[""project_training"", ""c++"", ""project_database"", ""llm_learning""]","#include <sqlite3.h>
+int main() { sqlite3* db = nullptr; sqlite3_open(""app.db"", &db); sqlite3_close(db); return 0; }
+",C++ project_database v1 sample built for end-to-end LLM training and project generation.
+cpp_project_database_v2,C++,project_database,organic,True,core,"[""project_training"", ""c++"", ""project_database"", ""llm_learning""]","#include <sqlite3.h>
+int main() { sqlite3* db = nullptr; sqlite3_open(""app.db"", &db); sqlite3_close(db); return 0; }
+",C++ project_database v2 sample built for end-to-end LLM training and project generation.
+cpp_project_scheduler_v1,C++,project_scheduler,synthetic,True,core,"[""project_training"", ""c++"", ""project_scheduler"", ""llm_learning""]","#include <thread>
+#include <chrono>
+#include <iostream>
+int main() {
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    std::cout << ""tick\n"";
+}
+",C++ project_scheduler v1 sample built for end-to-end LLM training and project generation.
+cpp_project_scheduler_v2,C++,project_scheduler,synthetic,True,core,"[""project_training"", ""c++"", ""project_scheduler"", ""llm_learning""]","#include <thread>
+#include <chrono>
+#include <iostream>
+int main() {
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    std::cout << ""tick\n"";
+}
+",C++ project_scheduler v2 sample built for end-to-end LLM training and project generation.
+cpp_memory_v1,C++,memory,synthetic,True,low_level,"[""project_training"", ""c++"", ""memory"", ""llm_learning""]","#include <cstring>
+void copy_bytes(unsigned char* dst, const unsigned char* src, size_t n) { std::memcpy(dst, src, n); }
+",C++ memory v1 sample built for end-to-end LLM training and project generation.
+cpp_memory_v2,C++,memory,synthetic,True,low_level,"[""project_training"", ""c++"", ""memory"", ""llm_learning""]","#include <cstring>
+void copy_bytes(unsigned char* dst, const unsigned char* src, size_t n) { std::memcpy(dst, src, n); }
+",C++ memory v2 sample built for end-to-end LLM training and project generation.
+cpp_syscall_v1,C++,syscall,synthetic,True,low_level,"[""project_training"", ""c++"", ""syscall"", ""llm_learning""]","#include <fstream>
+int main() { std::ofstream out(""/tmp/pid.txt""); out << getpid(); }
+",C++ syscall v1 sample built for end-to-end LLM training and project generation.
+cpp_syscall_v2,C++,syscall,synthetic,True,low_level,"[""project_training"", ""c++"", ""syscall"", ""llm_learning""]","#include <fstream>
+int main() { std::ofstream out(""/tmp/pid.txt""); out << getpid(); }
+",C++ syscall v2 sample built for end-to-end LLM training and project generation.
+cpp_assembly_v1,C++,assembly,synthetic,True,low_level,"[""project_training"", ""c++"", ""assembly"", ""llm_learning""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",C++ assembly v1 sample built for end-to-end LLM training and project generation.
+cpp_assembly_v2,C++,assembly,synthetic,True,low_level,"[""project_training"", ""c++"", ""assembly"", ""llm_learning""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",C++ assembly v2 sample built for end-to-end LLM training and project generation.
+cpp_binary_v1,C++,binary,synthetic,True,low_level,"[""project_training"", ""c++"", ""binary"", ""llm_learning""]",55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,C++ binary v1 sample built for end-to-end LLM training and project generation.
+cpp_binary_v2,C++,binary,synthetic,True,low_level,"[""project_training"", ""c++"", ""binary"", ""llm_learning""]",55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,C++ binary v2 sample built for end-to-end LLM training and project generation.
+cpp_ml_preprocessor_v1,C++,ml_preprocessor,organic,True,core,"[""project_training"", ""c++"", ""ml_preprocessor"", ""llm_learning""]","#include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> values = {10, 20, 30};
+    for (int& value : values) value /= 10;
+    for (int value : values) std::cout << value << ' ';
+}
+",C++ ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+cpp_ml_preprocessor_v2,C++,ml_preprocessor,organic,True,core,"[""project_training"", ""c++"", ""ml_preprocessor"", ""llm_learning""]","#include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> values = {10, 20, 30};
+    for (int& value : values) value /= 10;
+    for (int value : values) std::cout << value << ' ';
+}
+",C++ ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+cpp_project_full_stack_v1,C++,project_full_stack,synthetic,True,core,"[""project_training"", ""c++"", ""project_full_stack"", ""llm_learning""]","#include <iostream>
+int main() { std::cout << ""Full stack app stub\n""; }
+",C++ project_full_stack v1 sample built for end-to-end LLM training and project generation.
+cpp_project_full_stack_v2,C++,project_full_stack,synthetic,True,core,"[""project_training"", ""c++"", ""project_full_stack"", ""llm_learning""]","#include <iostream>
+int main() { std::cout << ""Full stack app stub\n""; }
+",C++ project_full_stack v2 sample built for end-to-end LLM training and project generation.
+cpp_project_tooling_v1,C++,project_tooling,synthetic,True,core,"[""project_training"", ""c++"", ""project_tooling"", ""llm_learning""]","#include <iostream>
+int main(int argc, char** argv) { std::cout << (argc > 1 ? argv[1] : ""no argument"") << '\n'; }
+",C++ project_tooling v1 sample built for end-to-end LLM training and project generation.
+cpp_project_tooling_v2,C++,project_tooling,synthetic,True,core,"[""project_training"", ""c++"", ""project_tooling"", ""llm_learning""]","#include <iostream>
+int main(int argc, char** argv) { std::cout << (argc > 1 ? argv[1] : ""no argument"") << '\n'; }
+",C++ project_tooling v2 sample built for end-to-end LLM training and project generation.
+go_project_cli_v1,Go,project_cli,synthetic,True,core,"[""project_training"", ""go"", ""project_cli"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() {
+    values := []int{12, 18, 21, 9, 31}
+    total := 0
+    for _, v := range values { total += v }
+    fmt.Println(""Total:"", total)
+    fmt.Printf(""Average: %.2f\n"", float64(total)/float64(len(values)))
+}
+",Go project_cli v1 sample built for end-to-end LLM training and project generation.
+go_project_cli_v2,Go,project_cli,synthetic,True,core,"[""project_training"", ""go"", ""project_cli"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() {
+    values := []int{12, 18, 21, 9, 31}
+    total := 0
+    for _, v := range values { total += v }
+    fmt.Println(""Total:"", total)
+    fmt.Printf(""Average: %.2f\n"", float64(total)/float64(len(values)))
+}
+",Go project_cli v2 sample built for end-to-end LLM training and project generation.
+go_project_parser_v1,Go,project_parser,organic,True,core,"[""project_training"", ""go"", ""project_parser"", ""llm_learning""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    data, _ := os.ReadFile(""input.csv"")
+    fmt.Println(len(data))
+}
+",Go project_parser v1 sample built for end-to-end LLM training and project generation.
+go_project_parser_v2,Go,project_parser,organic,True,core,"[""project_training"", ""go"", ""project_parser"", ""llm_learning""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    data, _ := os.ReadFile(""input.csv"")
+    fmt.Println(len(data))
+}
+",Go project_parser v2 sample built for end-to-end LLM training and project generation.
+go_project_data_pipeline_v1,Go,project_data_pipeline,organic,True,core,"[""project_training"", ""go"", ""project_data_pipeline"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() {
+    raw := []string{""1"", ""2"", """", ""NA"", ""7""}
+    count := 0
+    for _, value := range raw { if value != """" && value != ""NA"" { count++ } }
+    fmt.Println(count)
+}
+",Go project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+go_project_data_pipeline_v2,Go,project_data_pipeline,organic,True,core,"[""project_training"", ""go"", ""project_data_pipeline"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() {
+    raw := []string{""1"", ""2"", """", ""NA"", ""7""}
+    count := 0
+    for _, value := range raw { if value != """" && value != ""NA"" { count++ } }
+    fmt.Println(count)
+}
+",Go project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+go_project_api_v1,Go,project_api,synthetic,True,core,"[""project_training"", ""go"", ""project_api"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() { fmt.Println(""API ready"") }
+",Go project_api v1 sample built for end-to-end LLM training and project generation.
+go_project_api_v2,Go,project_api,synthetic,True,core,"[""project_training"", ""go"", ""project_api"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() { fmt.Println(""API ready"") }
+",Go project_api v2 sample built for end-to-end LLM training and project generation.
+go_project_http_service_v1,Go,project_http_service,synthetic,True,core,"[""project_training"", ""go"", ""project_http_service"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() { fmt.Println(""HTTP service stub"") }
+",Go project_http_service v1 sample built for end-to-end LLM training and project generation.
+go_project_http_service_v2,Go,project_http_service,synthetic,True,core,"[""project_training"", ""go"", ""project_http_service"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() { fmt.Println(""HTTP service stub"") }
+",Go project_http_service v2 sample built for end-to-end LLM training and project generation.
+go_project_file_system_v1,Go,project_file_system,organic,True,core,"[""project_training"", ""go"", ""project_file_system"", ""llm_learning""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    entries, _ := os.ReadDir(""."")
+    for _, entry := range entries { fmt.Println(entry.Name()) }
+}
+",Go project_file_system v1 sample built for end-to-end LLM training and project generation.
+go_project_file_system_v2,Go,project_file_system,organic,True,core,"[""project_training"", ""go"", ""project_file_system"", ""llm_learning""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    entries, _ := os.ReadDir(""."")
+    for _, entry := range entries { fmt.Println(entry.Name()) }
+}
+",Go project_file_system v2 sample built for end-to-end LLM training and project generation.
+go_project_database_v1,Go,project_database,organic,True,core,"[""project_training"", ""go"", ""project_database"", ""llm_learning""]","package main
+
+import ""database/sql
+
+func main() {
+    _ = sql.Open(""sqlite3"", ""app.db"")
+}
+",Go project_database v1 sample built for end-to-end LLM training and project generation.
+go_project_database_v2,Go,project_database,organic,True,core,"[""project_training"", ""go"", ""project_database"", ""llm_learning""]","package main
+
+import ""database/sql
+
+func main() {
+    _ = sql.Open(""sqlite3"", ""app.db"")
+}
+",Go project_database v2 sample built for end-to-end LLM training and project generation.
+go_project_scheduler_v1,Go,project_scheduler,synthetic,True,core,"[""project_training"", ""go"", ""project_scheduler"", ""llm_learning""]","package main
+
+import ""time""
+
+func main() {
+    ticker := time.NewTicker(5 * time.Second)
+    defer ticker.Stop()
+    for range ticker.C { println(""tick"") }
+}
+",Go project_scheduler v1 sample built for end-to-end LLM training and project generation.
+go_project_scheduler_v2,Go,project_scheduler,synthetic,True,core,"[""project_training"", ""go"", ""project_scheduler"", ""llm_learning""]","package main
+
+import ""time""
+
+func main() {
+    ticker := time.NewTicker(5 * time.Second)
+    defer ticker.Stop()
+    for range ticker.C { println(""tick"") }
+}
+",Go project_scheduler v2 sample built for end-to-end LLM training and project generation.
+go_memory_v1,Go,memory,synthetic,True,low_level,"[""project_training"", ""go"", ""memory"", ""llm_learning""]","package main
+
+func copyBytes(dst, src []byte) { copy(dst, src) }
+",Go memory v1 sample built for end-to-end LLM training and project generation.
+go_memory_v2,Go,memory,synthetic,True,low_level,"[""project_training"", ""go"", ""memory"", ""llm_learning""]","package main
+
+func copyBytes(dst, src []byte) { copy(dst, src) }
+",Go memory v2 sample built for end-to-end LLM training and project generation.
+go_syscall_v1,Go,syscall,synthetic,True,low_level,"[""project_training"", ""go"", ""syscall"", ""llm_learning""]","package main
+
+import ""os""
+
+func main() { _ = os.WriteFile(""/tmp/pid.txt"", []byte(""123""), 0644) }
+",Go syscall v1 sample built for end-to-end LLM training and project generation.
+go_syscall_v2,Go,syscall,synthetic,True,low_level,"[""project_training"", ""go"", ""syscall"", ""llm_learning""]","package main
+
+import ""os""
+
+func main() { _ = os.WriteFile(""/tmp/pid.txt"", []byte(""123""), 0644) }
+",Go syscall v2 sample built for end-to-end LLM training and project generation.
+go_assembly_v1,Go,assembly,synthetic,True,low_level,"[""project_training"", ""go"", ""assembly"", ""llm_learning""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",Go assembly v1 sample built for end-to-end LLM training and project generation.
+go_assembly_v2,Go,assembly,synthetic,True,low_level,"[""project_training"", ""go"", ""assembly"", ""llm_learning""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",Go assembly v2 sample built for end-to-end LLM training and project generation.
+go_binary_v1,Go,binary,synthetic,True,low_level,"[""project_training"", ""go"", ""binary"", ""llm_learning""]",48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,Go binary v1 sample built for end-to-end LLM training and project generation.
+go_binary_v2,Go,binary,synthetic,True,low_level,"[""project_training"", ""go"", ""binary"", ""llm_learning""]",48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,Go binary v2 sample built for end-to-end LLM training and project generation.
+go_ml_preprocessor_v1,Go,ml_preprocessor,organic,True,core,"[""project_training"", ""go"", ""ml_preprocessor"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() {
+    values := []int{10, 20, 30}
+    for i := range values { values[i] /= 10 }
+    fmt.Println(values)
+}
+",Go ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+go_ml_preprocessor_v2,Go,ml_preprocessor,organic,True,core,"[""project_training"", ""go"", ""ml_preprocessor"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() {
+    values := []int{10, 20, 30}
+    for i := range values { values[i] /= 10 }
+    fmt.Println(values)
+}
+",Go ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+go_project_full_stack_v1,Go,project_full_stack,synthetic,True,core,"[""project_training"", ""go"", ""project_full_stack"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() { fmt.Println(""Full stack app stub"") }
+",Go project_full_stack v1 sample built for end-to-end LLM training and project generation.
+go_project_full_stack_v2,Go,project_full_stack,synthetic,True,core,"[""project_training"", ""go"", ""project_full_stack"", ""llm_learning""]","package main
+
+import ""fmt""
+
+func main() { fmt.Println(""Full stack app stub"") }
+",Go project_full_stack v2 sample built for end-to-end LLM training and project generation.
+go_project_tooling_v1,Go,project_tooling,synthetic,True,core,"[""project_training"", ""go"", ""project_tooling"", ""llm_learning""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    if len(os.Args) > 1 { fmt.Println(os.Args[1]) } else { fmt.Println(""no argument"") }
+}
+",Go project_tooling v1 sample built for end-to-end LLM training and project generation.
+go_project_tooling_v2,Go,project_tooling,synthetic,True,core,"[""project_training"", ""go"", ""project_tooling"", ""llm_learning""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    if len(os.Args) > 1 { fmt.Println(os.Args[1]) } else { fmt.Println(""no argument"") }
+}
+",Go project_tooling v2 sample built for end-to-end LLM training and project generation.
+rust_project_cli_v1,Rust,project_cli,synthetic,True,core,"[""project_training"", ""rust"", ""project_cli"", ""llm_learning""]","fn main() {
+    let values = [12, 18, 21, 9, 31];
+    let total: i32 = values.iter().sum();
+    println!(""Total: {}"", total);
+    println!(""Average: {:.2}"", total as f64 / values.len() as f64);
+}
+",Rust project_cli v1 sample built for end-to-end LLM training and project generation.
+rust_project_cli_v2,Rust,project_cli,synthetic,True,core,"[""project_training"", ""rust"", ""project_cli"", ""llm_learning""]","fn main() {
+    let values = [12, 18, 21, 9, 31];
+    let total: i32 = values.iter().sum();
+    println!(""Total: {}"", total);
+    println!(""Average: {:.2}"", total as f64 / values.len() as f64);
+}
+",Rust project_cli v2 sample built for end-to-end LLM training and project generation.
+rust_project_parser_v1,Rust,project_parser,organic,True,core,"[""project_training"", ""rust"", ""project_parser"", ""llm_learning""]","fn main() {
+    let raw = [""1"", ""2"", """", ""NA"", ""7""];
+    let count = raw.iter().filter(|v| !v.is_empty() && *v != ""NA"").count();
+    println!(""{}"", count);
+}
+",Rust project_parser v1 sample built for end-to-end LLM training and project generation.
+rust_project_parser_v2,Rust,project_parser,organic,True,core,"[""project_training"", ""rust"", ""project_parser"", ""llm_learning""]","fn main() {
+    let raw = [""1"", ""2"", """", ""NA"", ""7""];
+    let count = raw.iter().filter(|v| !v.is_empty() && *v != ""NA"").count();
+    println!(""{}"", count);
+}
+",Rust project_parser v2 sample built for end-to-end LLM training and project generation.
+rust_project_data_pipeline_v1,Rust,project_data_pipeline,organic,True,core,"[""project_training"", ""rust"", ""project_data_pipeline"", ""llm_learning""]","fn main() {
+    let raw = [""1"", ""2"", """", ""NA"", ""7""];
+    let clean: Vec<i32> = raw.iter().filter_map(|v| {
+        if !v.is_empty() && *v != ""NA"" { Some(v.parse::<i32>().unwrap()) } else { None }
+    }).collect();
+    println!(""{:?}"", clean);
+}
+",Rust project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+rust_project_data_pipeline_v2,Rust,project_data_pipeline,organic,True,core,"[""project_training"", ""rust"", ""project_data_pipeline"", ""llm_learning""]","fn main() {
+    let raw = [""1"", ""2"", """", ""NA"", ""7""];
+    let clean: Vec<i32> = raw.iter().filter_map(|v| {
+        if !v.is_empty() && *v != ""NA"" { Some(v.parse::<i32>().unwrap()) } else { None }
+    }).collect();
+    println!(""{:?}"", clean);
+}
+",Rust project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+rust_project_api_v1,Rust,project_api,synthetic,True,core,"[""project_training"", ""rust"", ""project_api"", ""llm_learning""]","fn main() { println!(""API ready""); }
+",Rust project_api v1 sample built for end-to-end LLM training and project generation.
+rust_project_api_v2,Rust,project_api,synthetic,True,core,"[""project_training"", ""rust"", ""project_api"", ""llm_learning""]","fn main() { println!(""API ready""); }
+",Rust project_api v2 sample built for end-to-end LLM training and project generation.
+rust_project_http_service_v1,Rust,project_http_service,synthetic,True,core,"[""project_training"", ""rust"", ""project_http_service"", ""llm_learning""]","fn main() { println!(""HTTP service stub""); }
+",Rust project_http_service v1 sample built for end-to-end LLM training and project generation.
+rust_project_http_service_v2,Rust,project_http_service,synthetic,True,core,"[""project_training"", ""rust"", ""project_http_service"", ""llm_learning""]","fn main() { println!(""HTTP service stub""); }
+",Rust project_http_service v2 sample built for end-to-end LLM training and project generation.
+rust_project_file_system_v1,Rust,project_file_system,organic,True,core,"[""project_training"", ""rust"", ""project_file_system"", ""llm_learning""]","fn main() { println!(""File system example""); }
+",Rust project_file_system v1 sample built for end-to-end LLM training and project generation.
+rust_project_file_system_v2,Rust,project_file_system,organic,True,core,"[""project_training"", ""rust"", ""project_file_system"", ""llm_learning""]","fn main() { println!(""File system example""); }
+",Rust project_file_system v2 sample built for end-to-end LLM training and project generation.
+rust_project_database_v1,Rust,project_database,organic,True,core,"[""project_training"", ""rust"", ""project_database"", ""llm_learning""]","fn main() { println!(""Database example""); }
+",Rust project_database v1 sample built for end-to-end LLM training and project generation.
+rust_project_database_v2,Rust,project_database,organic,True,core,"[""project_training"", ""rust"", ""project_database"", ""llm_learning""]","fn main() { println!(""Database example""); }
+",Rust project_database v2 sample built for end-to-end LLM training and project generation.
+rust_project_scheduler_v1,Rust,project_scheduler,synthetic,True,core,"[""project_training"", ""rust"", ""project_scheduler"", ""llm_learning""]","fn main() { println!(""Scheduler example""); }
+",Rust project_scheduler v1 sample built for end-to-end LLM training and project generation.
+rust_project_scheduler_v2,Rust,project_scheduler,synthetic,True,core,"[""project_training"", ""rust"", ""project_scheduler"", ""llm_learning""]","fn main() { println!(""Scheduler example""); }
+",Rust project_scheduler v2 sample built for end-to-end LLM training and project generation.
+rust_memory_v1,Rust,memory,synthetic,True,low_level,"[""project_training"", ""rust"", ""memory"", ""llm_learning""]","fn copy_bytes(dst: &mut [u8], src: &[u8]) { dst.copy_from_slice(src); }
+",Rust memory v1 sample built for end-to-end LLM training and project generation.
+rust_memory_v2,Rust,memory,synthetic,True,low_level,"[""project_training"", ""rust"", ""memory"", ""llm_learning""]","fn copy_bytes(dst: &mut [u8], src: &[u8]) { dst.copy_from_slice(src); }
+",Rust memory v2 sample built for end-to-end LLM training and project generation.
+rust_syscall_v1,Rust,syscall,synthetic,True,low_level,"[""project_training"", ""rust"", ""syscall"", ""llm_learning""]","use std::fs;
+fn main() { fs::write(""/tmp/pid.txt"", std::process::id().to_string()).unwrap(); }
+",Rust syscall v1 sample built for end-to-end LLM training and project generation.
+rust_syscall_v2,Rust,syscall,synthetic,True,low_level,"[""project_training"", ""rust"", ""syscall"", ""llm_learning""]","use std::fs;
+fn main() { fs::write(""/tmp/pid.txt"", std::process::id().to_string()).unwrap(); }
+",Rust syscall v2 sample built for end-to-end LLM training and project generation.
+rust_assembly_v1,Rust,assembly,synthetic,True,low_level,"[""project_training"", ""rust"", ""assembly"", ""llm_learning""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",Rust assembly v1 sample built for end-to-end LLM training and project generation.
+rust_assembly_v2,Rust,assembly,synthetic,True,low_level,"[""project_training"", ""rust"", ""assembly"", ""llm_learning""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+",Rust assembly v2 sample built for end-to-end LLM training and project generation.
+rust_binary_v1,Rust,binary,synthetic,True,low_level,"[""project_training"", ""rust"", ""binary"", ""llm_learning""]",48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,Rust binary v1 sample built for end-to-end LLM training and project generation.
+rust_binary_v2,Rust,binary,synthetic,True,low_level,"[""project_training"", ""rust"", ""binary"", ""llm_learning""]",48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,Rust binary v2 sample built for end-to-end LLM training and project generation.
+rust_ml_preprocessor_v1,Rust,ml_preprocessor,organic,True,core,"[""project_training"", ""rust"", ""ml_preprocessor"", ""llm_learning""]","fn main() {
+    let mut values = vec![10, 20, 30];
+    values.iter_mut().for_each(|v| *v /= 10);
+    println!(""{:?}"", values);
+}
+",Rust ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+rust_ml_preprocessor_v2,Rust,ml_preprocessor,organic,True,core,"[""project_training"", ""rust"", ""ml_preprocessor"", ""llm_learning""]","fn main() {
+    let mut values = vec![10, 20, 30];
+    values.iter_mut().for_each(|v| *v /= 10);
+    println!(""{:?}"", values);
+}
+",Rust ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+rust_project_full_stack_v1,Rust,project_full_stack,synthetic,True,core,"[""project_training"", ""rust"", ""project_full_stack"", ""llm_learning""]","fn main() { println!(""Full stack app stub""); }
+",Rust project_full_stack v1 sample built for end-to-end LLM training and project generation.
+rust_project_full_stack_v2,Rust,project_full_stack,synthetic,True,core,"[""project_training"", ""rust"", ""project_full_stack"", ""llm_learning""]","fn main() { println!(""Full stack app stub""); }
+",Rust project_full_stack v2 sample built for end-to-end LLM training and project generation.
+rust_project_tooling_v1,Rust,project_tooling,synthetic,True,core,"[""project_training"", ""rust"", ""project_tooling"", ""llm_learning""]","fn main() { println!(""tooling stub""); }
+",Rust project_tooling v1 sample built for end-to-end LLM training and project generation.
+rust_project_tooling_v2,Rust,project_tooling,synthetic,True,core,"[""project_training"", ""rust"", ""project_tooling"", ""llm_learning""]","fn main() { println!(""tooling stub""); }
+",Rust project_tooling v2 sample built for end-to-end LLM training and project generation.
+typescript_project_cli_v1,TypeScript,project_cli,synthetic,True,core,"[""project_training"", ""typescript"", ""project_cli"", ""llm_learning""]","const values = [12, 18, 21, 9, 31];
+const total = values.reduce((sum, value) => sum + value, 0);
+console.log('Total:', total);
+console.log('Average:', (total / values.length).toFixed(2));
+",TypeScript project_cli v1 sample built for end-to-end LLM training and project generation.
+typescript_project_cli_v2,TypeScript,project_cli,synthetic,True,core,"[""project_training"", ""typescript"", ""project_cli"", ""llm_learning""]","const values = [12, 18, 21, 9, 31];
+const total = values.reduce((sum, value) => sum + value, 0);
+console.log('Total:', total);
+console.log('Average:', (total / values.length).toFixed(2));
+",TypeScript project_cli v2 sample built for end-to-end LLM training and project generation.
+typescript_project_parser_v1,TypeScript,project_parser,organic,True,core,"[""project_training"", ""typescript"", ""project_parser"", ""llm_learning""]","const fs = require('fs');
+const lines = fs.readFileSync('input.csv', 'utf8').trim().split('
+');
+console.log(lines.length);
+",TypeScript project_parser v1 sample built for end-to-end LLM training and project generation.
+typescript_project_parser_v2,TypeScript,project_parser,organic,True,core,"[""project_training"", ""typescript"", ""project_parser"", ""llm_learning""]","const fs = require('fs');
+const lines = fs.readFileSync('input.csv', 'utf8').trim().split('
+');
+console.log(lines.length);
+",TypeScript project_parser v2 sample built for end-to-end LLM training and project generation.
+typescript_project_data_pipeline_v1,TypeScript,project_data_pipeline,organic,True,core,"[""project_training"", ""typescript"", ""project_data_pipeline"", ""llm_learning""]","const raw = ['1', '2', '', 'NA', '7'];
+const cleaned = raw.filter(v => v && v !== 'NA').map(Number);
+console.log(cleaned);
+",TypeScript project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+typescript_project_data_pipeline_v2,TypeScript,project_data_pipeline,organic,True,core,"[""project_training"", ""typescript"", ""project_data_pipeline"", ""llm_learning""]","const raw = ['1', '2', '', 'NA', '7'];
+const cleaned = raw.filter(v => v && v !== 'NA').map(Number);
+console.log(cleaned);
+",TypeScript project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+typescript_project_api_v1,TypeScript,project_api,synthetic,True,core,"[""project_training"", ""typescript"", ""project_api"", ""llm_learning""]","import express from 'express';
+const app = express();
+app.get('/health', (_, res) => res.json({ status: 'ok' }));
+app.listen(3000);
+",TypeScript project_api v1 sample built for end-to-end LLM training and project generation.
+typescript_project_api_v2,TypeScript,project_api,synthetic,True,core,"[""project_training"", ""typescript"", ""project_api"", ""llm_learning""]","import express from 'express';
+const app = express();
+app.get('/health', (_, res) => res.json({ status: 'ok' }));
+app.listen(3000);
+",TypeScript project_api v2 sample built for end-to-end LLM training and project generation.
+typescript_project_http_service_v1,TypeScript,project_http_service,synthetic,True,core,"[""project_training"", ""typescript"", ""project_http_service"", ""llm_learning""]","import http from 'http';
+http.createServer((_, res) => res.end(JSON.stringify({ ok: true }))).listen(8080);
+",TypeScript project_http_service v1 sample built for end-to-end LLM training and project generation.
+typescript_project_http_service_v2,TypeScript,project_http_service,synthetic,True,core,"[""project_training"", ""typescript"", ""project_http_service"", ""llm_learning""]","import http from 'http';
+http.createServer((_, res) => res.end(JSON.stringify({ ok: true }))).listen(8080);
+",TypeScript project_http_service v2 sample built for end-to-end LLM training and project generation.
+typescript_project_file_system_v1,TypeScript,project_file_system,organic,True,core,"[""project_training"", ""typescript"", ""project_file_system"", ""llm_learning""]","import fs from 'fs';
+for (const name of fs.readdirSync('.')) if (name.endsWith('.ts')) console.log(name);
+",TypeScript project_file_system v1 sample built for end-to-end LLM training and project generation.
+typescript_project_file_system_v2,TypeScript,project_file_system,organic,True,core,"[""project_training"", ""typescript"", ""project_file_system"", ""llm_learning""]","import fs from 'fs';
+for (const name of fs.readdirSync('.')) if (name.endsWith('.ts')) console.log(name);
+",TypeScript project_file_system v2 sample built for end-to-end LLM training and project generation.
+typescript_project_database_v1,TypeScript,project_database,organic,True,core,"[""project_training"", ""typescript"", ""project_database"", ""llm_learning""]","import sqlite3 from 'sqlite3';
+const db = new sqlite3.Database('app.db');
+db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');
+",TypeScript project_database v1 sample built for end-to-end LLM training and project generation.
+typescript_project_database_v2,TypeScript,project_database,organic,True,core,"[""project_training"", ""typescript"", ""project_database"", ""llm_learning""]","import sqlite3 from 'sqlite3';
+const db = new sqlite3.Database('app.db');
+db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');
+",TypeScript project_database v2 sample built for end-to-end LLM training and project generation.
+typescript_project_scheduler_v1,TypeScript,project_scheduler,synthetic,True,core,"[""project_training"", ""typescript"", ""project_scheduler"", ""llm_learning""]","setInterval(() => console.log('tick'), 5000);
+",TypeScript project_scheduler v1 sample built for end-to-end LLM training and project generation.
+typescript_project_scheduler_v2,TypeScript,project_scheduler,synthetic,True,core,"[""project_training"", ""typescript"", ""project_scheduler"", ""llm_learning""]","setInterval(() => console.log('tick'), 5000);
+",TypeScript project_scheduler v2 sample built for end-to-end LLM training and project generation.
+typescript_memory_v1,TypeScript,memory,synthetic,True,low_level,"[""project_training"", ""typescript"", ""memory"", ""llm_learning""]","function cloneBuffer(src: Uint8Array): Uint8Array { return new Uint8Array(src); }
+",TypeScript memory v1 sample built for end-to-end LLM training and project generation.
+typescript_memory_v2,TypeScript,memory,synthetic,True,low_level,"[""project_training"", ""typescript"", ""memory"", ""llm_learning""]","function cloneBuffer(src: Uint8Array): Uint8Array { return new Uint8Array(src); }
+",TypeScript memory v2 sample built for end-to-end LLM training and project generation.
+typescript_syscall_v1,TypeScript,syscall,synthetic,True,low_level,"[""project_training"", ""typescript"", ""syscall"", ""llm_learning""]","import fs from 'fs';
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+",TypeScript syscall v1 sample built for end-to-end LLM training and project generation.
+typescript_syscall_v2,TypeScript,syscall,synthetic,True,low_level,"[""project_training"", ""typescript"", ""syscall"", ""llm_learning""]","import fs from 'fs';
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+",TypeScript syscall v2 sample built for end-to-end LLM training and project generation.
+typescript_assembly_v1,TypeScript,assembly,synthetic,True,low_level,"[""project_training"", ""typescript"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    xor eax, eax
+    ret
+",TypeScript assembly v1 sample built for end-to-end LLM training and project generation.
+typescript_assembly_v2,TypeScript,assembly,synthetic,True,low_level,"[""project_training"", ""typescript"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    xor eax, eax
+    ret
+",TypeScript assembly v2 sample built for end-to-end LLM training and project generation.
+typescript_binary_v1,TypeScript,binary,synthetic,True,low_level,"[""project_training"", ""typescript"", ""binary"", ""llm_learning""]",31 c0 c3 90 90 90 90,TypeScript binary v1 sample built for end-to-end LLM training and project generation.
+typescript_binary_v2,TypeScript,binary,synthetic,True,low_level,"[""project_training"", ""typescript"", ""binary"", ""llm_learning""]",31 c0 c3 90 90 90 90,TypeScript binary v2 sample built for end-to-end LLM training and project generation.
+typescript_ml_preprocessor_v1,TypeScript,ml_preprocessor,organic,True,core,"[""project_training"", ""typescript"", ""ml_preprocessor"", ""llm_learning""]","const normalize = (values: number[]) => values.map(v => v / Math.max(1, Math.max(...values)));
+console.log(normalize([10, 20, 30]));
+",TypeScript ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+typescript_ml_preprocessor_v2,TypeScript,ml_preprocessor,organic,True,core,"[""project_training"", ""typescript"", ""ml_preprocessor"", ""llm_learning""]","const normalize = (values: number[]) => values.map(v => v / Math.max(1, Math.max(...values)));
+console.log(normalize([10, 20, 30]));
+",TypeScript ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+typescript_project_full_stack_v1,TypeScript,project_full_stack,synthetic,True,core,"[""project_training"", ""typescript"", ""project_full_stack"", ""llm_learning""]","import express from 'express';
+const app = express();
+app.get('/', (_, res) => res.json({ status: 'ready' }));
+app.listen(3000);
+",TypeScript project_full_stack v1 sample built for end-to-end LLM training and project generation.
+typescript_project_full_stack_v2,TypeScript,project_full_stack,synthetic,True,core,"[""project_training"", ""typescript"", ""project_full_stack"", ""llm_learning""]","import express from 'express';
+const app = express();
+app.get('/', (_, res) => res.json({ status: 'ready' }));
+app.listen(3000);
+",TypeScript project_full_stack v2 sample built for end-to-end LLM training and project generation.
+typescript_project_tooling_v1,TypeScript,project_tooling,synthetic,True,core,"[""project_training"", ""typescript"", ""project_tooling"", ""llm_learning""]","const args = process.argv.slice(2);
+console.log(args[0] || 'no argument');
+",TypeScript project_tooling v1 sample built for end-to-end LLM training and project generation.
+typescript_project_tooling_v2,TypeScript,project_tooling,synthetic,True,core,"[""project_training"", ""typescript"", ""project_tooling"", ""llm_learning""]","const args = process.argv.slice(2);
+console.log(args[0] || 'no argument');
+",TypeScript project_tooling v2 sample built for end-to-end LLM training and project generation.
+php_project_cli_v1,PHP,project_cli,synthetic,True,core,"[""project_training"", ""php"", ""project_cli"", ""llm_learning""]","<?php
+$values = [12, 18, 21, 9, 31];
+$total = array_sum($values);
+echo 'Total: ' . $total . PHP_EOL;
+echo 'Average: ' . ($total / count($values)) . PHP_EOL;
+",PHP project_cli v1 sample built for end-to-end LLM training and project generation.
+php_project_cli_v2,PHP,project_cli,synthetic,True,core,"[""project_training"", ""php"", ""project_cli"", ""llm_learning""]","<?php
+$values = [12, 18, 21, 9, 31];
+$total = array_sum($values);
+echo 'Total: ' . $total . PHP_EOL;
+echo 'Average: ' . ($total / count($values)) . PHP_EOL;
+",PHP project_cli v2 sample built for end-to-end LLM training and project generation.
+php_project_parser_v1,PHP,project_parser,organic,True,core,"[""project_training"", ""php"", ""project_parser"", ""llm_learning""]","<?php
+$lines = file('input.csv');
+echo count($lines) . PHP_EOL;
+",PHP project_parser v1 sample built for end-to-end LLM training and project generation.
+php_project_parser_v2,PHP,project_parser,organic,True,core,"[""project_training"", ""php"", ""project_parser"", ""llm_learning""]","<?php
+$lines = file('input.csv');
+echo count($lines) . PHP_EOL;
+",PHP project_parser v2 sample built for end-to-end LLM training and project generation.
+php_project_data_pipeline_v1,PHP,project_data_pipeline,organic,True,core,"[""project_training"", ""php"", ""project_data_pipeline"", ""llm_learning""]","<?php
+$raw = ['1', '2', '', 'NA', '7'];
+$clean = array_filter($raw, fn($v) => $v !== '' && $v !== 'NA');
+print_r(array_map('intval', $clean));
+",PHP project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+php_project_data_pipeline_v2,PHP,project_data_pipeline,organic,True,core,"[""project_training"", ""php"", ""project_data_pipeline"", ""llm_learning""]","<?php
+$raw = ['1', '2', '', 'NA', '7'];
+$clean = array_filter($raw, fn($v) => $v !== '' && $v !== 'NA');
+print_r(array_map('intval', $clean));
+",PHP project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+php_project_api_v1,PHP,project_api,synthetic,True,core,"[""project_training"", ""php"", ""project_api"", ""llm_learning""]","<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok']);
+",PHP project_api v1 sample built for end-to-end LLM training and project generation.
+php_project_api_v2,PHP,project_api,synthetic,True,core,"[""project_training"", ""php"", ""project_api"", ""llm_learning""]","<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok']);
+",PHP project_api v2 sample built for end-to-end LLM training and project generation.
+php_project_http_service_v1,PHP,project_http_service,synthetic,True,core,"[""project_training"", ""php"", ""project_http_service"", ""llm_learning""]","<?php
+header('Content-Type: application/json');
+echo json_encode(['message' => 'pong']);
+",PHP project_http_service v1 sample built for end-to-end LLM training and project generation.
+php_project_http_service_v2,PHP,project_http_service,synthetic,True,core,"[""project_training"", ""php"", ""project_http_service"", ""llm_learning""]","<?php
+header('Content-Type: application/json');
+echo json_encode(['message' => 'pong']);
+",PHP project_http_service v2 sample built for end-to-end LLM training and project generation.
+php_project_file_system_v1,PHP,project_file_system,organic,True,core,"[""project_training"", ""php"", ""project_file_system"", ""llm_learning""]","<?php
+foreach (scandir('.') as $entry) { if (str_ends_with($entry, '.php')) echo $entry . PHP_EOL; }
+",PHP project_file_system v1 sample built for end-to-end LLM training and project generation.
+php_project_file_system_v2,PHP,project_file_system,organic,True,core,"[""project_training"", ""php"", ""project_file_system"", ""llm_learning""]","<?php
+foreach (scandir('.') as $entry) { if (str_ends_with($entry, '.php')) echo $entry . PHP_EOL; }
+",PHP project_file_system v2 sample built for end-to-end LLM training and project generation.
+php_project_database_v1,PHP,project_database,organic,True,core,"[""project_training"", ""php"", ""project_database"", ""llm_learning""]","<?php
+$pdo = new PDO('sqlite:app.db');
+$pdo->exec('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');
+",PHP project_database v1 sample built for end-to-end LLM training and project generation.
+php_project_database_v2,PHP,project_database,organic,True,core,"[""project_training"", ""php"", ""project_database"", ""llm_learning""]","<?php
+$pdo = new PDO('sqlite:app.db');
+$pdo->exec('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');
+",PHP project_database v2 sample built for end-to-end LLM training and project generation.
+php_project_scheduler_v1,PHP,project_scheduler,synthetic,True,core,"[""project_training"", ""php"", ""project_scheduler"", ""llm_learning""]","<?php
+for ($i = 0; $i < 3; $i++) { echo 'tick' . PHP_EOL; }
+",PHP project_scheduler v1 sample built for end-to-end LLM training and project generation.
+php_project_scheduler_v2,PHP,project_scheduler,synthetic,True,core,"[""project_training"", ""php"", ""project_scheduler"", ""llm_learning""]","<?php
+for ($i = 0; $i < 3; $i++) { echo 'tick' . PHP_EOL; }
+",PHP project_scheduler v2 sample built for end-to-end LLM training and project generation.
+php_memory_v1,PHP,memory,synthetic,True,low_level,"[""project_training"", ""php"", ""memory"", ""llm_learning""]","<?php
+function copy_bytes(array $src): array { return array_values($src); }
+",PHP memory v1 sample built for end-to-end LLM training and project generation.
+php_memory_v2,PHP,memory,synthetic,True,low_level,"[""project_training"", ""php"", ""memory"", ""llm_learning""]","<?php
+function copy_bytes(array $src): array { return array_values($src); }
+",PHP memory v2 sample built for end-to-end LLM training and project generation.
+php_syscall_v1,PHP,syscall,synthetic,True,low_level,"[""project_training"", ""php"", ""syscall"", ""llm_learning""]","<?php
+file_put_contents('/tmp/pid.txt', getmypid());
+",PHP syscall v1 sample built for end-to-end LLM training and project generation.
+php_syscall_v2,PHP,syscall,synthetic,True,low_level,"[""project_training"", ""php"", ""syscall"", ""llm_learning""]","<?php
+file_put_contents('/tmp/pid.txt', getmypid());
+",PHP syscall v2 sample built for end-to-end LLM training and project generation.
+php_assembly_v1,PHP,assembly,synthetic,True,low_level,"[""project_training"", ""php"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+",PHP assembly v1 sample built for end-to-end LLM training and project generation.
+php_assembly_v2,PHP,assembly,synthetic,True,low_level,"[""project_training"", ""php"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+",PHP assembly v2 sample built for end-to-end LLM training and project generation.
+php_binary_v1,PHP,binary,synthetic,True,low_level,"[""project_training"", ""php"", ""binary"", ""llm_learning""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,PHP binary v1 sample built for end-to-end LLM training and project generation.
+php_binary_v2,PHP,binary,synthetic,True,low_level,"[""project_training"", ""php"", ""binary"", ""llm_learning""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,PHP binary v2 sample built for end-to-end LLM training and project generation.
+php_ml_preprocessor_v1,PHP,ml_preprocessor,organic,True,core,"[""project_training"", ""php"", ""ml_preprocessor"", ""llm_learning""]","<?php
+$values = [10, 20, 30];
+$normalized = array_map(fn($v) => $v / max(1, max($values)), $values);
+print_r($normalized);
+",PHP ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+php_ml_preprocessor_v2,PHP,ml_preprocessor,organic,True,core,"[""project_training"", ""php"", ""ml_preprocessor"", ""llm_learning""]","<?php
+$values = [10, 20, 30];
+$normalized = array_map(fn($v) => $v / max(1, max($values)), $values);
+print_r($normalized);
+",PHP ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+php_project_full_stack_v1,PHP,project_full_stack,synthetic,True,core,"[""project_training"", ""php"", ""project_full_stack"", ""llm_learning""]","<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ready']);
+",PHP project_full_stack v1 sample built for end-to-end LLM training and project generation.
+php_project_full_stack_v2,PHP,project_full_stack,synthetic,True,core,"[""project_training"", ""php"", ""project_full_stack"", ""llm_learning""]","<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ready']);
+",PHP project_full_stack v2 sample built for end-to-end LLM training and project generation.
+php_project_tooling_v1,PHP,project_tooling,synthetic,True,core,"[""project_training"", ""php"", ""project_tooling"", ""llm_learning""]","<?php
+$arg = $argv[1] ?? 'no argument';
+echo $arg . PHP_EOL;
+",PHP project_tooling v1 sample built for end-to-end LLM training and project generation.
+php_project_tooling_v2,PHP,project_tooling,synthetic,True,core,"[""project_training"", ""php"", ""project_tooling"", ""llm_learning""]","<?php
+$arg = $argv[1] ?? 'no argument';
+echo $arg . PHP_EOL;
+",PHP project_tooling v2 sample built for end-to-end LLM training and project generation.
+ruby_project_cli_v1,Ruby,project_cli,synthetic,True,core,"[""project_training"", ""ruby"", ""project_cli"", ""llm_learning""]","items = [12, 18, 21, 9, 31]
+total = items.sum
+puts ""Total: #{total}""
+puts ""Average: #{(total / items.length.to_f).round(2)}""
+",Ruby project_cli v1 sample built for end-to-end LLM training and project generation.
+ruby_project_cli_v2,Ruby,project_cli,synthetic,True,core,"[""project_training"", ""ruby"", ""project_cli"", ""llm_learning""]","items = [12, 18, 21, 9, 31]
+total = items.sum
+puts ""Total: #{total}""
+puts ""Average: #{(total / items.length.to_f).round(2)}""
+",Ruby project_cli v2 sample built for end-to-end LLM training and project generation.
+ruby_project_parser_v1,Ruby,project_parser,organic,True,core,"[""project_training"", ""ruby"", ""project_parser"", ""llm_learning""]","lines = File.readlines('input.csv')
+puts lines.length
+",Ruby project_parser v1 sample built for end-to-end LLM training and project generation.
+ruby_project_parser_v2,Ruby,project_parser,organic,True,core,"[""project_training"", ""ruby"", ""project_parser"", ""llm_learning""]","lines = File.readlines('input.csv')
+puts lines.length
+",Ruby project_parser v2 sample built for end-to-end LLM training and project generation.
+ruby_project_data_pipeline_v1,Ruby,project_data_pipeline,organic,True,core,"[""project_training"", ""ruby"", ""project_data_pipeline"", ""llm_learning""]","raw = ['1', '2', '', 'NA', '7']
+clean = raw.reject { |v| v.empty? || v == 'NA' }.map(&:to_i)
+p clean
+",Ruby project_data_pipeline v1 sample built for end-to-end LLM training and project generation.
+ruby_project_data_pipeline_v2,Ruby,project_data_pipeline,organic,True,core,"[""project_training"", ""ruby"", ""project_data_pipeline"", ""llm_learning""]","raw = ['1', '2', '', 'NA', '7']
+clean = raw.reject { |v| v.empty? || v == 'NA' }.map(&:to_i)
+p clean
+",Ruby project_data_pipeline v2 sample built for end-to-end LLM training and project generation.
+ruby_project_api_v1,Ruby,project_api,synthetic,True,core,"[""project_training"", ""ruby"", ""project_api"", ""llm_learning""]","puts 'API ready'
+",Ruby project_api v1 sample built for end-to-end LLM training and project generation.
+ruby_project_api_v2,Ruby,project_api,synthetic,True,core,"[""project_training"", ""ruby"", ""project_api"", ""llm_learning""]","puts 'API ready'
+",Ruby project_api v2 sample built for end-to-end LLM training and project generation.
+ruby_project_http_service_v1,Ruby,project_http_service,synthetic,True,core,"[""project_training"", ""ruby"", ""project_http_service"", ""llm_learning""]","puts 'HTTP service stub'
+",Ruby project_http_service v1 sample built for end-to-end LLM training and project generation.
+ruby_project_http_service_v2,Ruby,project_http_service,synthetic,True,core,"[""project_training"", ""ruby"", ""project_http_service"", ""llm_learning""]","puts 'HTTP service stub'
+",Ruby project_http_service v2 sample built for end-to-end LLM training and project generation.
+ruby_project_file_system_v1,Ruby,project_file_system,organic,True,core,"[""project_training"", ""ruby"", ""project_file_system"", ""llm_learning""]","Dir.children('.').grep(/\.rb$/).each { |name| puts name }
+",Ruby project_file_system v1 sample built for end-to-end LLM training and project generation.
+ruby_project_file_system_v2,Ruby,project_file_system,organic,True,core,"[""project_training"", ""ruby"", ""project_file_system"", ""llm_learning""]","Dir.children('.').grep(/\.rb$/).each { |name| puts name }
+",Ruby project_file_system v2 sample built for end-to-end LLM training and project generation.
+ruby_project_database_v1,Ruby,project_database,organic,True,core,"[""project_training"", ""ruby"", ""project_database"", ""llm_learning""]","require 'sqlite3'
+SQLite3::Database.new('app.db')
+",Ruby project_database v1 sample built for end-to-end LLM training and project generation.
+ruby_project_database_v2,Ruby,project_database,organic,True,core,"[""project_training"", ""ruby"", ""project_database"", ""llm_learning""]","require 'sqlite3'
+SQLite3::Database.new('app.db')
+",Ruby project_database v2 sample built for end-to-end LLM training and project generation.
+ruby_project_scheduler_v1,Ruby,project_scheduler,synthetic,True,core,"[""project_training"", ""ruby"", ""project_scheduler"", ""llm_learning""]","3.times { puts 'tick' }
+",Ruby project_scheduler v1 sample built for end-to-end LLM training and project generation.
+ruby_project_scheduler_v2,Ruby,project_scheduler,synthetic,True,core,"[""project_training"", ""ruby"", ""project_scheduler"", ""llm_learning""]","3.times { puts 'tick' }
+",Ruby project_scheduler v2 sample built for end-to-end LLM training and project generation.
+ruby_memory_v1,Ruby,memory,synthetic,True,low_level,"[""project_training"", ""ruby"", ""memory"", ""llm_learning""]","def copy_bytes(src, dst)
+  src.each_with_index { |byte, idx| dst[idx] = byte }
+  dst
+end
+",Ruby memory v1 sample built for end-to-end LLM training and project generation.
+ruby_memory_v2,Ruby,memory,synthetic,True,low_level,"[""project_training"", ""ruby"", ""memory"", ""llm_learning""]","def copy_bytes(src, dst)
+  src.each_with_index { |byte, idx| dst[idx] = byte }
+  dst
+end
+",Ruby memory v2 sample built for end-to-end LLM training and project generation.
+ruby_syscall_v1,Ruby,syscall,synthetic,True,low_level,"[""project_training"", ""ruby"", ""syscall"", ""llm_learning""]","File.write('/tmp/pid.txt', Process.pid.to_s)
+",Ruby syscall v1 sample built for end-to-end LLM training and project generation.
+ruby_syscall_v2,Ruby,syscall,synthetic,True,low_level,"[""project_training"", ""ruby"", ""syscall"", ""llm_learning""]","File.write('/tmp/pid.txt', Process.pid.to_s)
+",Ruby syscall v2 sample built for end-to-end LLM training and project generation.
+ruby_assembly_v1,Ruby,assembly,synthetic,True,low_level,"[""project_training"", ""ruby"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
+",Ruby assembly v1 sample built for end-to-end LLM training and project generation.
+ruby_assembly_v2,Ruby,assembly,synthetic,True,low_level,"[""project_training"", ""ruby"", ""assembly"", ""llm_learning""]","section .text
+    global _start
+_start:
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
+",Ruby assembly v2 sample built for end-to-end LLM training and project generation.
+ruby_binary_v1,Ruby,binary,synthetic,True,low_level,"[""project_training"", ""ruby"", ""binary"", ""llm_learning""]",b8 01 00 00 00 bb 00 00 00 00 cd 80,Ruby binary v1 sample built for end-to-end LLM training and project generation.
+ruby_binary_v2,Ruby,binary,synthetic,True,low_level,"[""project_training"", ""ruby"", ""binary"", ""llm_learning""]",b8 01 00 00 00 bb 00 00 00 00 cd 80,Ruby binary v2 sample built for end-to-end LLM training and project generation.
+ruby_ml_preprocessor_v1,Ruby,ml_preprocessor,organic,True,core,"[""project_training"", ""ruby"", ""ml_preprocessor"", ""llm_learning""]","values = [10, 20, 30]
+normalized = values.map { |v| v / [1, values.max].max.to_f }
+p normalized
+",Ruby ml_preprocessor v1 sample built for end-to-end LLM training and project generation.
+ruby_ml_preprocessor_v2,Ruby,ml_preprocessor,organic,True,core,"[""project_training"", ""ruby"", ""ml_preprocessor"", ""llm_learning""]","values = [10, 20, 30]
+normalized = values.map { |v| v / [1, values.max].max.to_f }
+p normalized
+",Ruby ml_preprocessor v2 sample built for end-to-end LLM training and project generation.
+ruby_project_full_stack_v1,Ruby,project_full_stack,synthetic,True,core,"[""project_training"", ""ruby"", ""project_full_stack"", ""llm_learning""]","puts 'Full stack app stub'
+",Ruby project_full_stack v1 sample built for end-to-end LLM training and project generation.
+ruby_project_full_stack_v2,Ruby,project_full_stack,synthetic,True,core,"[""project_training"", ""ruby"", ""project_full_stack"", ""llm_learning""]","puts 'Full stack app stub'
+",Ruby project_full_stack v2 sample built for end-to-end LLM training and project generation.
+ruby_project_tooling_v1,Ruby,project_tooling,synthetic,True,core,"[""project_training"", ""ruby"", ""project_tooling"", ""llm_learning""]","arg = ARGV[0] || 'no argument'
+puts arg
+",Ruby project_tooling v1 sample built for end-to-end LLM training and project generation.
+ruby_project_tooling_v2,Ruby,project_tooling,synthetic,True,core,"[""project_training"", ""ruby"", ""project_tooling"", ""llm_learning""]","arg = ARGV[0] || 'no argument'
+puts arg
+",Ruby project_tooling v2 sample built for end-to-end LLM training and project generation.

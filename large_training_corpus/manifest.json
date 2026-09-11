@@ -1,0 +1,45 @@
+{
+  "title": "Large LLM Training Corpus for Complete Project Generation",
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C#",
+    "C++",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "PHP",
+    "Ruby"
+  ],
+  "categories": [
+    "project_cli",
+    "project_parser",
+    "project_data_pipeline",
+    "project_api",
+    "project_system_tool",
+    "memory",
+    "syscall",
+    "assembly",
+    "binary",
+    "organic_high_level"
+  ],
+  "record_count": 100,
+  "source_mix": {
+    "organic": 10,
+    "synthetic": 90
+  },
+  "description": "A large corpus designed to teach LLMs how to generate code accurately, creatively, and end-to-end for complete coding tasks across the top 10 programming languages, including assembly and binary reasoning.",
+  "project_directories": [
+    "project_examples\\cpp",
+    "project_examples\\csharp",
+    "project_examples\\go",
+    "project_examples\\java",
+    "project_examples\\javascript",
+    "project_examples\\php",
+    "project_examples\\python",
+    "project_examples\\ruby",
+    "project_examples\\rust",
+    "project_examples\\typescript"
+  ]
+}

@@ -1,0 +1,4 @@
+items = [12, 18, 21, 9, 31]
+total = items.sum
+puts "Total: #{total}"
+puts "Average: #{(total / items.length.to_f).round(2)}"

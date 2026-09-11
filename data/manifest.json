@@ -1,0 +1,26 @@
+{
+  "title": "Programming Top 10 with Assembly and Binary",
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C#",
+    "C++",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "PHP",
+    "Ruby"
+  ],
+  "categories": [
+    "code",
+    "assembly",
+    "binary"
+  ],
+  "record_count": 40,
+  "source_mix": {
+    "organic": 10,
+    "synthetic": 30
+  },
+  "description": "A mixed synthetic/organic dataset for ML training on the top 10 programming languages, with Assembly and Binary samples included for every language."
+}

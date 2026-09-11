@@ -1,0 +1,9 @@
+{
+  "language": "JavaScript",
+  "mode": "training",
+  "features": [
+    "cli",
+    "parser",
+    "pipeline"
+  ]
+}

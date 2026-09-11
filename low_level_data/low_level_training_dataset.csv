@@ -1,0 +1,247 @@
+dataset_id,language,category,source_type,valid,difficulty,labels,text,notes
+python_high_level_1,Python,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","def read_and_sum(path):
+    with open(path, 'r', encoding='utf-8') as fh:
+        return sum(int(line.strip()) for line in fh if line.strip())
+
+print(read_and_sum('numbers.txt'))
+","Python high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+python_memory_2,Python,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","def copy_buffer(src, dst):
+    for i in range(len(src)):
+        dst[i] = src[i]
+    return dst
+","Python memory training sample designed for code understanding, execution semantics, and low-level model learning."
+python_syscall_3,Python,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","import os
+
+def write_pid_file():
+    with open('/tmp/pid.txt', 'w', encoding='utf-8') as fh:
+        fh.write(str(os.getpid()))
+","Python syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+python_assembly_4,Python,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global _start
+_start:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+","Python assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+python_binary_5,Python,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",b8 01 00 00 00 bb 00 00 00 00 cd 80,"Python binary training sample designed for code understanding, execution semantics, and low-level model learning."
+javascript_high_level_6,JavaScript,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","const fs = require('fs');
+const data = fs.readFileSync('config.json', 'utf8');
+const config = JSON.parse(data);
+console.log(config.port);
+","JavaScript high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+javascript_memory_7,JavaScript,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","function copyBytes(src, dst) {
+  for (let i = 0; i < src.length; i++) dst[i] = src[i];
+  return dst;
+}
+","JavaScript memory training sample designed for code understanding, execution semantics, and low-level model learning."
+javascript_syscall_8,JavaScript,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","const fs = require('fs');
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+","JavaScript syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+javascript_assembly_9,JavaScript,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global _start
+_start:
+    mov rax, 60
+    xor rdi, rdi
+    syscall
+","JavaScript assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+javascript_binary_10,JavaScript,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,"JavaScript binary training sample designed for code understanding, execution semantics, and low-level model learning."
+java_high_level_11,Java,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","import java.nio.file.*;
+
+public class FileReaderDemo {
+    public static void main(String[] args) throws Exception {
+        String text = Files.readString(Path.of(""input.txt""));
+        System.out.println(text.length());
+    }
+}
+","Java high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+java_memory_12,Java,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","public class BufferCopy {
+    static void copy(byte[] src, byte[] dst) {
+        System.arraycopy(src, 0, dst, 0, src.length);
+    }
+}
+","Java memory training sample designed for code understanding, execution semantics, and low-level model learning."
+java_syscall_13,Java,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","import java.io.*;
+
+public class PidWriter {
+    public static void main(String[] args) throws Exception {
+        new FileWriter(""/tmp/pid.txt"").write(String.valueOf(ProcessHandle.current().pid()));
+    }
+}
+","Java syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+java_assembly_14,Java,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global main
+main:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+","Java assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+java_binary_15,Java,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,"Java binary training sample designed for code understanding, execution semantics, and low-level model learning."
+csharp_high_level_16,C#,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","using System;
+using System.IO;
+
+var text = File.ReadAllText(""config.json"");
+Console.WriteLine(text.Length);
+","C# high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+csharp_memory_17,C#,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","unsafe static void Copy(byte[] src, byte[] dst) {
+    fixed (byte* s = src, d = dst) {
+        Buffer.MemoryCopy(s, d, dst.Length, src.Length);
+    }
+}
+","C# memory training sample designed for code understanding, execution semantics, and low-level model learning."
+csharp_syscall_18,C#,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","using System.IO;
+File.WriteAllText(""/tmp/pid.txt"", Environment.ProcessId.ToString());
+","C# syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+csharp_assembly_19,C#,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+","C# assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+csharp_binary_20,C#,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,"C# binary training sample designed for code understanding, execution semantics, and low-level model learning."
+cplusplus_high_level_21,C++,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","#include <fstream>
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::ifstream input(""numbers.txt"");
+    int total = 0;
+    int value = 0;
+    while (input >> value) total += value;
+    std::cout << total << \""\n\"";
+}
+","C++ high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+cplusplus_memory_22,C++,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","#include <cstring>
+void copy_bytes(unsigned char* dst, const unsigned char* src, size_t n) {
+    std::memcpy(dst, src, n);
+}
+","C++ memory training sample designed for code understanding, execution semantics, and low-level model learning."
+cplusplus_syscall_23,C++,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","#include <fstream>
+int main() {
+    std::ofstream out(""/tmp/pid.txt"");
+    out << getpid();
+}
+","C++ syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+cplusplus_assembly_24,C++,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","C++ assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+cplusplus_binary_25,C++,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,"C++ binary training sample designed for code understanding, execution semantics, and low-level model learning."
+go_high_level_26,Go,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    data, _ := os.ReadFile(""config.json"")
+    fmt.Println(len(data))
+}
+","Go high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+go_memory_27,Go,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","package main
+
+func copyBytes(dst, src []byte) {
+    copy(dst, src)
+}
+","Go memory training sample designed for code understanding, execution semantics, and low-level model learning."
+go_syscall_28,Go,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","package main
+
+import ""os""
+
+func main() {
+    _ = os.WriteFile(""/tmp/pid.txt"", []byte(""123""), 0644)
+}
+","Go syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+go_assembly_29,Go,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","Go assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+go_binary_30,Go,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,"Go binary training sample designed for code understanding, execution semantics, and low-level model learning."
+rust_high_level_31,Rust,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","use std::fs;
+
+fn main() {
+    let data = fs::read_to_string(""config.txt"").unwrap();
+    println!(""{}"", data.len());
+}
+","Rust high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+rust_memory_32,Rust,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","fn copy_bytes(dst: &mut [u8], src: &[u8]) {
+    dst.copy_from_slice(src);
+}
+","Rust memory training sample designed for code understanding, execution semantics, and low-level model learning."
+rust_syscall_33,Rust,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","use std::fs;
+fn main() {
+    fs::write(""/tmp/pid.txt"", std::process::id().to_string()).unwrap();
+}
+","Rust syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+rust_assembly_34,Rust,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","Rust assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+rust_binary_35,Rust,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,"Rust binary training sample designed for code understanding, execution semantics, and low-level model learning."
+typescript_high_level_36,TypeScript,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","import fs from 'fs';
+const payload = fs.readFileSync('settings.json', 'utf8');
+const config = JSON.parse(payload);
+console.log(config.timeout);
+","TypeScript high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+typescript_memory_37,TypeScript,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","function cloneBuffer(src: Uint8Array): Uint8Array {
+  return new Uint8Array(src);
+}
+","TypeScript memory training sample designed for code understanding, execution semantics, and low-level model learning."
+typescript_syscall_38,TypeScript,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","import fs from 'fs';
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+","TypeScript syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+typescript_assembly_39,TypeScript,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global _start
+_start:
+    xor eax, eax
+    ret
+","TypeScript assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+typescript_binary_40,TypeScript,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",31 c0 c3 90 90 90 90,"TypeScript binary training sample designed for code understanding, execution semantics, and low-level model learning."
+php_high_level_41,PHP,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","<?php
+
+$data = file_get_contents('config.json');
+$config = json_decode($data, true);
+echo $config['timeout'];
+","PHP high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+php_memory_42,PHP,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","<?php
+function copy_bytes(array $src): array {
+    return array_values($src);
+}
+","PHP memory training sample designed for code understanding, execution semantics, and low-level model learning."
+php_syscall_43,PHP,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","<?php
+file_put_contents('/tmp/pid.txt', getmypid());
+","PHP syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+php_assembly_44,PHP,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+","PHP assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+php_binary_45,PHP,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,"PHP binary training sample designed for code understanding, execution semantics, and low-level model learning."
+ruby_high_level_46,Ruby,high_level,organic,True,core,"[""language_identification"", ""high_level"", ""low_level_training""]","data = File.read('config.json')
+config = JSON.parse(data)
+puts config['timeout']
+","Ruby high_level training sample designed for code understanding, execution semantics, and low-level model learning."
+ruby_memory_47,Ruby,memory,synthetic,True,low_level,"[""language_identification"", ""memory"", ""low_level_training""]","def copy_bytes(src, dst)
+  src.each_with_index { |byte, idx| dst[idx] = byte }
+  dst
+end
+","Ruby memory training sample designed for code understanding, execution semantics, and low-level model learning."
+ruby_syscall_48,Ruby,syscall,synthetic,True,low_level,"[""language_identification"", ""syscall"", ""low_level_training""]","File.write('/tmp/pid.txt', Process.pid.to_s)
+","Ruby syscall training sample designed for code understanding, execution semantics, and low-level model learning."
+ruby_assembly_49,Ruby,assembly,synthetic,True,low_level,"[""language_identification"", ""assembly"", ""low_level_training""]","section .text
+    global _start
+_start:
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
+","Ruby assembly training sample designed for code understanding, execution semantics, and low-level model learning."
+ruby_binary_50,Ruby,binary,synthetic,True,low_level,"[""language_identification"", ""binary"", ""low_level_training""]",b8 01 00 00 00 bb 00 00 00 00 cd 80,"Ruby binary training sample designed for code understanding, execution semantics, and low-level model learning."

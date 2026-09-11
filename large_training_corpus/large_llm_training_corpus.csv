@@ -1,0 +1,561 @@
+dataset_id,language,category,source_type,valid,difficulty,labels,text,notes
+python_project_cli_1,Python,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""python"", ""project_cli""]","def main():
+    items = [12, 18, 21, 9, 31]
+    total = sum(items)
+    avg = total / len(items)
+    print(f'Total: {total}')
+    print(f'Average: {avg:.2f}')
+
+if __name__ == '__main__':
+    main()
+","Python project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_project_parser_2,Python,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""python"", ""project_parser""]","import csv
+
+with open('sales.csv', newline='', encoding='utf-8') as fh:
+    rows = list(csv.DictReader(fh))
+
+revenue = sum(float(r['amount']) for r in rows)
+print(f'Revenue: {revenue:.2f}')
+","Python project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_project_data_pipeline_3,Python,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""python"", ""project_data_pipeline""]","def clean_values(values):
+    return [int(v) for v in values if v.strip() not in {'', 'NA'}]
+
+raw = ['1', '2', '', 'NA', '7']
+print(clean_values(raw))
+","Python project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_project_api_4,Python,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""python"", ""project_api""]","from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get('/health')
+def health():
+    return {'status': 'ok'}
+","Python project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_project_system_tool_5,Python,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""python"", ""project_system_tool""]","import os
+
+for name in os.listdir('.'):
+    if name.endswith('.py'):
+        print(name)
+","Python project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_memory_6,Python,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""python"", ""memory""]","def copy_buffer(src, dst):
+    for i in range(len(src)):
+        dst[i] = src[i]
+    return dst
+","Python memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_syscall_7,Python,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""python"", ""syscall""]","import os
+
+with open('/tmp/pid.txt', 'w', encoding='utf-8') as fh:
+    fh.write(str(os.getpid()))
+","Python syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_assembly_8,Python,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""python"", ""assembly""]","section .text
+    global _start
+_start:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+","Python assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_binary_9,Python,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""python"", ""binary""]",31 c0 31 db b0 01 40 89 c3 80 3d 2a 00 00 00 00 0f 05,"Python binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+python_organic_high_level_10,Python,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""python"", ""organic_high_level""]","def read_and_sum(path):
+    with open(path, 'r', encoding='utf-8') as fh:
+        return sum(int(line.strip()) for line in fh if line.strip())
+
+print(read_and_sum('numbers.txt'))
+","Python organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_project_cli_1,JavaScript,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""javascript"", ""project_cli""]","const items = [12, 18, 21, 9, 31];
+const total = items.reduce((sum, v) => sum + v, 0);
+console.log('Total:', total);
+console.log('Average:', (total / items.length).toFixed(2));
+","JavaScript project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_project_parser_2,JavaScript,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""javascript"", ""project_parser""]","const fs = require('fs');
+const rows = fs.readFileSync('sales.csv', 'utf8').trim().split('
+').slice(1);
+const revenue = rows.reduce((sum, row) => sum + Number(row.split(',')[1] || 0), 0);
+console.log('Revenue:', revenue.toFixed(2));
+","JavaScript project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_project_data_pipeline_3,JavaScript,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""javascript"", ""project_data_pipeline""]","const raw = ['1', '2', '', 'NA', '7'];
+const clean = raw.filter(v => v && v !== 'NA').map(Number);
+console.log(clean);
+","JavaScript project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_project_api_4,JavaScript,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""javascript"", ""project_api""]","const express = require('express');
+const app = express();
+app.get('/health', (_, res) => res.json({ status: 'ok' }));
+app.listen(3000);
+","JavaScript project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_project_system_tool_5,JavaScript,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""javascript"", ""project_system_tool""]","const fs = require('fs');
+for (const name of fs.readdirSync('.')) {
+  if (name.endsWith('.js')) console.log(name);
+}
+","JavaScript project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_memory_6,JavaScript,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""javascript"", ""memory""]","function copyBytes(src, dst) {
+  for (let i = 0; i < src.length; i++) dst[i] = src[i];
+  return dst;
+}
+","JavaScript memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_syscall_7,JavaScript,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""javascript"", ""syscall""]","const fs = require('fs');
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+","JavaScript syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_assembly_8,JavaScript,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""javascript"", ""assembly""]","section .text
+    global _start
+_start:
+    mov rax, 60
+    xor rdi, rdi
+    syscall
+","JavaScript assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_binary_9,JavaScript,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""javascript"", ""binary""]",48 83 ec 08 48 89 5c 24 08 48 89 74 24 10 48 8b 5c 24 08 48 83 c4 08 c3,"JavaScript binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+javascript_organic_high_level_10,JavaScript,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""javascript"", ""organic_high_level""]","const fs = require('fs');
+const data = fs.readFileSync('config.json', 'utf8');
+const config = JSON.parse(data);
+console.log(config.port);
+","JavaScript organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_project_cli_1,Java,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""java"", ""project_cli""]","public class Main {
+    public static void main(String[] args) {
+        int[] items = {12, 18, 21, 9, 31};
+        int total = 0;
+        for (int value : items) total += value;
+        System.out.println(""Total: "" + total);
+        System.out.println(""Average: "" + (total / (double) items.length));
+    }
+}
+","Java project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_project_parser_2,Java,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""java"", ""project_parser""]","import java.nio.file.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        var text = Files.readString(Path.of(""sales.csv""));
+        System.out.println(""Lines: "" + text.lines().count());
+    }
+}
+","Java project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_project_data_pipeline_3,Java,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""java"", ""project_data_pipeline""]","public class Main {
+    public static void main(String[] args) {
+        String[] raw = {""1"", ""2"", """", ""NA"", ""7""};
+        int count = 0;
+        for (String value : raw) if (value != null && !value.isBlank() && !value.equals(""NA"")) count++;
+        System.out.println(count);
+    }
+}
+","Java project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_project_api_4,Java,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""java"", ""project_api""]","public class Main {
+    public static void main(String[] args) {
+        System.out.println(""API stub ready"");
+    }
+}
+","Java project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_project_system_tool_5,Java,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""java"", ""project_system_tool""]","import java.io.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        var dir = new File(""."");
+        for (String name : dir.list()) if (name.endsWith("".java"")) System.out.println(name);
+    }
+}
+","Java project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_memory_6,Java,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""java"", ""memory""]","public class BufferCopy {
+    static void copy(byte[] src, byte[] dst) {
+        System.arraycopy(src, 0, dst, 0, src.length);
+    }
+}
+","Java memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_syscall_7,Java,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""java"", ""syscall""]","import java.io.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        new FileWriter(""/tmp/pid.txt"").write(String.valueOf(java.lang.ProcessHandle.current().pid()));
+    }
+}
+","Java syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_assembly_8,Java,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""java"", ""assembly""]","section .text
+    global main
+main:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+","Java assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_binary_9,Java,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""java"", ""binary""]",55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,"Java binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+java_organic_high_level_10,Java,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""java"", ""organic_high_level""]","import java.nio.file.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        var text = Files.readString(Path.of(""input.txt""));
+        System.out.println(text.length());
+    }
+}
+","Java organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_project_cli_1,C#,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""c#"", ""project_cli""]","using System;
+class Program {
+    static void Main() {
+        int[] items = { 12, 18, 21, 9, 31 };
+        int total = 0;
+        foreach (int value in items) total += value;
+        Console.WriteLine($""Total: {total}"");
+        Console.WriteLine($""Average: {total / (double)items.Length:F2}"");
+    }
+}
+","C# project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_project_parser_2,C#,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""c#"", ""project_parser""]","using System;
+using System.IO;
+class Program {
+    static void Main() {
+        var lines = File.ReadAllLines(""sales.csv"");
+        Console.WriteLine($""Rows: {lines.Length}"");
+    }
+}
+","C# project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_project_data_pipeline_3,C#,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""c#"", ""project_data_pipeline""]","using System;
+class Program {
+    static void Main() {
+        string[] raw = { ""1"", ""2"", """", ""NA"", ""7"" };
+        int count = 0;
+        foreach (var value in raw) if (!string.IsNullOrWhiteSpace(value) && value != ""NA"") count++;
+        Console.WriteLine(count);
+    }
+}
+","C# project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_project_api_4,C#,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""c#"", ""project_api""]","using System;
+class Program {
+    static void Main() { Console.WriteLine(""API stub ready""); }
+}
+","C# project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_project_system_tool_5,C#,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""c#"", ""project_system_tool""]","using System;
+using System.IO;
+class Program {
+    static void Main() {
+        foreach (var file in Directory.GetFiles(""."")) Console.WriteLine(file);
+    }
+}
+","C# project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_memory_6,C#,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""c#"", ""memory""]","unsafe static void Copy(byte[] src, byte[] dst) {
+    fixed (byte* s = src, d = dst) {
+        Buffer.MemoryCopy(s, d, dst.Length, src.Length);
+    }
+}
+","C# memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_syscall_7,C#,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""c#"", ""syscall""]","using System.IO;
+File.WriteAllText(""/tmp/pid.txt"", System.Environment.ProcessId.ToString());
+","C# syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_assembly_8,C#,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""c#"", ""assembly""]","section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+","C# assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_binary_9,C#,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""c#"", ""binary""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,"C# binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+csharp_organic_high_level_10,C#,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""c#"", ""organic_high_level""]","using System;
+using System.IO;
+var text = File.ReadAllText(""config.json"");
+Console.WriteLine(text.Length);
+","C# organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_project_cli_1,C++,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""c++"", ""project_cli""]","#include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> items = {12, 18, 21, 9, 31};
+    int total = 0;
+    for (int value : items) total += value;
+    std::cout << ""Total: "" << total << '\n';
+    std::cout << ""Average: "" << (total / static_cast<double>(items.size())) << '\n';
+}
+","C++ project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_project_parser_2,C++,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""c++"", ""project_parser""]","#include <fstream>
+#include <iostream>
+int main() {
+    std::ifstream file(""sales.csv"");
+    std::string line;
+    int count = 0;
+    while (std::getline(file, line)) ++count;
+    std::cout << count << '\n';
+}
+","C++ project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_project_data_pipeline_3,C++,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""c++"", ""project_data_pipeline""]","#include <iostream>
+#include <vector>
+#include <string>
+int main() {
+    std::vector<std::string> raw = {""1"", ""2"", """", ""NA"", ""7""};
+    int count = 0;
+    for (const auto& value : raw) if (!value.empty() && value != ""NA"") ++count;
+    std::cout << count << '\n';
+}
+","C++ project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_project_api_4,C++,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""c++"", ""project_api""]","#include <iostream>
+int main() { std::cout << ""API stub ready\n""; }
+","C++ project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_project_system_tool_5,C++,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""c++"", ""project_system_tool""]","#include <filesystem>
+#include <iostream>
+int main() {
+    for (const auto& entry : std::filesystem::directory_iterator(""."")) {
+        std::cout << entry.path() << '\n';
+    }
+}
+","C++ project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_memory_6,C++,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""c++"", ""memory""]","#include <cstring>
+void copy_bytes(unsigned char* dst, const unsigned char* src, size_t n) {
+    std::memcpy(dst, src, n);
+}
+","C++ memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_syscall_7,C++,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""c++"", ""syscall""]","#include <fstream>
+int main() {
+    std::ofstream out(""/tmp/pid.txt"");
+    out << getpid();
+}
+","C++ syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_assembly_8,C++,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""c++"", ""assembly""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","C++ assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_binary_9,C++,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""c++"", ""binary""]",55 48 89 e5 48 83 ec 10 89 7d fc 8b 45 fc 83 c0 01 89 45 fc eb e7 8b 45 fc 5d c3,"C++ binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+cpp_organic_high_level_10,C++,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""c++"", ""organic_high_level""]","#include <fstream>
+#include <iostream>
+int main() {
+    std::ifstream file(""numbers.txt"");
+    int total = 0; int value = 0;
+    while (file >> value) total += value;
+    std::cout << total << '\n';
+}
+","C++ organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_project_cli_1,Go,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""go"", ""project_cli""]","package main
+
+import ""fmt""
+
+func main() {
+    items := []int{12, 18, 21, 9, 31}
+    total := 0
+    for _, value := range items { total += value }
+    fmt.Println(""Total:"", total)
+    fmt.Printf(""Average: %.2f\n"", float64(total)/float64(len(items)))
+}
+","Go project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_project_parser_2,Go,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""go"", ""project_parser""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    data, _ := os.ReadFile(""sales.csv"")
+    fmt.Println(""Bytes:"", len(data))
+}
+","Go project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_project_data_pipeline_3,Go,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""go"", ""project_data_pipeline""]","package main
+
+import ""fmt""
+
+func main() {
+    raw := []string{""1"", ""2"", """", ""NA"", ""7""}
+    count := 0
+    for _, value := range raw {
+        if value != """" && value != ""NA"" { count++ }
+    }
+    fmt.Println(count)
+}
+","Go project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_project_api_4,Go,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""go"", ""project_api""]","package main
+
+import ""fmt""
+
+func main() { fmt.Println(""API stub ready"") }
+","Go project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_project_system_tool_5,Go,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""go"", ""project_system_tool""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    entries, _ := os.ReadDir(""."")
+    for _, entry := range entries { fmt.Println(entry.Name()) }
+}
+","Go project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_memory_6,Go,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""go"", ""memory""]","package main
+
+func copyBytes(dst, src []byte) {
+    copy(dst, src)
+}
+","Go memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_syscall_7,Go,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""go"", ""syscall""]","package main
+
+import ""os""
+
+func main() {
+    _ = os.WriteFile(""/tmp/pid.txt"", []byte(""123""), 0644)
+}
+","Go syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_assembly_8,Go,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""go"", ""assembly""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","Go assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_binary_9,Go,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""go"", ""binary""]",48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,"Go binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+go_organic_high_level_10,Go,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""go"", ""organic_high_level""]","package main
+
+import (
+    ""fmt""
+    ""os""
+)
+
+func main() {
+    data, _ := os.ReadFile(""config.json"")
+    fmt.Println(len(data))
+}
+","Go organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_project_cli_1,Rust,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""rust"", ""project_cli""]","fn main() {
+    let items = [12, 18, 21, 9, 31];
+    let total: i32 = items.iter().sum();
+    println!(""Total: {}"", total);
+    println!(""Average: {:.2}"", total as f64 / items.len() as f64);
+}
+","Rust project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_project_parser_2,Rust,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""rust"", ""project_parser""]","fn main() {
+    let raw = [""1"", ""2"", """", ""NA"", ""7""];
+    let count = raw.iter().filter(|v| !v.is_empty() && *v != ""NA"").count();
+    println!(""{}"", count);
+}
+","Rust project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_project_data_pipeline_3,Rust,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""rust"", ""project_data_pipeline""]","fn main() {
+    let raw = [""1"", ""2"", """", ""NA"", ""7""];
+    let clean: Vec<i32> = raw.iter().filter_map(|v| {
+        if !v.is_empty() && *v != ""NA"" { Some(v.parse::<i32>().unwrap()) } else { None }
+    }).collect();
+    println!(""{:?}"", clean);
+}
+","Rust project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_project_api_4,Rust,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""rust"", ""project_api""]","fn main() { println!(""API stub ready""); }
+","Rust project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_project_system_tool_5,Rust,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""rust"", ""project_system_tool""]","fn main() { println!(""Listing files""); }
+","Rust project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_memory_6,Rust,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""rust"", ""memory""]","fn copy_bytes(dst: &mut [u8], src: &[u8]) {
+    dst.copy_from_slice(src);
+}
+","Rust memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_syscall_7,Rust,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""rust"", ""syscall""]","use std::fs;
+fn main() { fs::write(""/tmp/pid.txt"", std::process::id().to_string()).unwrap(); }
+","Rust syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_assembly_8,Rust,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""rust"", ""assembly""]","section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","Rust assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_binary_9,Rust,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""rust"", ""binary""]",48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,"Rust binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+rust_organic_high_level_10,Rust,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""rust"", ""organic_high_level""]","use std::fs;
+fn main() {
+    let text = fs::read_to_string(""config.txt"").unwrap();
+    println!(""{}"", text.len());
+}
+","Rust organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_project_cli_1,TypeScript,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""typescript"", ""project_cli""]","const items = [12, 18, 21, 9, 31];
+const total = items.reduce((sum, value) => sum + value, 0);
+console.log('Total:', total);
+console.log('Average:', (total / items.length).toFixed(2));
+","TypeScript project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_project_parser_2,TypeScript,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""typescript"", ""project_parser""]","const fs = require('fs');
+const lines = fs.readFileSync('sales.csv', 'utf8').trim().split('
+');
+console.log('Rows:', lines.length);
+","TypeScript project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_project_data_pipeline_3,TypeScript,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""typescript"", ""project_data_pipeline""]","const raw = ['1', '2', '', 'NA', '7'];
+const clean = raw.filter(v => v && v !== 'NA').map(Number);
+console.log(clean);
+","TypeScript project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_project_api_4,TypeScript,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""typescript"", ""project_api""]","import express from 'express';
+const app = express();
+app.get('/health', (_, res) => res.json({ status: 'ok' }));
+app.listen(3000);
+","TypeScript project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_project_system_tool_5,TypeScript,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""typescript"", ""project_system_tool""]","import fs from 'fs';
+for (const name of fs.readdirSync('.')) { if (name.endsWith('.ts')) console.log(name); }
+","TypeScript project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_memory_6,TypeScript,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""typescript"", ""memory""]","function cloneBuffer(src: Uint8Array): Uint8Array {
+  return new Uint8Array(src);
+}
+","TypeScript memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_syscall_7,TypeScript,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""typescript"", ""syscall""]","import fs from 'fs';
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+","TypeScript syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_assembly_8,TypeScript,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""typescript"", ""assembly""]","section .text
+    global _start
+_start:
+    xor eax, eax
+    ret
+","TypeScript assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_binary_9,TypeScript,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""typescript"", ""binary""]",31 c0 c3 90 90 90 90,"TypeScript binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+typescript_organic_high_level_10,TypeScript,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""typescript"", ""organic_high_level""]","import fs from 'fs';
+const text = fs.readFileSync('config.json', 'utf8');
+console.log(text.length);
+","TypeScript organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_project_cli_1,PHP,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""php"", ""project_cli""]","<?php
+$items = [12, 18, 21, 9, 31];
+$total = array_sum($items);
+echo ""Total: "" . $total . PHP_EOL;
+echo ""Average: "" . ($total / count($items)) . PHP_EOL;
+","PHP project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_project_parser_2,PHP,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""php"", ""project_parser""]","<?php
+$lines = file('sales.csv');
+echo 'Rows: ' . count($lines) . PHP_EOL;
+","PHP project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_project_data_pipeline_3,PHP,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""php"", ""project_data_pipeline""]","<?php
+$raw = ['1', '2', '', 'NA', '7'];
+$clean = array_filter($raw, fn($value) => $value !== '' && $value !== 'NA');
+print_r(array_map('intval', $clean));
+","PHP project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_project_api_4,PHP,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""php"", ""project_api""]","<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok']);
+","PHP project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_project_system_tool_5,PHP,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""php"", ""project_system_tool""]","<?php
+foreach (scandir('.') as $entry) { if (str_ends_with($entry, '.php')) echo $entry . PHP_EOL; }
+","PHP project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_memory_6,PHP,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""php"", ""memory""]","<?php
+function copy_bytes(array $src): array { return array_values($src); }
+","PHP memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_syscall_7,PHP,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""php"", ""syscall""]","<?php
+file_put_contents('/tmp/pid.txt', getmypid());
+","PHP syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_assembly_8,PHP,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""php"", ""assembly""]","section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+","PHP assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_binary_9,PHP,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""php"", ""binary""]",48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,"PHP binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+php_organic_high_level_10,PHP,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""php"", ""organic_high_level""]","<?php
+$data = file_get_contents('config.json');
+$config = json_decode($data, true);
+echo $config['timeout'];
+","PHP organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_project_cli_1,Ruby,project_cli,synthetic,True,core,"[""code_generation"", ""project_building"", ""ruby"", ""project_cli""]","items = [12, 18, 21, 9, 31]
+total = items.sum
+puts ""Total: #{total}""
+puts ""Average: #{(total / items.length.to_f).round(2)}""
+","Ruby project_cli sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_project_parser_2,Ruby,project_parser,synthetic,True,core,"[""code_generation"", ""project_building"", ""ruby"", ""project_parser""]","lines = File.readlines('sales.csv')
+puts ""Rows: #{lines.length}""
+","Ruby project_parser sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_project_data_pipeline_3,Ruby,project_data_pipeline,synthetic,True,core,"[""code_generation"", ""project_building"", ""ruby"", ""project_data_pipeline""]","raw = ['1', '2', '', 'NA', '7']
+clean = raw.reject { |v| v.empty? || v == 'NA' }.map(&:to_i)
+p clean
+","Ruby project_data_pipeline sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_project_api_4,Ruby,project_api,synthetic,True,core,"[""code_generation"", ""project_building"", ""ruby"", ""project_api""]","puts 'API stub ready'
+","Ruby project_api sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_project_system_tool_5,Ruby,project_system_tool,synthetic,True,core,"[""code_generation"", ""project_building"", ""ruby"", ""project_system_tool""]","Dir.children('.').grep(/\.rb$/).each { |name| puts name }
+","Ruby project_system_tool sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_memory_6,Ruby,memory,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""ruby"", ""memory""]","def copy_bytes(src, dst)
+  src.each_with_index { |byte, idx| dst[idx] = byte }
+  dst
+end
+","Ruby memory sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_syscall_7,Ruby,syscall,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""ruby"", ""syscall""]","File.write('/tmp/pid.txt', Process.pid.to_s)
+","Ruby syscall sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_assembly_8,Ruby,assembly,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""ruby"", ""assembly""]","section .text
+    global _start
+_start:
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
+","Ruby assembly sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_binary_9,Ruby,binary,synthetic,True,low_level,"[""code_generation"", ""project_building"", ""ruby"", ""binary""]",b8 01 00 00 00 bb 00 00 00 00 cd 80,"Ruby binary sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."
+ruby_organic_high_level_10,Ruby,organic_high_level,organic,True,core,"[""code_generation"", ""project_building"", ""ruby"", ""organic_high_level""]","data = File.read('config.json')
+config = JSON.parse(data)
+puts config['timeout']
+","Ruby organic_high_level sample for end-to-end LLM training, including realistic project-building patterns and low-level understanding."

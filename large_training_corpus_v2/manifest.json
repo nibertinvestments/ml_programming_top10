@@ -1,0 +1,47 @@
+{
+  "title": "Large Project Training Corpus",
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C#",
+    "C++",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "PHP",
+    "Ruby"
+  ],
+  "categories": [
+    "project_cli",
+    "project_parser",
+    "project_data_pipeline",
+    "project_api",
+    "project_http_service",
+    "project_file_system",
+    "project_database",
+    "project_scheduler",
+    "memory",
+    "syscall",
+    "assembly",
+    "binary",
+    "ml_preprocessor",
+    "project_full_stack",
+    "project_tooling"
+  ],
+  "record_count": 300,
+  "source_mix": {
+    "organic": 100,
+    "synthetic": 200
+  },
+  "project_bundle_count": 10,
+  "description": "Expansive LLM and ML corpus for complete project generation, end-to-end reasoning, and low-level language learning including assembly and binary samples.",
+  "training_goals": [
+    "generate working projects",
+    "reason about architecture",
+    "parse, transform, and store data",
+    "handle system/filesystem operations",
+    "understand low-level instruction patterns",
+    "generate code across multiple languages"
+  ]
+}

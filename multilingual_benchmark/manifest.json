@@ -1,0 +1,41 @@
+{
+  "title": "Multilingual Benchmark for LLM and ML Code Learning",
+  "record_count": 1200,
+  "train_count": 840,
+  "validation_count": 180,
+  "test_count": 180,
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C#",
+    "C++",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "PHP",
+    "Ruby"
+  ],
+  "categories": [
+    "project_cli",
+    "project_parser",
+    "project_data_pipeline",
+    "project_api",
+    "project_http_service",
+    "project_file_system",
+    "project_database",
+    "project_scheduler",
+    "memory",
+    "syscall",
+    "assembly",
+    "binary",
+    "ml_preprocessor",
+    "project_full_stack",
+    "project_tooling"
+  ],
+  "sources": {
+    "organic": 400,
+    "synthetic": 800
+  },
+  "description": "Large multilingual benchmark for software generation, project synthesis, low-level reasoning, and cross-language learning."
+}

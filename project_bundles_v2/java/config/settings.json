@@ -1,0 +1,9 @@
+{
+  "language": "Java",
+  "mode": "training",
+  "features": [
+    "cli",
+    "parser",
+    "pipeline"
+  ]
+}

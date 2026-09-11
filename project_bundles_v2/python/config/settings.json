@@ -1,0 +1,9 @@
+{
+  "language": "Python",
+  "mode": "training",
+  "features": [
+    "cli",
+    "parser",
+    "pipeline"
+  ]
+}

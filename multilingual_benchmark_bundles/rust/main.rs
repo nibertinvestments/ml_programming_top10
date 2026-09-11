@@ -1,0 +1,1 @@
+fn main() { let values = [12,18,21,9,31]; let total: i32 = values.iter().sum(); println!("Total: {}", total); println!("Average: {:.2}", total as f64 / values.len() as f64); }

@@ -1,0 +1,2 @@
+arg = ARGV[0] || 'no argument'
+puts arg

@@ -1,0 +1,407 @@
+dataset_id,language,category,source_type,valid,difficulty,text,labels,notes
+php_project_api_7,PHP,project_api,synthetic,True,core,<?php header('Content-Type: application/json'); echo json_encode(['status' => 'ok']);,"[""multilingual"", ""benchmark"", ""php"", ""project_api""]",PHP project_api benchmark sample created for multilingual LLM and ML training.
+php_project_file_system_6,PHP,project_file_system,organic,True,core,"<?php foreach (scandir('.') as $entry) { if (str_ends_with($entry, '.php')) echo $entry . PHP_EOL; }","[""multilingual"", ""benchmark"", ""php"", ""project_file_system""]",PHP project_file_system benchmark sample created for multilingual LLM and ML training.
+go_project_api_3,Go,project_api,synthetic,True,core,"package main
+import 'fmt'
+func main(){ fmt.Println('API ready') }","[""multilingual"", ""benchmark"", ""go"", ""project_api""]",Go project_api benchmark sample created for multilingual LLM and ML training.
+java_memory_6,Java,memory,synthetic,True,core,"public class BufferCopy { static void copy(byte[] src, byte[] dst) { System.arraycopy(src, 0, dst, 0, src.length); } }","[""multilingual"", ""benchmark"", ""java"", ""memory""]",Java memory benchmark sample created for multilingual LLM and ML training.
+rust_project_cli_1,Rust,project_cli,synthetic,True,core,"fn main() { let values = [12,18,21,9,31]; let total: i32 = values.iter().sum(); println!(""Total: {}"", total); println!(""Average: {:.2}"", total as f64 / values.len() as f64); }","[""multilingual"", ""benchmark"", ""rust"", ""project_cli""]",Rust project_cli benchmark sample created for multilingual LLM and ML training.
+cpp_syscall_5,C++,syscall,synthetic,True,core,"#include <fstream>
+int main() { std::ofstream out('/tmp/pid.txt'); out << getpid(); }","[""multilingual"", ""benchmark"", ""c++"", ""syscall""]",C++ syscall benchmark sample created for multilingual LLM and ML training.
+csharp_binary_1,C#,binary,synthetic,True,low_level,48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,"[""multilingual"", ""benchmark"", ""c#"", ""binary""]",C# binary benchmark sample created for multilingual LLM and ML training.
+typescript_memory_3,TypeScript,memory,synthetic,True,core,function cloneBuffer(src: Uint8Array): Uint8Array { return new Uint8Array(src); },"[""multilingual"", ""benchmark"", ""typescript"", ""memory""]",TypeScript memory benchmark sample created for multilingual LLM and ML training.
+java_project_database_4,Java,project_database,organic,True,core,"import java.sql.*; public class Main { public static void main(String[] args) throws Exception { Connection c = DriverManager.getConnection('jdbc:sqlite:app.db'); Statement s = c.createStatement(); s.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)'); } }","[""multilingual"", ""benchmark"", ""java"", ""project_database""]",Java project_database benchmark sample created for multilingual LLM and ML training.
+csharp_project_data_pipeline_3,C#,project_data_pipeline,organic,True,core,"using System; class Program { static void Main() { string[] raw = {'1','2','','NA','7'}; int count = 0; foreach (var v in raw) if (!string.IsNullOrWhiteSpace(v) && v != 'NA') count++; Console.WriteLine(count); } }","[""multilingual"", ""benchmark"", ""c#"", ""project_data_pipeline""]",C# project_data_pipeline benchmark sample created for multilingual LLM and ML training.
+java_project_parser_3,Java,project_parser,organic,True,core,import java.nio.file.*; public class Main { public static void main(String[] args) throws Exception { var text = Files.readString(Path.of('records.csv')); System.out.println(text.lines().count()); } },"[""multilingual"", ""benchmark"", ""java"", ""project_parser""]",Java project_parser benchmark sample created for multilingual LLM and ML training.
+typescript_project_scheduler_5,TypeScript,project_scheduler,synthetic,True,core,"setInterval(() => console.log('tick'), 5000);","[""multilingual"", ""benchmark"", ""typescript"", ""project_scheduler""]",TypeScript project_scheduler benchmark sample created for multilingual LLM and ML training.
+java_project_tooling_6,Java,project_tooling,synthetic,True,core,public class Main { public static void main(String[] args) { System.out.println(args.length > 0 ? args[0] : 'no argument'); } },"[""multilingual"", ""benchmark"", ""java"", ""project_tooling""]",Java project_tooling benchmark sample created for multilingual LLM and ML training.
+php_project_database_8,PHP,project_database,organic,True,core,"<?php $pdo = new PDO('sqlite:app.db'); $pdo->exec('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');","[""multilingual"", ""benchmark"", ""php"", ""project_database""]",PHP project_database benchmark sample created for multilingual LLM and ML training.
+typescript_memory_5,TypeScript,memory,synthetic,True,core,function cloneBuffer(src: Uint8Array): Uint8Array { return new Uint8Array(src); },"[""multilingual"", ""benchmark"", ""typescript"", ""memory""]",TypeScript memory benchmark sample created for multilingual LLM and ML training.
+cpp_project_http_service_7,C++,project_http_service,synthetic,True,core,"#include <iostream>
+int main() { std::cout << ""HTTP service stub\n""; }","[""multilingual"", ""benchmark"", ""c++"", ""project_http_service""]",C++ project_http_service benchmark sample created for multilingual LLM and ML training.
+ruby_project_database_2,Ruby,project_database,organic,True,core,require 'sqlite3'; SQLite3::Database.new('app.db'),"[""multilingual"", ""benchmark"", ""ruby"", ""project_database""]",Ruby project_database benchmark sample created for multilingual LLM and ML training.
+cpp_memory_7,C++,memory,synthetic,True,core,"#include <cstring>
+void copy_bytes(unsigned char* dst, const unsigned char* src, size_t n) { std::memcpy(dst, src, n); }","[""multilingual"", ""benchmark"", ""c++"", ""memory""]",C++ memory benchmark sample created for multilingual LLM and ML training.
+python_syscall_4,Python,syscall,synthetic,True,core,"import os
+with open('/tmp/pid.txt', 'w', encoding='utf-8') as fh:
+    fh.write(str(os.getpid()))
+","[""multilingual"", ""benchmark"", ""python"", ""syscall""]",Python syscall benchmark sample created for multilingual LLM and ML training.
+python_ml_preprocessor_7,Python,ml_preprocessor,organic,True,core,"def normalize(values):
+    maxv = max(values) if values else 1
+    return [v / maxv for v in values]
+print(normalize([10, 20, 30]))
+","[""multilingual"", ""benchmark"", ""python"", ""ml_preprocessor""]",Python ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+cpp_ml_preprocessor_1,C++,ml_preprocessor,organic,True,core,"#include <iostream>
+#include <vector>
+int main() { std::vector<int> values = {10,20,30}; for (int& v : values) v /= 10; for (int v : values) std::cout << v << ' '; }","[""multilingual"", ""benchmark"", ""c++"", ""ml_preprocessor""]",C++ ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+go_project_http_service_5,Go,project_http_service,synthetic,True,core,"package main
+import 'fmt'
+func main(){ fmt.Println('HTTP service stub') }","[""multilingual"", ""benchmark"", ""go"", ""project_http_service""]",Go project_http_service benchmark sample created for multilingual LLM and ML training.
+ruby_project_file_system_4,Ruby,project_file_system,organic,True,core,Dir.children('.').grep(/\.rb$/).each { |name| puts name },"[""multilingual"", ""benchmark"", ""ruby"", ""project_file_system""]",Ruby project_file_system benchmark sample created for multilingual LLM and ML training.
+python_project_parser_2,Python,project_parser,organic,True,core,"import csv
+with open('records.csv', newline='', encoding='utf-8') as fh:
+    rows = list(csv.DictReader(fh))
+print(sum(float(r['amount']) for r in rows))
+","[""multilingual"", ""benchmark"", ""python"", ""project_parser""]",Python project_parser benchmark sample created for multilingual LLM and ML training.
+python_syscall_3,Python,syscall,synthetic,True,core,"import os
+with open('/tmp/pid.txt', 'w', encoding='utf-8') as fh:
+    fh.write(str(os.getpid()))
+","[""multilingual"", ""benchmark"", ""python"", ""syscall""]",Python syscall benchmark sample created for multilingual LLM and ML training.
+rust_project_database_2,Rust,project_database,organic,True,core,"fn main() { println!(""Database example""); }","[""multilingual"", ""benchmark"", ""rust"", ""project_database""]",Rust project_database benchmark sample created for multilingual LLM and ML training.
+typescript_project_file_system_1,TypeScript,project_file_system,organic,True,core,import fs from 'fs'; for (const name of fs.readdirSync('.')) if (name.endsWith('.ts')) console.log(name);,"[""multilingual"", ""benchmark"", ""typescript"", ""project_file_system""]",TypeScript project_file_system benchmark sample created for multilingual LLM and ML training.
+php_memory_4,PHP,memory,synthetic,True,core,<?php function copy_bytes(array $src): array { return array_values($src); },"[""multilingual"", ""benchmark"", ""php"", ""memory""]",PHP memory benchmark sample created for multilingual LLM and ML training.
+java_memory_4,Java,memory,synthetic,True,core,"public class BufferCopy { static void copy(byte[] src, byte[] dst) { System.arraycopy(src, 0, dst, 0, src.length); } }","[""multilingual"", ""benchmark"", ""java"", ""memory""]",Java memory benchmark sample created for multilingual LLM and ML training.
+go_project_scheduler_5,Go,project_scheduler,synthetic,True,core,"package main
+import 'time'
+func main(){ ticker:=time.NewTicker(5 * time.Second); defer ticker.Stop(); for range ticker.C { println('tick') } }","[""multilingual"", ""benchmark"", ""go"", ""project_scheduler""]",Go project_scheduler benchmark sample created for multilingual LLM and ML training.
+go_assembly_8,Go,assembly,synthetic,True,low_level,"section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","[""multilingual"", ""benchmark"", ""go"", ""assembly""]",Go assembly benchmark sample created for multilingual LLM and ML training.
+javascript_project_parser_7,JavaScript,project_parser,organic,True,core,"const fs = require('fs');
+const rows = fs.readFileSync('records.csv', 'utf8').trim().split('
+').slice(1);
+console.log(rows.length);
+","[""multilingual"", ""benchmark"", ""javascript"", ""project_parser""]",JavaScript project_parser benchmark sample created for multilingual LLM and ML training.
+csharp_project_file_system_6,C#,project_file_system,organic,True,core,using System; using System.IO; class Program { static void Main() { foreach (var file in Directory.GetFiles('.')) Console.WriteLine(file); } },"[""multilingual"", ""benchmark"", ""c#"", ""project_file_system""]",C# project_file_system benchmark sample created for multilingual LLM and ML training.
+typescript_ml_preprocessor_2,TypeScript,ml_preprocessor,organic,True,core,"const normalize = (values:number[]) => { const maxv = Math.max(...values, 1); return values.map(v => v / maxv); }; console.log(normalize([10,20,30]));","[""multilingual"", ""benchmark"", ""typescript"", ""ml_preprocessor""]",TypeScript ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+java_project_cli_5,Java,project_cli,synthetic,True,core,"public class Main { public static void main(String[] args) { int[] values = {12,18,21,9,31}; int total = 0; for (int v: values) total += v; System.out.println('Total: ' + total); System.out.println('Average: ' + (total / (double) values.length)); } }","[""multilingual"", ""benchmark"", ""java"", ""project_cli""]",Java project_cli benchmark sample created for multilingual LLM and ML training.
+typescript_syscall_3,TypeScript,syscall,synthetic,True,core,"import fs from 'fs'; fs.writeFileSync('/tmp/pid.txt', String(process.pid));","[""multilingual"", ""benchmark"", ""typescript"", ""syscall""]",TypeScript syscall benchmark sample created for multilingual LLM and ML training.
+rust_project_parser_6,Rust,project_parser,organic,True,core,"fn main() { let raw = ['1','2','','NA','7']; let count = raw.iter().filter(|v| !v.is_empty() && *v != 'NA').count(); println!(""{}"", count); }","[""multilingual"", ""benchmark"", ""rust"", ""project_parser""]",Rust project_parser benchmark sample created for multilingual LLM and ML training.
+php_project_scheduler_4,PHP,project_scheduler,synthetic,True,core,<?php for ($i = 0; $i < 3; $i++) echo 'tick' . PHP_EOL;,"[""multilingual"", ""benchmark"", ""php"", ""project_scheduler""]",PHP project_scheduler benchmark sample created for multilingual LLM and ML training.
+ruby_assembly_8,Ruby,assembly,synthetic,True,low_level,"section .text
+    global _start
+_start:
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
+","[""multilingual"", ""benchmark"", ""ruby"", ""assembly""]",Ruby assembly benchmark sample created for multilingual LLM and ML training.
+java_project_api_4,Java,project_api,synthetic,True,core,public class Main { public static void main(String[] args) { System.out.println('API ready'); } },"[""multilingual"", ""benchmark"", ""java"", ""project_api""]",Java project_api benchmark sample created for multilingual LLM and ML training.
+php_project_tooling_8,PHP,project_tooling,synthetic,True,core,<?php $arg = $argv[1] ?? 'no argument'; echo $arg . PHP_EOL;,"[""multilingual"", ""benchmark"", ""php"", ""project_tooling""]",PHP project_tooling benchmark sample created for multilingual LLM and ML training.
+cpp_project_database_8,C++,project_database,organic,True,core,"#include <sqlite3.h>
+int main() { sqlite3* db = nullptr; sqlite3_open(""app.db"", &db); sqlite3_close(db); return 0; }","[""multilingual"", ""benchmark"", ""c++"", ""project_database""]",C++ project_database benchmark sample created for multilingual LLM and ML training.
+cpp_ml_preprocessor_3,C++,ml_preprocessor,organic,True,core,"#include <iostream>
+#include <vector>
+int main() { std::vector<int> values = {10,20,30}; for (int& v : values) v /= 10; for (int v : values) std::cout << v << ' '; }","[""multilingual"", ""benchmark"", ""c++"", ""ml_preprocessor""]",C++ ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+cpp_project_tooling_6,C++,project_tooling,synthetic,True,core,"#include <iostream>
+int main(int argc, char** argv) { std::cout << (argc > 1 ? argv[1] : ""no argument"") << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_tooling""]",C++ project_tooling benchmark sample created for multilingual LLM and ML training.
+go_syscall_2,Go,syscall,synthetic,True,core,"package main
+import 'os'
+func main(){ _ = os.WriteFile('/tmp/pid.txt', []byte('123'), 0644) }","[""multilingual"", ""benchmark"", ""go"", ""syscall""]",Go syscall benchmark sample created for multilingual LLM and ML training.
+ruby_project_scheduler_1,Ruby,project_scheduler,synthetic,True,core,3.times { puts 'tick' },"[""multilingual"", ""benchmark"", ""ruby"", ""project_scheduler""]",Ruby project_scheduler benchmark sample created for multilingual LLM and ML training.
+python_assembly_4,Python,assembly,synthetic,True,low_level,"section .text
+    global _start
+_start:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+","[""multilingual"", ""benchmark"", ""python"", ""assembly""]",Python assembly benchmark sample created for multilingual LLM and ML training.
+go_project_http_service_3,Go,project_http_service,synthetic,True,core,"package main
+import 'fmt'
+func main(){ fmt.Println('HTTP service stub') }","[""multilingual"", ""benchmark"", ""go"", ""project_http_service""]",Go project_http_service benchmark sample created for multilingual LLM and ML training.
+python_project_file_system_1,Python,project_file_system,organic,True,core,"import os
+for name in os.listdir('.'):
+    if name.endswith('.py'):
+        print(name)
+","[""multilingual"", ""benchmark"", ""python"", ""project_file_system""]",Python project_file_system benchmark sample created for multilingual LLM and ML training.
+go_project_parser_1,Go,project_parser,organic,True,core,"package main
+import (""fmt""; ""os""); func main() { data, _ := os.ReadFile('records.csv'); fmt.Println(len(data)) }","[""multilingual"", ""benchmark"", ""go"", ""project_parser""]",Go project_parser benchmark sample created for multilingual LLM and ML training.
+ruby_memory_4,Ruby,memory,synthetic,True,core,"def copy_bytes(src, dst); src.each_with_index { |byte, idx| dst[idx] = byte }; dst; end","[""multilingual"", ""benchmark"", ""ruby"", ""memory""]",Ruby memory benchmark sample created for multilingual LLM and ML training.
+java_project_parser_5,Java,project_parser,organic,True,core,import java.nio.file.*; public class Main { public static void main(String[] args) throws Exception { var text = Files.readString(Path.of('records.csv')); System.out.println(text.lines().count()); } },"[""multilingual"", ""benchmark"", ""java"", ""project_parser""]",Java project_parser benchmark sample created for multilingual LLM and ML training.
+cpp_ml_preprocessor_8,C++,ml_preprocessor,organic,True,core,"#include <iostream>
+#include <vector>
+int main() { std::vector<int> values = {10,20,30}; for (int& v : values) v /= 10; for (int v : values) std::cout << v << ' '; }","[""multilingual"", ""benchmark"", ""c++"", ""ml_preprocessor""]",C++ ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+javascript_project_cli_3,JavaScript,project_cli,synthetic,True,core,"const values = [12, 18, 21, 9, 31];
+const total = values.reduce((s, v) => s + v, 0);
+console.log('Total:', total);
+console.log('Average:', (total / values.length).toFixed(2));
+","[""multilingual"", ""benchmark"", ""javascript"", ""project_cli""]",JavaScript project_cli benchmark sample created for multilingual LLM and ML training.
+csharp_project_database_6,C#,project_database,organic,True,core,"using System.Data.SQLite; class Program { static void Main() { using var conn = new SQLiteConnection('Data Source=app.db'); conn.Open(); using var cmd = new SQLiteCommand('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)', conn); cmd.ExecuteNonQuery(); } }","[""multilingual"", ""benchmark"", ""c#"", ""project_database""]",C# project_database benchmark sample created for multilingual LLM and ML training.
+java_project_cli_1,Java,project_cli,synthetic,True,core,"public class Main { public static void main(String[] args) { int[] values = {12,18,21,9,31}; int total = 0; for (int v: values) total += v; System.out.println('Total: ' + total); System.out.println('Average: ' + (total / (double) values.length)); } }","[""multilingual"", ""benchmark"", ""java"", ""project_cli""]",Java project_cli benchmark sample created for multilingual LLM and ML training.
+php_project_cli_5,PHP,project_cli,synthetic,True,core,"<?php $values = [12,18,21,9,31]; $total = array_sum($values); echo 'Total: ' . $total . PHP_EOL; echo 'Average: ' . ($total / count($values)) . PHP_EOL;","[""multilingual"", ""benchmark"", ""php"", ""project_cli""]",PHP project_cli benchmark sample created for multilingual LLM and ML training.
+go_binary_4,Go,binary,synthetic,True,low_level,48 83 ec 08 48 89 5c 24 08 48 83 c4 08 c3,"[""multilingual"", ""benchmark"", ""go"", ""binary""]",Go binary benchmark sample created for multilingual LLM and ML training.
+python_memory_6,Python,memory,synthetic,True,core,"def copy_buffer(src, dst):
+    for i in range(len(src)):
+        dst[i] = src[i]
+    return dst
+","[""multilingual"", ""benchmark"", ""python"", ""memory""]",Python memory benchmark sample created for multilingual LLM and ML training.
+go_project_parser_2,Go,project_parser,organic,True,core,"package main
+import (""fmt""; ""os""); func main() { data, _ := os.ReadFile('records.csv'); fmt.Println(len(data)) }","[""multilingual"", ""benchmark"", ""go"", ""project_parser""]",Go project_parser benchmark sample created for multilingual LLM and ML training.
+python_memory_7,Python,memory,synthetic,True,core,"def copy_buffer(src, dst):
+    for i in range(len(src)):
+        dst[i] = src[i]
+    return dst
+","[""multilingual"", ""benchmark"", ""python"", ""memory""]",Python memory benchmark sample created for multilingual LLM and ML training.
+javascript_memory_7,JavaScript,memory,synthetic,True,core,"function copyBytes(src, dst) {
+  for (let i = 0; i < src.length; i++) dst[i] = src[i];
+  return dst;
+}
+","[""multilingual"", ""benchmark"", ""javascript"", ""memory""]",JavaScript memory benchmark sample created for multilingual LLM and ML training.
+typescript_project_api_8,TypeScript,project_api,synthetic,True,core,"import express from 'express'; const app = express(); app.get('/health', (_, res) => res.json({ status: 'ok' })); app.listen(3000);","[""multilingual"", ""benchmark"", ""typescript"", ""project_api""]",TypeScript project_api benchmark sample created for multilingual LLM and ML training.
+python_assembly_3,Python,assembly,synthetic,True,low_level,"section .text
+    global _start
+_start:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+","[""multilingual"", ""benchmark"", ""python"", ""assembly""]",Python assembly benchmark sample created for multilingual LLM and ML training.
+cpp_project_file_system_1,C++,project_file_system,organic,True,core,"#include <filesystem>
+#include <iostream>
+int main() { for (const auto& entry : std::filesystem::directory_iterator('.')) std::cout << entry.path() << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_file_system""]",C++ project_file_system benchmark sample created for multilingual LLM and ML training.
+typescript_syscall_2,TypeScript,syscall,synthetic,True,core,"import fs from 'fs'; fs.writeFileSync('/tmp/pid.txt', String(process.pid));","[""multilingual"", ""benchmark"", ""typescript"", ""syscall""]",TypeScript syscall benchmark sample created for multilingual LLM and ML training.
+php_binary_8,PHP,binary,synthetic,True,low_level,48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,"[""multilingual"", ""benchmark"", ""php"", ""binary""]",PHP binary benchmark sample created for multilingual LLM and ML training.
+cpp_project_scheduler_8,C++,project_scheduler,synthetic,True,core,"#include <thread>
+#include <chrono>
+#include <iostream>
+int main() { std::this_thread::sleep_for(std::chrono::seconds(1)); std::cout << ""tick\n""; }","[""multilingual"", ""benchmark"", ""c++"", ""project_scheduler""]",C++ project_scheduler benchmark sample created for multilingual LLM and ML training.
+typescript_project_http_service_2,TypeScript,project_http_service,synthetic,True,core,"import http from 'http'; http.createServer((_, res) => res.end(JSON.stringify({ ok: true }))).listen(8080);","[""multilingual"", ""benchmark"", ""typescript"", ""project_http_service""]",TypeScript project_http_service benchmark sample created for multilingual LLM and ML training.
+ruby_project_cli_8,Ruby,project_cli,synthetic,True,core,"items = [12,18,21,9,31]; total = items.sum; puts ""Total: #{total}""; puts ""Average: #{(total / items.length.to_f).round(2)}""","[""multilingual"", ""benchmark"", ""ruby"", ""project_cli""]",Ruby project_cli benchmark sample created for multilingual LLM and ML training.
+cpp_project_parser_1,C++,project_parser,organic,True,core,"#include <fstream>
+#include <iostream>
+int main() { std::ifstream file(""records.csv""); std::string line; int count = 0; while (std::getline(file, line)) ++count; std::cout << count << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_parser""]",C++ project_parser benchmark sample created for multilingual LLM and ML training.
+cpp_project_tooling_7,C++,project_tooling,synthetic,True,core,"#include <iostream>
+int main(int argc, char** argv) { std::cout << (argc > 1 ? argv[1] : ""no argument"") << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_tooling""]",C++ project_tooling benchmark sample created for multilingual LLM and ML training.
+php_project_cli_1,PHP,project_cli,synthetic,True,core,"<?php $values = [12,18,21,9,31]; $total = array_sum($values); echo 'Total: ' . $total . PHP_EOL; echo 'Average: ' . ($total / count($values)) . PHP_EOL;","[""multilingual"", ""benchmark"", ""php"", ""project_cli""]",PHP project_cli benchmark sample created for multilingual LLM and ML training.
+python_project_scheduler_3,Python,project_scheduler,synthetic,True,core,"import schedule
+# training example
+schedule.every(5).minutes.do(lambda: print('tick'))
+","[""multilingual"", ""benchmark"", ""python"", ""project_scheduler""]",Python project_scheduler benchmark sample created for multilingual LLM and ML training.
+java_assembly_2,Java,assembly,synthetic,True,low_level,"section .text
+    global main
+main:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+","[""multilingual"", ""benchmark"", ""java"", ""assembly""]",Java assembly benchmark sample created for multilingual LLM and ML training.
+php_project_full_stack_4,PHP,project_full_stack,synthetic,True,core,<?php header('Content-Type: application/json'); echo json_encode(['status' => 'ready']);,"[""multilingual"", ""benchmark"", ""php"", ""project_full_stack""]",PHP project_full_stack benchmark sample created for multilingual LLM and ML training.
+php_project_api_4,PHP,project_api,synthetic,True,core,<?php header('Content-Type: application/json'); echo json_encode(['status' => 'ok']);,"[""multilingual"", ""benchmark"", ""php"", ""project_api""]",PHP project_api benchmark sample created for multilingual LLM and ML training.
+cpp_syscall_4,C++,syscall,synthetic,True,core,"#include <fstream>
+int main() { std::ofstream out('/tmp/pid.txt'); out << getpid(); }","[""multilingual"", ""benchmark"", ""c++"", ""syscall""]",C++ syscall benchmark sample created for multilingual LLM and ML training.
+rust_project_http_service_2,Rust,project_http_service,synthetic,True,core,"fn main() { println!(""HTTP service stub""); }","[""multilingual"", ""benchmark"", ""rust"", ""project_http_service""]",Rust project_http_service benchmark sample created for multilingual LLM and ML training.
+cpp_project_tooling_2,C++,project_tooling,synthetic,True,core,"#include <iostream>
+int main(int argc, char** argv) { std::cout << (argc > 1 ? argv[1] : ""no argument"") << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_tooling""]",C++ project_tooling benchmark sample created for multilingual LLM and ML training.
+python_project_scheduler_4,Python,project_scheduler,synthetic,True,core,"import schedule
+# training example
+schedule.every(5).minutes.do(lambda: print('tick'))
+","[""multilingual"", ""benchmark"", ""python"", ""project_scheduler""]",Python project_scheduler benchmark sample created for multilingual LLM and ML training.
+javascript_ml_preprocessor_7,JavaScript,ml_preprocessor,organic,True,core,"const normalize = values => { const maxv = Math.max(...values, 1); return values.map(v => v / maxv); };
+console.log(normalize([10, 20, 30]));
+","[""multilingual"", ""benchmark"", ""javascript"", ""ml_preprocessor""]",JavaScript ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+java_project_scheduler_8,Java,project_scheduler,synthetic,True,core,"import java.util.*; public class Main { public static void main(String[] args) { Timer timer = new Timer(); timer.schedule(new TimerTask(){ public void run(){ System.out.println('tick'); } }, 5000); } }","[""multilingual"", ""benchmark"", ""java"", ""project_scheduler""]",Java project_scheduler benchmark sample created for multilingual LLM and ML training.
+php_project_data_pipeline_3,PHP,project_data_pipeline,organic,True,core,"<?php $raw = ['1','2','','NA','7']; $clean = array_filter($raw, fn($v) => $v !== '' && $v !== 'NA'); print_r(array_map('intval', $clean));","[""multilingual"", ""benchmark"", ""php"", ""project_data_pipeline""]",PHP project_data_pipeline benchmark sample created for multilingual LLM and ML training.
+javascript_project_http_service_7,JavaScript,project_http_service,synthetic,True,core,"const http = require('http');
+http.createServer((_, res) => res.end(JSON.stringify({ ok: true }))).listen(8080);
+","[""multilingual"", ""benchmark"", ""javascript"", ""project_http_service""]",JavaScript project_http_service benchmark sample created for multilingual LLM and ML training.
+cpp_project_data_pipeline_3,C++,project_data_pipeline,organic,True,core,"#include <iostream>
+#include <vector>
+#include <string>
+int main() { std::vector<std::string> raw = {'1','2','','NA','7'}; int count = 0; for (const auto& v : raw) if (!v.empty() && v != 'NA') ++count; std::cout << count << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_data_pipeline""]",C++ project_data_pipeline benchmark sample created for multilingual LLM and ML training.
+ruby_assembly_4,Ruby,assembly,synthetic,True,low_level,"section .text
+    global _start
+_start:
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
+","[""multilingual"", ""benchmark"", ""ruby"", ""assembly""]",Ruby assembly benchmark sample created for multilingual LLM and ML training.
+go_syscall_6,Go,syscall,synthetic,True,core,"package main
+import 'os'
+func main(){ _ = os.WriteFile('/tmp/pid.txt', []byte('123'), 0644) }","[""multilingual"", ""benchmark"", ""go"", ""syscall""]",Go syscall benchmark sample created for multilingual LLM and ML training.
+ruby_project_scheduler_7,Ruby,project_scheduler,synthetic,True,core,3.times { puts 'tick' },"[""multilingual"", ""benchmark"", ""ruby"", ""project_scheduler""]",Ruby project_scheduler benchmark sample created for multilingual LLM and ML training.
+typescript_ml_preprocessor_1,TypeScript,ml_preprocessor,organic,True,core,"const normalize = (values:number[]) => { const maxv = Math.max(...values, 1); return values.map(v => v / maxv); }; console.log(normalize([10,20,30]));","[""multilingual"", ""benchmark"", ""typescript"", ""ml_preprocessor""]",TypeScript ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+rust_project_api_5,Rust,project_api,synthetic,True,core,"fn main() { println!(""API ready""); }","[""multilingual"", ""benchmark"", ""rust"", ""project_api""]",Rust project_api benchmark sample created for multilingual LLM and ML training.
+go_project_tooling_2,Go,project_tooling,synthetic,True,core,"package main
+import ('fmt'; 'os')
+func main(){ if len(os.Args) > 1 { fmt.Println(os.Args[1]) } else { fmt.Println('no argument') } }","[""multilingual"", ""benchmark"", ""go"", ""project_tooling""]",Go project_tooling benchmark sample created for multilingual LLM and ML training.
+php_project_http_service_6,PHP,project_http_service,synthetic,True,core,<?php header('Content-Type: application/json'); echo json_encode(['message' => 'pong']);,"[""multilingual"", ""benchmark"", ""php"", ""project_http_service""]",PHP project_http_service benchmark sample created for multilingual LLM and ML training.
+ruby_project_api_8,Ruby,project_api,synthetic,True,core,puts 'API ready',"[""multilingual"", ""benchmark"", ""ruby"", ""project_api""]",Ruby project_api benchmark sample created for multilingual LLM and ML training.
+csharp_project_full_stack_2,C#,project_full_stack,synthetic,True,core,using System; class Program { static void Main() { Console.WriteLine('Full stack app stub'); } },"[""multilingual"", ""benchmark"", ""c#"", ""project_full_stack""]",C# project_full_stack benchmark sample created for multilingual LLM and ML training.
+php_project_file_system_8,PHP,project_file_system,organic,True,core,"<?php foreach (scandir('.') as $entry) { if (str_ends_with($entry, '.php')) echo $entry . PHP_EOL; }","[""multilingual"", ""benchmark"", ""php"", ""project_file_system""]",PHP project_file_system benchmark sample created for multilingual LLM and ML training.
+rust_assembly_3,Rust,assembly,synthetic,True,low_level,"section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","[""multilingual"", ""benchmark"", ""rust"", ""assembly""]",Rust assembly benchmark sample created for multilingual LLM and ML training.
+java_project_api_8,Java,project_api,synthetic,True,core,public class Main { public static void main(String[] args) { System.out.println('API ready'); } },"[""multilingual"", ""benchmark"", ""java"", ""project_api""]",Java project_api benchmark sample created for multilingual LLM and ML training.
+csharp_project_http_service_8,C#,project_http_service,synthetic,True,core,using System; class Program { static void Main() { Console.WriteLine('HTTP service stub'); } },"[""multilingual"", ""benchmark"", ""c#"", ""project_http_service""]",C# project_http_service benchmark sample created for multilingual LLM and ML training.
+python_project_cli_3,Python,project_cli,synthetic,True,core,"def main():
+    data = [12, 18, 21, 9, 31]
+    total = sum(data)
+    avg = total / len(data)
+    print(f'Total: {total}')
+    print(f'Average: {avg:.2f}')
+
+main()
+","[""multilingual"", ""benchmark"", ""python"", ""project_cli""]",Python project_cli benchmark sample created for multilingual LLM and ML training.
+csharp_project_api_5,C#,project_api,synthetic,True,core,using System; class Program { static void Main() { Console.WriteLine('API ready'); } },"[""multilingual"", ""benchmark"", ""c#"", ""project_api""]",C# project_api benchmark sample created for multilingual LLM and ML training.
+javascript_project_database_1,JavaScript,project_database,organic,True,core,"const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('app.db');
+db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');
+","[""multilingual"", ""benchmark"", ""javascript"", ""project_database""]",JavaScript project_database benchmark sample created for multilingual LLM and ML training.
+python_project_scheduler_5,Python,project_scheduler,synthetic,True,core,"import schedule
+# training example
+schedule.every(5).minutes.do(lambda: print('tick'))
+","[""multilingual"", ""benchmark"", ""python"", ""project_scheduler""]",Python project_scheduler benchmark sample created for multilingual LLM and ML training.
+php_project_full_stack_7,PHP,project_full_stack,synthetic,True,core,<?php header('Content-Type: application/json'); echo json_encode(['status' => 'ready']);,"[""multilingual"", ""benchmark"", ""php"", ""project_full_stack""]",PHP project_full_stack benchmark sample created for multilingual LLM and ML training.
+csharp_project_database_3,C#,project_database,organic,True,core,"using System.Data.SQLite; class Program { static void Main() { using var conn = new SQLiteConnection('Data Source=app.db'); conn.Open(); using var cmd = new SQLiteCommand('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)', conn); cmd.ExecuteNonQuery(); } }","[""multilingual"", ""benchmark"", ""c#"", ""project_database""]",C# project_database benchmark sample created for multilingual LLM and ML training.
+typescript_project_file_system_6,TypeScript,project_file_system,organic,True,core,import fs from 'fs'; for (const name of fs.readdirSync('.')) if (name.endsWith('.ts')) console.log(name);,"[""multilingual"", ""benchmark"", ""typescript"", ""project_file_system""]",TypeScript project_file_system benchmark sample created for multilingual LLM and ML training.
+javascript_ml_preprocessor_3,JavaScript,ml_preprocessor,organic,True,core,"const normalize = values => { const maxv = Math.max(...values, 1); return values.map(v => v / maxv); };
+console.log(normalize([10, 20, 30]));
+","[""multilingual"", ""benchmark"", ""javascript"", ""ml_preprocessor""]",JavaScript ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+cpp_project_parser_5,C++,project_parser,organic,True,core,"#include <fstream>
+#include <iostream>
+int main() { std::ifstream file(""records.csv""); std::string line; int count = 0; while (std::getline(file, line)) ++count; std::cout << count << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_parser""]",C++ project_parser benchmark sample created for multilingual LLM and ML training.
+php_project_scheduler_3,PHP,project_scheduler,synthetic,True,core,<?php for ($i = 0; $i < 3; $i++) echo 'tick' . PHP_EOL;,"[""multilingual"", ""benchmark"", ""php"", ""project_scheduler""]",PHP project_scheduler benchmark sample created for multilingual LLM and ML training.
+php_project_file_system_5,PHP,project_file_system,organic,True,core,"<?php foreach (scandir('.') as $entry) { if (str_ends_with($entry, '.php')) echo $entry . PHP_EOL; }","[""multilingual"", ""benchmark"", ""php"", ""project_file_system""]",PHP project_file_system benchmark sample created for multilingual LLM and ML training.
+javascript_project_database_3,JavaScript,project_database,organic,True,core,"const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('app.db');
+db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');
+","[""multilingual"", ""benchmark"", ""javascript"", ""project_database""]",JavaScript project_database benchmark sample created for multilingual LLM and ML training.
+java_project_cli_3,Java,project_cli,synthetic,True,core,"public class Main { public static void main(String[] args) { int[] values = {12,18,21,9,31}; int total = 0; for (int v: values) total += v; System.out.println('Total: ' + total); System.out.println('Average: ' + (total / (double) values.length)); } }","[""multilingual"", ""benchmark"", ""java"", ""project_cli""]",Java project_cli benchmark sample created for multilingual LLM and ML training.
+typescript_project_api_6,TypeScript,project_api,synthetic,True,core,"import express from 'express'; const app = express(); app.get('/health', (_, res) => res.json({ status: 'ok' })); app.listen(3000);","[""multilingual"", ""benchmark"", ""typescript"", ""project_api""]",TypeScript project_api benchmark sample created for multilingual LLM and ML training.
+rust_project_database_4,Rust,project_database,organic,True,core,"fn main() { println!(""Database example""); }","[""multilingual"", ""benchmark"", ""rust"", ""project_database""]",Rust project_database benchmark sample created for multilingual LLM and ML training.
+typescript_project_full_stack_5,TypeScript,project_full_stack,synthetic,True,core,"import express from 'express'; const app = express(); app.get('/', (_, res) => res.json({ status: 'ready' })); app.listen(3000);","[""multilingual"", ""benchmark"", ""typescript"", ""project_full_stack""]",TypeScript project_full_stack benchmark sample created for multilingual LLM and ML training.
+python_binary_8,Python,binary,synthetic,True,low_level,31 c0 31 db b0 01 40 89 c3 80 3d 2a 00 00 00 00 0f 05,"[""multilingual"", ""benchmark"", ""python"", ""binary""]",Python binary benchmark sample created for multilingual LLM and ML training.
+python_project_parser_8,Python,project_parser,organic,True,core,"import csv
+with open('records.csv', newline='', encoding='utf-8') as fh:
+    rows = list(csv.DictReader(fh))
+print(sum(float(r['amount']) for r in rows))
+","[""multilingual"", ""benchmark"", ""python"", ""project_parser""]",Python project_parser benchmark sample created for multilingual LLM and ML training.
+typescript_project_data_pipeline_1,TypeScript,project_data_pipeline,organic,True,core,"const raw = ['1','2','','NA','7']; const clean = raw.filter(v => v && v !== 'NA').map(Number); console.log(clean);","[""multilingual"", ""benchmark"", ""typescript"", ""project_data_pipeline""]",TypeScript project_data_pipeline benchmark sample created for multilingual LLM and ML training.
+cpp_syscall_2,C++,syscall,synthetic,True,core,"#include <fstream>
+int main() { std::ofstream out('/tmp/pid.txt'); out << getpid(); }","[""multilingual"", ""benchmark"", ""c++"", ""syscall""]",C++ syscall benchmark sample created for multilingual LLM and ML training.
+go_memory_4,Go,memory,synthetic,True,core,"package main
+func copyBytes(dst, src []byte) { copy(dst, src) }","[""multilingual"", ""benchmark"", ""go"", ""memory""]",Go memory benchmark sample created for multilingual LLM and ML training.
+ruby_project_tooling_7,Ruby,project_tooling,synthetic,True,core,arg = ARGV[0] || 'no argument'; puts arg,"[""multilingual"", ""benchmark"", ""ruby"", ""project_tooling""]",Ruby project_tooling benchmark sample created for multilingual LLM and ML training.
+php_project_api_5,PHP,project_api,synthetic,True,core,<?php header('Content-Type: application/json'); echo json_encode(['status' => 'ok']);,"[""multilingual"", ""benchmark"", ""php"", ""project_api""]",PHP project_api benchmark sample created for multilingual LLM and ML training.
+ruby_project_tooling_6,Ruby,project_tooling,synthetic,True,core,arg = ARGV[0] || 'no argument'; puts arg,"[""multilingual"", ""benchmark"", ""ruby"", ""project_tooling""]",Ruby project_tooling benchmark sample created for multilingual LLM and ML training.
+typescript_project_http_service_5,TypeScript,project_http_service,synthetic,True,core,"import http from 'http'; http.createServer((_, res) => res.end(JSON.stringify({ ok: true }))).listen(8080);","[""multilingual"", ""benchmark"", ""typescript"", ""project_http_service""]",TypeScript project_http_service benchmark sample created for multilingual LLM and ML training.
+php_project_data_pipeline_7,PHP,project_data_pipeline,organic,True,core,"<?php $raw = ['1','2','','NA','7']; $clean = array_filter($raw, fn($v) => $v !== '' && $v !== 'NA'); print_r(array_map('intval', $clean));","[""multilingual"", ""benchmark"", ""php"", ""project_data_pipeline""]",PHP project_data_pipeline benchmark sample created for multilingual LLM and ML training.
+rust_project_full_stack_4,Rust,project_full_stack,synthetic,True,core,"fn main() { println!(""Full stack app stub""); }","[""multilingual"", ""benchmark"", ""rust"", ""project_full_stack""]",Rust project_full_stack benchmark sample created for multilingual LLM and ML training.
+csharp_binary_6,C#,binary,synthetic,True,low_level,48 31 c0 48 31 ff 48 c7 c0 3c 00 00 00 0f 05,"[""multilingual"", ""benchmark"", ""c#"", ""binary""]",C# binary benchmark sample created for multilingual LLM and ML training.
+python_syscall_6,Python,syscall,synthetic,True,core,"import os
+with open('/tmp/pid.txt', 'w', encoding='utf-8') as fh:
+    fh.write(str(os.getpid()))
+","[""multilingual"", ""benchmark"", ""python"", ""syscall""]",Python syscall benchmark sample created for multilingual LLM and ML training.
+typescript_project_full_stack_2,TypeScript,project_full_stack,synthetic,True,core,"import express from 'express'; const app = express(); app.get('/', (_, res) => res.json({ status: 'ready' })); app.listen(3000);","[""multilingual"", ""benchmark"", ""typescript"", ""project_full_stack""]",TypeScript project_full_stack benchmark sample created for multilingual LLM and ML training.
+typescript_project_database_8,TypeScript,project_database,organic,True,core,"import sqlite3 from 'sqlite3'; const db = new sqlite3.Database('app.db'); db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');","[""multilingual"", ""benchmark"", ""typescript"", ""project_database""]",TypeScript project_database benchmark sample created for multilingual LLM and ML training.
+ruby_syscall_6,Ruby,syscall,synthetic,True,core,"File.write('/tmp/pid.txt', Process.pid.to_s)","[""multilingual"", ""benchmark"", ""ruby"", ""syscall""]",Ruby syscall benchmark sample created for multilingual LLM and ML training.
+csharp_project_tooling_2,C#,project_tooling,synthetic,True,core,using System; class Program { static void Main(string[] args) { Console.WriteLine(args.Length > 0 ? args[0] : 'no argument'); } },"[""multilingual"", ""benchmark"", ""c#"", ""project_tooling""]",C# project_tooling benchmark sample created for multilingual LLM and ML training.
+php_project_scheduler_5,PHP,project_scheduler,synthetic,True,core,<?php for ($i = 0; $i < 3; $i++) echo 'tick' . PHP_EOL;,"[""multilingual"", ""benchmark"", ""php"", ""project_scheduler""]",PHP project_scheduler benchmark sample created for multilingual LLM and ML training.
+javascript_memory_4,JavaScript,memory,synthetic,True,core,"function copyBytes(src, dst) {
+  for (let i = 0; i < src.length; i++) dst[i] = src[i];
+  return dst;
+}
+","[""multilingual"", ""benchmark"", ""javascript"", ""memory""]",JavaScript memory benchmark sample created for multilingual LLM and ML training.
+ruby_project_http_service_6,Ruby,project_http_service,synthetic,True,core,puts 'HTTP service stub',"[""multilingual"", ""benchmark"", ""ruby"", ""project_http_service""]",Ruby project_http_service benchmark sample created for multilingual LLM and ML training.
+javascript_project_data_pipeline_8,JavaScript,project_data_pipeline,organic,True,core,"const raw = ['1', '2', '', 'NA', '7'];
+const clean = raw.filter(v => v && v !== 'NA').map(Number);
+console.log(clean);
+","[""multilingual"", ""benchmark"", ""javascript"", ""project_data_pipeline""]",JavaScript project_data_pipeline benchmark sample created for multilingual LLM and ML training.
+csharp_ml_preprocessor_4,C#,ml_preprocessor,organic,True,core,"using System; class Program { static void Main() { int[] values = {10,20,30}; for (int i = 0; i < values.Length; i++) values[i] /= 10; Console.WriteLine(string.Join(', ', values)); } }","[""multilingual"", ""benchmark"", ""c#"", ""ml_preprocessor""]",C# ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+cpp_memory_6,C++,memory,synthetic,True,core,"#include <cstring>
+void copy_bytes(unsigned char* dst, const unsigned char* src, size_t n) { std::memcpy(dst, src, n); }","[""multilingual"", ""benchmark"", ""c++"", ""memory""]",C++ memory benchmark sample created for multilingual LLM and ML training.
+php_project_file_system_4,PHP,project_file_system,organic,True,core,"<?php foreach (scandir('.') as $entry) { if (str_ends_with($entry, '.php')) echo $entry . PHP_EOL; }","[""multilingual"", ""benchmark"", ""php"", ""project_file_system""]",PHP project_file_system benchmark sample created for multilingual LLM and ML training.
+javascript_syscall_5,JavaScript,syscall,synthetic,True,core,"const fs = require('fs');
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+","[""multilingual"", ""benchmark"", ""javascript"", ""syscall""]",JavaScript syscall benchmark sample created for multilingual LLM and ML training.
+java_project_parser_7,Java,project_parser,organic,True,core,import java.nio.file.*; public class Main { public static void main(String[] args) throws Exception { var text = Files.readString(Path.of('records.csv')); System.out.println(text.lines().count()); } },"[""multilingual"", ""benchmark"", ""java"", ""project_parser""]",Java project_parser benchmark sample created for multilingual LLM and ML training.
+python_project_full_stack_8,Python,project_full_stack,synthetic,True,core,"from flask import Flask, jsonify
+app = Flask(__name__)
+@app.get('/')
+def index():
+    return jsonify({'status': 'ready'})
+","[""multilingual"", ""benchmark"", ""python"", ""project_full_stack""]",Python project_full_stack benchmark sample created for multilingual LLM and ML training.
+typescript_project_file_system_3,TypeScript,project_file_system,organic,True,core,import fs from 'fs'; for (const name of fs.readdirSync('.')) if (name.endsWith('.ts')) console.log(name);,"[""multilingual"", ""benchmark"", ""typescript"", ""project_file_system""]",TypeScript project_file_system benchmark sample created for multilingual LLM and ML training.
+rust_ml_preprocessor_4,Rust,ml_preprocessor,organic,True,core,"fn main() { let mut values = vec![10,20,30]; values.iter_mut().for_each(|v| *v /= 10); println!(""{:?}"", values); }","[""multilingual"", ""benchmark"", ""rust"", ""ml_preprocessor""]",Rust ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+java_project_full_stack_4,Java,project_full_stack,synthetic,True,core,public class Main { public static void main(String[] args) { System.out.println('Full stack app stub'); } },"[""multilingual"", ""benchmark"", ""java"", ""project_full_stack""]",Java project_full_stack benchmark sample created for multilingual LLM and ML training.
+rust_project_api_2,Rust,project_api,synthetic,True,core,"fn main() { println!(""API ready""); }","[""multilingual"", ""benchmark"", ""rust"", ""project_api""]",Rust project_api benchmark sample created for multilingual LLM and ML training.
+csharp_project_database_5,C#,project_database,organic,True,core,"using System.Data.SQLite; class Program { static void Main() { using var conn = new SQLiteConnection('Data Source=app.db'); conn.Open(); using var cmd = new SQLiteCommand('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)', conn); cmd.ExecuteNonQuery(); } }","[""multilingual"", ""benchmark"", ""c#"", ""project_database""]",C# project_database benchmark sample created for multilingual LLM and ML training.
+python_project_scheduler_7,Python,project_scheduler,synthetic,True,core,"import schedule
+# training example
+schedule.every(5).minutes.do(lambda: print('tick'))
+","[""multilingual"", ""benchmark"", ""python"", ""project_scheduler""]",Python project_scheduler benchmark sample created for multilingual LLM and ML training.
+python_ml_preprocessor_5,Python,ml_preprocessor,organic,True,core,"def normalize(values):
+    maxv = max(values) if values else 1
+    return [v / maxv for v in values]
+print(normalize([10, 20, 30]))
+","[""multilingual"", ""benchmark"", ""python"", ""ml_preprocessor""]",Python ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+go_project_scheduler_6,Go,project_scheduler,synthetic,True,core,"package main
+import 'time'
+func main(){ ticker:=time.NewTicker(5 * time.Second); defer ticker.Stop(); for range ticker.C { println('tick') } }","[""multilingual"", ""benchmark"", ""go"", ""project_scheduler""]",Go project_scheduler benchmark sample created for multilingual LLM and ML training.
+go_memory_6,Go,memory,synthetic,True,core,"package main
+func copyBytes(dst, src []byte) { copy(dst, src) }","[""multilingual"", ""benchmark"", ""go"", ""memory""]",Go memory benchmark sample created for multilingual LLM and ML training.
+ruby_binary_1,Ruby,binary,synthetic,True,low_level,b8 01 00 00 00 bb 00 00 00 00 cd 80,"[""multilingual"", ""benchmark"", ""ruby"", ""binary""]",Ruby binary benchmark sample created for multilingual LLM and ML training.
+python_project_database_8,Python,project_database,organic,True,core,"import sqlite3
+conn = sqlite3.connect('app.db')
+conn.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)')
+conn.commit()
+","[""multilingual"", ""benchmark"", ""python"", ""project_database""]",Python project_database benchmark sample created for multilingual LLM and ML training.
+rust_project_api_3,Rust,project_api,synthetic,True,core,"fn main() { println!(""API ready""); }","[""multilingual"", ""benchmark"", ""rust"", ""project_api""]",Rust project_api benchmark sample created for multilingual LLM and ML training.
+typescript_project_file_system_5,TypeScript,project_file_system,organic,True,core,import fs from 'fs'; for (const name of fs.readdirSync('.')) if (name.endsWith('.ts')) console.log(name);,"[""multilingual"", ""benchmark"", ""typescript"", ""project_file_system""]",TypeScript project_file_system benchmark sample created for multilingual LLM and ML training.
+csharp_project_tooling_7,C#,project_tooling,synthetic,True,core,using System; class Program { static void Main(string[] args) { Console.WriteLine(args.Length > 0 ? args[0] : 'no argument'); } },"[""multilingual"", ""benchmark"", ""c#"", ""project_tooling""]",C# project_tooling benchmark sample created for multilingual LLM and ML training.
+csharp_project_scheduler_5,C#,project_scheduler,synthetic,True,core,"using System; using System.Threading; class Program { static void Main() { var t = new Timer(_ => Console.WriteLine('tick'), null, 5000, 5000); Thread.Sleep(10000); } }","[""multilingual"", ""benchmark"", ""c#"", ""project_scheduler""]",C# project_scheduler benchmark sample created for multilingual LLM and ML training.
+php_assembly_6,PHP,assembly,synthetic,True,low_level,"section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+","[""multilingual"", ""benchmark"", ""php"", ""assembly""]",PHP assembly benchmark sample created for multilingual LLM and ML training.
+csharp_project_cli_3,C#,project_cli,synthetic,True,core,"using System; class Program { static void Main() { int[] values = {12, 18, 21, 9, 31}; int total = 0; foreach (var v in values) total += v; Console.WriteLine($""Total: {total}""); Console.WriteLine($""Average: {total / (double) values.Length:F2}""); } }","[""multilingual"", ""benchmark"", ""c#"", ""project_cli""]",C# project_cli benchmark sample created for multilingual LLM and ML training.
+csharp_assembly_2,C#,assembly,synthetic,True,low_level,"section .text
+    global _start
+_start:
+    mov eax, 60
+    xor edi, edi
+    syscall
+","[""multilingual"", ""benchmark"", ""c#"", ""assembly""]",C# assembly benchmark sample created for multilingual LLM and ML training.
+go_syscall_3,Go,syscall,synthetic,True,core,"package main
+import 'os'
+func main(){ _ = os.WriteFile('/tmp/pid.txt', []byte('123'), 0644) }","[""multilingual"", ""benchmark"", ""go"", ""syscall""]",Go syscall benchmark sample created for multilingual LLM and ML training.
+python_ml_preprocessor_4,Python,ml_preprocessor,organic,True,core,"def normalize(values):
+    maxv = max(values) if values else 1
+    return [v / maxv for v in values]
+print(normalize([10, 20, 30]))
+","[""multilingual"", ""benchmark"", ""python"", ""ml_preprocessor""]",Python ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+ruby_project_data_pipeline_2,Ruby,project_data_pipeline,organic,True,core,"raw = ['1','2','','NA','7']; clean = raw.reject { |v| v.empty? || v == 'NA' }.map(&:to_i); p clean","[""multilingual"", ""benchmark"", ""ruby"", ""project_data_pipeline""]",Ruby project_data_pipeline benchmark sample created for multilingual LLM and ML training.
+javascript_syscall_3,JavaScript,syscall,synthetic,True,core,"const fs = require('fs');
+fs.writeFileSync('/tmp/pid.txt', String(process.pid));
+","[""multilingual"", ""benchmark"", ""javascript"", ""syscall""]",JavaScript syscall benchmark sample created for multilingual LLM and ML training.
+csharp_project_scheduler_1,C#,project_scheduler,synthetic,True,core,"using System; using System.Threading; class Program { static void Main() { var t = new Timer(_ => Console.WriteLine('tick'), null, 5000, 5000); Thread.Sleep(10000); } }","[""multilingual"", ""benchmark"", ""c#"", ""project_scheduler""]",C# project_scheduler benchmark sample created for multilingual LLM and ML training.
+rust_project_full_stack_3,Rust,project_full_stack,synthetic,True,core,"fn main() { println!(""Full stack app stub""); }","[""multilingual"", ""benchmark"", ""rust"", ""project_full_stack""]",Rust project_full_stack benchmark sample created for multilingual LLM and ML training.
+php_project_database_2,PHP,project_database,organic,True,core,"<?php $pdo = new PDO('sqlite:app.db'); $pdo->exec('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)');","[""multilingual"", ""benchmark"", ""php"", ""project_database""]",PHP project_database benchmark sample created for multilingual LLM and ML training.
+rust_assembly_4,Rust,assembly,synthetic,True,low_level,"section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","[""multilingual"", ""benchmark"", ""rust"", ""assembly""]",Rust assembly benchmark sample created for multilingual LLM and ML training.
+java_project_parser_1,Java,project_parser,organic,True,core,import java.nio.file.*; public class Main { public static void main(String[] args) throws Exception { var text = Files.readString(Path.of('records.csv')); System.out.println(text.lines().count()); } },"[""multilingual"", ""benchmark"", ""java"", ""project_parser""]",Java project_parser benchmark sample created for multilingual LLM and ML training.
+cpp_project_cli_5,C++,project_cli,synthetic,True,core,"#include <iostream>
+#include <vector>
+int main() { std::vector<int> values = {12,18,21,9,31}; int total = 0; for (int v : values) total += v; std::cout << ""Total: "" << total << '\n'; std::cout << ""Average: "" << (total / static_cast<double>(values.size())) << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_cli""]",C++ project_cli benchmark sample created for multilingual LLM and ML training.
+cpp_project_full_stack_7,C++,project_full_stack,synthetic,True,core,"#include <iostream>
+int main() { std::cout << ""Full stack app stub\n""; }","[""multilingual"", ""benchmark"", ""c++"", ""project_full_stack""]",C++ project_full_stack benchmark sample created for multilingual LLM and ML training.
+cpp_project_full_stack_1,C++,project_full_stack,synthetic,True,core,"#include <iostream>
+int main() { std::cout << ""Full stack app stub\n""; }","[""multilingual"", ""benchmark"", ""c++"", ""project_full_stack""]",C++ project_full_stack benchmark sample created for multilingual LLM and ML training.
+typescript_project_scheduler_8,TypeScript,project_scheduler,synthetic,True,core,"setInterval(() => console.log('tick'), 5000);","[""multilingual"", ""benchmark"", ""typescript"", ""project_scheduler""]",TypeScript project_scheduler benchmark sample created for multilingual LLM and ML training.
+typescript_project_tooling_6,TypeScript,project_tooling,synthetic,True,core,const args = process.argv.slice(2); console.log(args[0] || 'no argument');,"[""multilingual"", ""benchmark"", ""typescript"", ""project_tooling""]",TypeScript project_tooling benchmark sample created for multilingual LLM and ML training.
+ruby_syscall_1,Ruby,syscall,synthetic,True,core,"File.write('/tmp/pid.txt', Process.pid.to_s)","[""multilingual"", ""benchmark"", ""ruby"", ""syscall""]",Ruby syscall benchmark sample created for multilingual LLM and ML training.
+ruby_project_http_service_7,Ruby,project_http_service,synthetic,True,core,puts 'HTTP service stub',"[""multilingual"", ""benchmark"", ""ruby"", ""project_http_service""]",Ruby project_http_service benchmark sample created for multilingual LLM and ML training.
+ruby_project_file_system_8,Ruby,project_file_system,organic,True,core,Dir.children('.').grep(/\.rb$/).each { |name| puts name },"[""multilingual"", ""benchmark"", ""ruby"", ""project_file_system""]",Ruby project_file_system benchmark sample created for multilingual LLM and ML training.
+javascript_ml_preprocessor_4,JavaScript,ml_preprocessor,organic,True,core,"const normalize = values => { const maxv = Math.max(...values, 1); return values.map(v => v / maxv); };
+console.log(normalize([10, 20, 30]));
+","[""multilingual"", ""benchmark"", ""javascript"", ""ml_preprocessor""]",JavaScript ml_preprocessor benchmark sample created for multilingual LLM and ML training.
+cpp_project_data_pipeline_2,C++,project_data_pipeline,organic,True,core,"#include <iostream>
+#include <vector>
+#include <string>
+int main() { std::vector<std::string> raw = {'1','2','','NA','7'}; int count = 0; for (const auto& v : raw) if (!v.empty() && v != 'NA') ++count; std::cout << count << '\n'; }","[""multilingual"", ""benchmark"", ""c++"", ""project_data_pipeline""]",C++ project_data_pipeline benchmark sample created for multilingual LLM and ML training.
+go_assembly_6,Go,assembly,synthetic,True,low_level,"section .text
+    global main
+main:
+    mov eax, 0
+    ret
+","[""multilingual"", ""benchmark"", ""go"", ""assembly""]",Go assembly benchmark sample created for multilingual LLM and ML training.
