@@ -3,159 +3,138 @@
 ![ML Programming Top 10 banner](assets/hero-banner.svg)
 
 ![10 Languages](https://img.shields.io/badge/10-Languages-blue)
-![1200 Benchmark Rows](https://img.shields.io/badge/1200-Benchmark%20Rows-orange)
-![Train/Val/Test Splits](https://img.shields.io/badge/Train%2FVal%2FTest-Splits-green)
-![Assembly + Binary Included](https://img.shields.io/badge/Assembly%2BBinary-Included-purple)
-![Release v1.0.0](https://img.shields.io/badge/Release-v1.0.0-9cf)
+![10k+ Task Records](https://img.shields.io/badge/10k%2B-Task%20Records-orange)
+![Train%2FVal%2FTest](https://img.shields.io/badge/Train%2FVal%2FTest-Splits-green)
+![Assembly + Binary](https://img.shields.io/badge/Assembly%2BBinary-Included-purple)
+![Release v1.1.0](https://img.shields.io/badge/Release-v1.1.0-9cf)
 
-A premium multilingual programming corpus for LLM and ML training, built to support software generation, code understanding, low-level reasoning, and project-scale learning across the world’s most used languages.
+A multilingual programming dataset and benchmark suite for LLM and ML training. This repository is designed to teach models how to write, debug, refactor, explain, and reason about code in real-world project patterns across the most common programming languages.
 
-This repository is optimized for discovery in searches for: machine learning dataset, LLM training data, multilingual programming dataset, code generation dataset, AI training data, programming benchmark, multilingual code corpus, and assembly and binary dataset.
+The corpus includes:
 
-This repository combines:
+- high-quality multilingual programming tasks
+- project-style file layouts and project scaffolding patterns
+- assembly and binary references for low-level reasoning
+- benchmark train/validation/test splits
+- task-driven examples for generation, repair, debugging, and refactoring
+- a mixed synthetic and realistic dataset strategy for broader learning coverage
 
-- high-level programming examples
-- project-style bundling and file layouts
-- assembly and binary references for low-level learning
-- benchmark-ready train, validation, and test splits
-- mixed realistic and synthetic examples for broader training coverage
+This repository is optimized for discovery in searches for: machine learning dataset, LLM training data, multilingual programming dataset, code generation dataset, AI training data, programming benchmark, multilingual code corpus, assembly dataset, and binary learning data.
 
 ## Why this corpus matters
 
-The project is designed for models that need to move beyond toy snippets and learn how real software is structured and reasoned about.
+Most code datasets are built around snippets. This project is built around the way software is actually created and reviewed: tasks, project structure, edge cases, repair workflows, and reasoning across languages.
 
-It helps train systems to:
+It is useful for training models that need to:
 
-- generate working code across major languages
-- understand project architecture and folder layouts
-- reason about memory, execution, and low-level primitives
-- handle assembly and binary concepts without brittle false positives
-- work from full project patterns rather than isolated function examples
+- generate working code across multiple languages
+- understand folder layouts, filesystems, and project conventions
+- debug broken behavior and repair code systematically
+- explain logic and refactor patterns clearly
+- work with low-level memory, assembly, and binary concepts
+- evaluate performance on benchmark splits that mirror real task flows
 
 ## Languages included
 
 - Python
 - JavaScript
-- TypeScript
 - Java
 - C#
 - C++
 - Go
 - Rust
+- TypeScript
 - PHP
 - Ruby
 
-## Built for
+## Current dataset suite
 
-This corpus is designed for teams and researchers training models for:
+### 1. 10k multilingual task corpus
 
-- code generation and synthesis
-- multilingual code understanding
-- project-level software planning
-- systems thinking and low-level reasoning
-- benchmark creation and evaluation
+The main training corpus is a large, structured JSONL set with 10,000 records spanning the 10 languages and multiple task types.
 
-## What makes it different
+Included task modes:
 
-| Capability | Included |
-| --- | --- |
-| Multilingual coverage | 10 major languages |
-| Project structure learning | Yes |
-| Assembly and binary context | Yes |
-| Benchmark-ready splits | Train / validation / test |
-| Realistic + synthetic mix | Yes |
-| Cross-language reasoning | Yes |
+- generate
+- repair
+- refactor
+- debug
+- explain
 
-## Typical training use cases
+This corpus is useful for training models on instruction-following, code synthesis, and code reasoning behavior.
 
-- training code models to write complete programs
-- evaluating multilingual reasoning quality
-- teaching low-level concepts like memory and execution
-- building project and file-layout understanding
-- preparing robust benchmark pipelines for code LLMs
+### 2. Bug-fix corpus
 
-## Dataset suites
+A dedicated repair-focused dataset built around broken examples, fix expectations, and validation-oriented prompts.
 
-### Core corpus
+### 3. Benchmark splits
 
-A foundational mixed-language dataset covering core programming tasks and realistic software patterns.
+The repository includes benchmark-ready data splits for reproducible evaluation:
 
-### Low-level training corpus
+- train: 8400
+- validation: 1800
+- test: 1800
 
-Includes low-level material focused on:
+### 4. Low-level and binary reasoning data
+
+The project includes low-level tasks centered on:
 
 - memory behavior
-- syscall concepts
-- binary structures
-- assembly operations
-- system-level reasoning
+- syscall-like patterns
+- assembly-oriented examples
+- binary-style control-flow understanding
+- system-level reasoning without relying on brittle false-positive samples
 
-### Large project corpus
-
-Extends beyond single-file coding into project-like structure, including:
-
-- CLI tools
-- parsers
-- API-style workflows
-- data-processing flows
-- filesystem and config patterns
-- application scaffolding
-
-### Benchmark corpus
-
-The benchmark release contains a 1200-record multilingual dataset with a validated split:
-
-- train: 840
-- validation: 180
-- test: 180
-
-This gives a clean, repeatable evaluation setup for model training and benchmarking.
-
-## Repository layout
+## Repository structure
 
 ```text
 ml_programming_top10/
 ├── README.md
+├── pytest.ini
 ├── run_dataset.cmd
-├── validate_large_corpus_v2.py
 ├── generate_dataset.py
 ├── generate_extended_low_level_dataset.py
 ├── generate_large_corpus.py
 ├── generate_large_corpus_v2.py
 ├── generate_multilingual_benchmark.py
+├── generate_task_corpus.py
+├── generate_10k_multilingual_corpus.py
+├── generate_bugfix_corpus.py
+├── generate_benchmark_splits.py
+├── TASK_CORPUS_PLAN.md
+├── .vscode/
+│   └── settings.json
 ├── assets/
 │   └── hero-banner.svg
 ├── data/
-│   ├── manifest.json
-│   └── programming_top10_with_assembly_and_binary.csv
 ├── low_level_data/
-│   ├── manifest.json
-│   └── low_level_training_dataset.csv
 ├── large_training_corpus/
-│   ├── manifest.json
-│   └── large_llm_training_corpus.csv
 ├── large_training_corpus_v2/
-│   ├── manifest.json
-│   └── large_project_training_corpus.csv
 ├── project_examples/
 ├── project_bundles_v2/
 ├── multilingual_benchmark/
-│   ├── manifest.json
-│   ├── multilingual_benchmark.csv
-│   ├── train.csv
-│   ├── validation.csv
-│   ├── test.csv
-│   ├── multilingual_benchmark.jsonl
-│   ├── train.jsonl
-│   ├── validation.jsonl
-│   └── test.jsonl
 ├── multilingual_benchmark_bundles/
-└── .git/
+├── task_corpus/
+├── task_corpus_10k/
+├── bugfix_corpus/
+├── benchmark_splits/
+├── tests/
+└── .github/
 ```
 
-## Example project style
+## Core generation scripts
 
-Each language bundle is designed to resemble a compact but usable project:
+- `generate_10k_multilingual_corpus.py` — builds the 10k multilingual task corpus
+- `generate_task_corpus.py` — generates a task-oriented corpus with prompt and validation metadata
+- `generate_bugfix_corpus.py` — produces a targeted repair dataset
+- `generate_benchmark_splits.py` — creates train/validation/test partitions
+- `generate_multilingual_benchmark.py` — builds benchmark-quality multilingual outputs
+- `generate_extended_low_level_dataset.py` — creates low-level reasoning examples
+- `generate_large_corpus.py` and `generate_large_corpus_v2.py` — scale corpus generation and project-style examples
+
+## Example project layout
+
+Each generated sample is designed to resemble a small but real project:
 
 ```text
 project/
@@ -164,28 +143,26 @@ project/
 ├── helpers.{ext}
 ├── assembly_example.asm
 ├── binary_example.txt
-├── config/
-├── data/
 ├── tests/
+├── data/
+├── config/
 └── app/
 ```
 
-This makes the corpus much closer to real-world software learning than simple code snippets alone.
-
-## Why it works for LLM/ML workflows
-
-- broad language coverage across major ecosystems
-- realistic and synthetic patterns combined for safer learning
-- assembly and binary examples included for each path
-- benchmark-ready splits for consistent evaluation
-- project-level structure for code generation and planning tasks
+This makes the corpus more useful for models that need to reason across real software structures instead of isolated snippets.
 
 ## Quick start
 
-Run the benchmark generator:
+Run the 10k corpus generator:
 
 ```bash
-python generate_multilingual_benchmark.py
+python generate_10k_multilingual_corpus.py
+```
+
+Generate benchmark splits:
+
+```bash
+python generate_benchmark_splits.py
 ```
 
 Or use the Windows launcher:
@@ -194,18 +171,19 @@ Or use the Windows launcher:
 run_dataset.cmd
 ```
 
-## Release status
+## Why this works for LLM and ML workflows
 
-This repository is tagged as:
-
-- v1.0.0
-
-The release includes the initial multilingual benchmark set, project bundle corpora, and supporting generation scripts.
+- broad language coverage across major ecosystems
+- task-driven prompts for generation, repair, and reasoning
+- structured metadata for validation and benchmarking
+- strong low-level coverage including assembly and binary concepts
+- project-aware layouts to better simulate real-world engineering tasks
+- balanced mix of realistic and synthetic examples for broader model coverage
 
 ## Usage notes
 
-This dataset is intended for experimentation, research, and model training workflows. It emphasizes practical, operational code patterns and blends organic and synthetic examples to reduce false positives while preserving realism.
+This repository is intended for research, experimentation, benchmarking, and model training. The data is designed to be practical and operational while reducing false positives by combining realistic app patterns with synthetic coverage when useful.
 
 ---
 
-Built for code generation, systems reasoning, and multilingual AI training.
+Built for code generation, systems reasoning, multilingual AI training, and robust benchmark evaluation.
