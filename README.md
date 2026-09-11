@@ -14,6 +14,8 @@
 
 A premium multilingual programming corpus for LLM and ML training, built to support software generation, code understanding, low-level reasoning, and project-scale learning across the world’s most used languages.
 
+This repository is optimized for discovery in searches for: machine learning dataset, LLM training data, multilingual programming dataset, code generation dataset, AI training data, programming benchmark, multilingual code corpus, and assembly and binary dataset.
+
 This repository combines:
 
 - high-level programming examples
