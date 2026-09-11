@@ -47,6 +47,35 @@ It helps train systems to:
 - PHP
 - Ruby
 
+## Built for
+
+This corpus is designed for teams and researchers training models for:
+
+- code generation and synthesis
+- multilingual code understanding
+- project-level software planning
+- systems thinking and low-level reasoning
+- benchmark creation and evaluation
+
+## What makes it different
+
+| Capability | Included |
+| --- | --- |
+| Multilingual coverage | 10 major languages |
+| Project structure learning | Yes |
+| Assembly and binary context | Yes |
+| Benchmark-ready splits | Train / validation / test |
+| Realistic + synthetic mix | Yes |
+| Cross-language reasoning | Yes |
+
+## Typical training use cases
+
+- training code models to write complete programs
+- evaluating multilingual reasoning quality
+- teaching low-level concepts like memory and execution
+- building project and file-layout understanding
+- preparing robust benchmark pipelines for code LLMs
+
 ## Dataset suites
 
 ### Core corpus
